@@ -1,0 +1,18 @@
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	IE 7
+	Filename:		ieonly.css
+	Date:			June 22, 2006
+	-------------------------------------------------------------	*/
+	
+/*	-------------------------------------------------------------
+	IE 7 Hacks
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+			*+html #container div.clear {position:static;}
+			*+html #breadcrumbs{position:absolute;}
+			*+html #header div.clear, *+html #red-header div.clear{height:auto;}
+			*+html #unlcurrent{margin-top:10px;}
+			*+html #title{position:relative;}
+			*+html #container {border: none;}
+			

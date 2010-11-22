@@ -1,0 +1,15 @@
+@media screen {
+#header ul li a {border:none;}
+#header ul li a:hover {border:none;background:none;}
+#red-header {background:url(/ucomm/templatedependents/templatecss/images/affiliate_red_head.gif) repeat-x;}
+#red-header h1 {background: url(/ucomm/templatedependents/templatecss/images/affiliate.gif) no-repeat 0 3px;}
+#header img#logo {margin: 0 0 0 -20px;}
+h4#sec_nav {border-bottom-color:#54691B;}
+#footer {border-top-color:#54691B}
+#red-header h1{color:#54691B;}
+body#popup #header a{background:url(/ucomm/templatedependents/templatecss/images/affiliate_popup.gif) no-repeat;}
+}
+
+@media print {
+#red-header h1{color:#54691B;}
+}

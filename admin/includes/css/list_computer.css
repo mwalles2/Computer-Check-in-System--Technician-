@@ -1,0 +1,25 @@
+	.computer_type_col
+	{
+		width: 15%;
+	}
+
+	.location_col
+	{
+		display: inline;
+		width: 10%;
+	}
+
+	.highlight
+	{
+		background-color: #3CC;
+	}
+
+	.computer_list div.row:nth-child(2n+1)
+	{
+		background-color:#FAF9D3;
+	}
+
+	.computer_list div.row:nth-child(2n)
+	{
+		background-color:#C2DEFB;
+	}

@@ -1,0 +1,129 @@
+<?php # HtmlTemplate2.class
+// This class reads in a template, sets the different values, and sends it to the browser.
+
+	if(!defined("HTMLTEMPLATES"))
+	{
+		define("HTMLTEMPLATES","TRUE");
+		class HtmlTemplate
+		{
+			// Set the attributes.
+			var $template;
+			var $html;
+			var $code = array();
+			var $src = array();
+			var $parameters = array();
+
+			function HtmlTemplate ($template) // This function sets which template will be used.
+			{
+				$this->template = $template;
+				$this->html = implode ("", (file($this->template))); // Read the template into an array, then create a string.
+			}
+
+			function SetParameter ($variable, $value) // This function sets the particular values.
+			{
+				if($variable == "SCRIPTSRC")
+				{
+					$this->src["javascript"] .= "\t<script type=\"text/javascript\" language=\"javascript\" src=\"".$value."\"></script>\n";
+				}
+				elseif($variable == "SCRIPTCODE")
+				{
+					//echo $value."<br>\n";
+					$this->code["javascript"] .= "\t\t".$value."\n";
+					//echo $this->code["javascript"]."<br>\n";
+				}
+				else if($variable == "CSSSRC")
+				{
+					$this->src["CSS"] .= "\t<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"".$value."\" hreflang=\"EN\" />";
+				}
+				elseif($variable == "CSSCODE")
+				{
+					//echo $value."<br>\n";
+					$this->code["CSS"] .= "\t\t".$value."\n";
+					//echo $this->code["javascript"]."<br>\n";
+				}
+				else
+				{
+					$this->parameters[$variable] = $value;
+				}
+			}
+
+			function AppendParameter ($variable, $value) // This function sets the particular values.
+			{
+				if(isset($this->parameters[$variable]))
+				{
+					$this->parameters[$variable] .= $value;
+				}
+				else
+				{
+					$this->parameters[$variable] = $value;
+				}
+			}
+
+			function CreatePage ()
+			{
+				echo $this->CreateHTML();
+			}
+
+			function CreateHTML () // This function does the bulk of the work.
+			{
+				if(!isset($this->parameters["JAVASCRIPT"]))
+				{
+					$this->parameters["JAVASCRIPT"] = "";
+				}
+				if(!isset($this->src["javascript"]))
+				{
+					$this->src["javascript"] = "";
+				}
+
+				if(!isset($this->code["javascript"]))
+				{
+					//echo "if 1";
+					$this->code["javascript"] = "";
+				}
+				else
+				{
+					//echo "else 1";
+					$this->code["javascript"] = "\t<script type=\"text/javascript\" language=\"javascript\">\n".$this->code["javascript"]."\t</script>\n";
+				}
+
+				if(!isset($this->parameters["CSS"]))
+				{
+					$this->parameters["CSS"] = "";
+				}
+
+				if(!isset($this->src["CSS"]))
+				{
+					$this->src["CSS"] = "";
+				}
+
+				if(!isset($this->code["CSS"]))
+				{
+					//echo "if 1";
+					$this->code["CSS"] = "";
+				}
+				else
+				{
+					//echo "else 1";
+					$this->code["CSS"] = "\t<style type=\"text/css\">\n".$this->code["CSS"]."\t</style>\n";
+				}
+
+				if(!isset($this->parameters["BODYOPTIONS"]))
+				{
+					$this->parameters["BODYOPTIONS"] = "";
+				}
+
+				//echo $this->src["javascript"] . $this->code["javascript"];
+				$this->parameters["JAVASCRIPT"] .= $this->src["javascript"] . $this->code["javascript"];
+				$this->parameters["CSS"] .= $this->src["CSS"] . $this->code["CSS"];
+				//print_r($this);
+				foreach ($this->parameters as $key => $value)
+				{ // Loop through all the parameters and set the variables to values.
+
+					$template_name = '{' . $key . '}';
+					$this->html = str_replace ($template_name, $value, $this->html);
+				}
+				return $this->html;
+			}
+		}
+	}
+?>

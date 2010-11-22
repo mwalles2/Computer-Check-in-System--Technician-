@@ -1,0 +1,222 @@
+/*
+All styles for the footer
+Created: 05/22/2009
+Last edited: 07/06/2009
+Author: WDN
+
+#footer
+	|
+	|- #footer_floater
+		|
+		|- .footer_col
+			|
+			|- h3, p, a, img
+		|- #copyright
+			|
+			|- ul>li, a, img
+*/
+@import url('feedback.css');
+@import url('rating.css');
+#footer {
+	margin-top:15px;
+	padding-top:26px;
+	position: relative;
+	clear: both;
+	background-color:#e5e5e5;
+	background-image: url(images/footerBG.png);
+	background-position: top left;
+	background-repeat: repeat-x;
+	text-align: left;
+	font: 71%/150% "Lucida Grande",Verdana,Arial;
+	color: #494949;
+}
+#footer a,
+#footer a:link,
+#footer a:visited {
+	color: #494949;
+	text-decoration:underline;
+}
+
+#footer a:hover
+{
+    color: #ba0000;
+}
+
+#footer_floater {
+	background-image: url(images/topSealb.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	height:41px;
+	margin-bottom:18px;
+}
+#wdn_copyright {
+	clear: both;
+	border-top:1px solid #ffffff;
+	padding:12px;
+	color:#606060;
+	font-size:.9em;
+	line-height:1.4em;
+	min-height:42px;
+}
+#wdn_copyright ul {
+	margin-top:10px;
+}
+#wdn_copyright ul li {
+	display:inline;
+}
+#wdn_unl_wordmark {
+	position:absolute;
+	right:12px;
+	bottom:12px;
+}
+a#wdn_unl_wordmark,
+a#wdn_unl_wordmark:link,
+a#wdn_unl_wordmark:visited {
+	border:none;
+}
+
+#footer .footer_col {
+	width:220px;
+	padding:0 10px 10px 10px;
+	float:left;
+	position:relative;
+	}
+	
+body.liquid #footer .footer_col {width:22.9%}	
+	
+#footer .footer_col h3 {
+	background:url('../images/headingBGRed.gif') repeat-x bottom;
+	padding:5px;
+	color:#fff;
+	margin-bottom:5px;
+	font-size:1.1em;
+}
+#footer .footer_col h3:after {
+	content:'';
+	width:20px;
+	height:10px;
+	display:block;
+	background:url('../images/downIndicators.png') no-repeat;
+	margin-left:30px;
+	margin-top:5px;
+}
+#footer ul {
+	list-style-type:disc;
+	padding:0 0 0 25px;
+}
+
+
+#footer ul.socialmedia {
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	text-align:center;
+}
+#footer ul.socialmedia li {
+	display:inline-block;
+	list-style-type:none;
+}
+#footer ul.socialmedia li a {
+	display:inline-block;
+	width:26px;
+	height:26px;
+	text-indent:-9000px;
+	padding:0px;
+	margin:0 3px 5px 0;
+}
+#wdn_emailthis, #wdn_facebook, #wdn_linkedin, #wdn_myspace, #wdn_twitter, #wdn_plurk, #wdn_digg, #wdn_delicious, #wdn_reddit, #wdn_stumbleupon, #wdn_newsvine, 
+	#wdn_googlebookmark {background: url(images/socialMedia.png) no-repeat}
+#wdn_emailthis {
+	background-position: 0 -52px;
+}
+#wdn_facebook {
+	background-position: -26px -52px;
+}
+#wdn_linkedin {
+	background-position: -52px -52px;
+}
+#wdn_myspace {
+	background-position: -78px -52px;
+}
+#wdn_twitter {
+	background-position: -104px -52px;
+}
+#wdn_plurk {
+	background-position: -130px -52px;
+}
+#wdn_digg {
+	background-position: 0 -78px;
+}
+#wdn_delicious {
+	background-position: -26px -78px;
+}
+#wdn_reddit {
+	background-position: -52px -78px;
+}
+#wdn_stumbleupon {
+	background-position: -78px -78px;
+}
+#wdn_newsvine {
+	background-position: -104px -78px;
+}
+#wdn_googlebookmark {
+	background-position: -130px -78px;
+}
+#wdn_emailthis:hover {
+	background-position: 0 0;
+}
+#wdn_facebook:hover {
+	background-position: -26px 0;
+}
+#wdn_linkedin:hover {
+	background-position: -52px 0;
+}
+#wdn_myspace:hover {
+	background-position: -78px 0;
+}
+#wdn_twitter:hover {
+	background-position: -104px 0;
+}
+#wdn_plurk:hover {
+	background-position: -130px 0;
+}
+#wdn_digg:hover {
+	background-position: 0 -26px;
+}
+#wdn_delicious:hover {
+	background-position: -26px -26px;
+}
+#wdn_reddit:hover {
+	background-position: -52px -26px;
+}
+#wdn_stumbleupon:hover {
+	background-position: -78px -26px;
+}
+#wdn_newsvine:hover {
+	background-position: -104px -26px;
+}
+#wdn_googlebookmark:hover {
+	background-position: -130px -26px;
+}
+#footer a#wdn_createGoURL, #footer input#goURLResponse {
+	display:block;
+	width:177px;
+	background: #7d7d7d url('../images/bottom_shadow_medium.png') repeat-x bottom;
+	height:23px;
+	margin-left:15px;
+	border-radius:3px;
+	color:#fff;
+	padding:6px 0px 0px 10px;
+	font-weight:bold;
+	text-decoration:none;
+}
+#footer a#wdn_createGoURL:hover {
+	background-color:#028a02;
+}
+#footer input#goURLResponse {
+	height:22px;
+	background: #fff url('../images/bottom_shadow_light.png') repeat-x bottom;
+	color:#7d7d7d;
+	border:none;
+	
+}

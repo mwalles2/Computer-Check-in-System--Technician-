@@ -1,0 +1,72 @@
+	.round_top_tab
+	{
+		cursor: pointer;	
+	}
+
+	.round_top_tab span.active, .round_top_tab span:hover
+	{
+		background-color: #4169E1;//#73C2FB;//#87CEEB;
+		padding: 0 3px 0 3px;
+		border-width: 1px 0 0 1px;
+		border-color: #000;
+		border-style: solid;
+	}
+
+	div.bottom_side_borders div.row span.active, div.bottom_side_borders div.row span:hover
+	{
+		margin: 1px 0 0 0;
+		background-color: #999;
+		padding: 0 3px 0 3px;
+		border-width: 1px 0 0 1px;
+		border-style: solid;
+	}
+
+	div.bottom_side_borders div.row span div.cell input
+	{
+		background-color: #CCC;
+		border-width: 0 1px 1px 0;
+	}
+
+	.round_top_tab span span:hover
+	{
+		border-width: 0;
+		padding: 0;
+	}
+
+	.round_top_tab input
+	{
+		background-color: #4169E1;//#73C2FB;//#87CEEB;
+		color: #FFF;
+		border-width: 0 1px 1px 0;
+	}
+
+	.darkBlueBackground
+	{
+		background-color:#002366;
+		color:white;
+	}
+
+	.remove, .add
+	{
+		color: #666;
+		float: right;
+		font-size: small;
+		text-decoration: underline;
+		cursor: pointer;
+		clear: none;
+		padding: 0 0 0 5px;
+	}
+
+	div.darkBlueBackground div div.add, div.darkBlueBackground div div.remove
+	{
+		color: #999;
+	}
+
+	.save
+	{
+		color: #333;
+		cursor: pointer;	
+		font-size: small;
+		text-decoration: underline;
+		padding: 0 5px 0 5px;
+	}

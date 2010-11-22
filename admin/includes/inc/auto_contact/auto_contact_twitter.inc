@@ -1,0 +1,1 @@
+Your ticket at the IS Computer Help Center has changed to {STATUS}. Go to http://go.unl.edu/mychc or call 402-472-3970 for details

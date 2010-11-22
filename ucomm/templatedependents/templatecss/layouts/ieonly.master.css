@@ -1,0 +1,37 @@
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	IE specific styles
+	Filename:		ieonly.css
+	Date:			June 22, 2006
+	-------------------------------------------------------------	*/
+
+/*	-------------------------------------------------------------
+	For IE < 6.0 (IE 7 hacks can be found in ie7.css)
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#shelf{margin-top:-2px}
+#shelf #toolcontainer{margin-top:0;}
+#breadcrumbs{position:absolute;}
+#container div.clear {position:static;height:768px;}
+img#wordmark{margin:0 20px 0 0;}
+#peoplefinder input{color:#fff;}
+ul.vcalendar{padding-left:0;}
+#unlcurrent{margin-top:10px;}
+#title ul {margin: 3px 0 0 0;}
+#title{position:relative;}
+#maincontent table td{padding:3px 5px;}
+#footer #footer_floater {height:60px;}
+#container div.clear #main_right {float:right;}
+
+		body#liquid .ieminwidth, body.liquid .ieminwidth{width:1000px;position:relative;}
+		body#liquid #header ul, body.liquid #header ul {margin-left:50px;}
+		body#liquid #main_right, body.liquid #main_right {float:right;margin-right:-9999px;}
+
+		body#doc #red-header{ padding:0;margin:0;}
+		
+		body#popup #container div.clear .altwrapper, body#popup #container div.clear .mainwrapper{margin:-75px 0 0 0;padding:0 0 15px 0;width: 98%;}
+		body#popup #container div.clear {height:auto;}
+		
+		body.secure #container div.clear {padding:0 14px 30px 14px;}
+		
+		

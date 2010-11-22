@@ -1,0 +1,57 @@
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Current weather conditions formating
+	Filename:		weather.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+.weathertempf{
+	font-size:35px;
+	font-style:normal;
+	}
+
+.weathertempc, .weatherconditions, .weatherasof{
+	font-style:normal;
+	}
+	
+.weatherforecast{
+	padding-top:8px;
+	padding-bottom:8px;
+	font-style:italic;
+	}
+
+#upArrowWeather {
+	z-index: 2;
+	top: 0px;
+	}
+
+#dragButtonWeather {
+	z-index: 100;
+	}
+
+#downArrowWeather {
+	z-index: 2; 
+	bottom: 0px;
+	}
+
+#trackBarWeather {
+	top: 18px;
+	}
+
+#trackBarWeather img{
+	height: 184px;
+	width: 18px;
+	}
+
+#weatherresults{
+	padding-top:10px;
+	}
+
+#weatherresults a.external {
+	padding-right: 13px;
+	background: url(/ucomm/templatedependents/templatecss/images/external_link.gif) center right no-repeat;
+	}
+
+#weathercontent.toolResultsMask {height: 220px;}
+	

@@ -1,0 +1,25 @@
+.skipnav {display: none;}
+
+body {
+	background:url(images/bg.jpg) top center no-repeat;
+}
+
+.hidden {
+	display:none;	
+}
+
+#wdn_wrapper {
+	background:#FFF;
+    border:12px solid #E0E0E0;
+    border-top:37px solid #E0E0E0;
+    padding:12px;
+    margin:0px;
+    border-radius:18px;
+    min-width:960px;
+    position:relative;
+    height:auto;
+}
+
+#wdn_wrapper_footer {
+	clear:both;
+}

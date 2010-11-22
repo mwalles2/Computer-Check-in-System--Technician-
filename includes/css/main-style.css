@@ -1,0 +1,114 @@
+		.row
+		{
+			margin: 0 10% 0 10%;
+			width: 80%;
+			clear: both;
+			min-width: 690px;
+		}
+		
+		.row_wide
+		{
+			margin: 0 0 0 0;
+			width: 100%;
+			clear: both;
+			min-width: 690px;
+		}
+
+		.row_narrow
+		{
+			width:78%;
+			margin: 0 11% 0 11%;
+			clear: both;
+			min-width: 690px;
+		}
+		
+		.cell
+		{
+			float: left;
+			vertical-align: top;
+		}
+		
+		.header
+		{
+			font-weight: bold;
+			vertical-align: top;
+		}
+
+		.top_space { padding: 10px 0 0 0; }
+
+		.bottom_space { padding: 0 0 10px 0; }
+		
+		.top_border
+		{
+			border-color: #000;
+			border-width: 1px 0 0 0;
+			border-style: solid;
+		}
+		
+		.bottom_border
+		{
+			border-color: #000;
+			border-width: 0 0 1px 0;
+			border-style: solid;
+		}
+		
+		.bottom_side_borders
+		{
+			border-color: #000;
+			border-width: 0 1px 1px 1px;
+			border-style: solid;
+			padding: 0 2px 2px 2px;
+		}
+
+		.side_borders
+		{
+			border-color: #000;
+			border-width: 0 1px 0 1px;
+			border-style: solid;
+			padding: 0 2px 0 2px;
+		}
+
+		.float_right { float: right; }
+		
+
+		.greyBg
+		{
+			background-color: #CCC;
+			width:96%;
+			margin: 0 2% 0 2%;
+		}
+
+		.setHeader
+		{
+			border-color: #000;
+			border-width: 1px 0 0 0;
+			border-style: solid;
+			padding: 0;
+		}
+		.bottom_side_borders
+		{
+			border-color: #000;
+			border-width: 0 1px 1px 1px;
+			border-style: solid;
+			padding: 0 2px 2px 2px;
+		}
+
+		.side_borders
+		{
+			border-color: #000;
+			border-width: 0 1px 0 1px;
+			border-style: solid;
+			padding: 0 2px 0 2px;
+		}
+
+		.round_top_tab
+		{
+			border-color: #000;
+			border-width: 1px 1px 0 1px;
+			border-style: solid;
+			-webkit-border-top-left-radius: 10px;
+			-webkit-border-top-right-radius: 10px;
+			-moz-border-radius-topleft: 10px;
+			-moz-border-radius-topright: 10px;
+			padding: 5px;
+		}

@@ -1,0 +1,110 @@
+/*	-------------------------------------------------------------
+	splash Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+	body#splash h4#sec_nav, body#splash #showlink, body#splash #navigation div#nav_end, body#splash #title{display:none;}
+	body#splash #breadcrumbs ul{display:none!important;}
+	
+	body#splash #breadcrumbs{margin-top:-1px;}
+	#splash_top h1{color:#999;padding:0;}
+	body#splash #container div.clear #navigation {margin:0;padding: 40px 10px 20px;}
+	
+	body#splash #navlinks ul#toplevel_nav{width:100%;margin:5px 0 20px 0;}
+	body#splash #navlinks ul#toplevel_nav li{padding:0 0 6px 0;margin-top:2px;background: url(/ucomm/templatedependents/templatecss/images/dott.gif) repeat-x left bottom;}
+	body#splash #navlinks ul#toplevel_nav li a{padding:2px 0 0 12px;background:url(/ucomm/templatedependents/templatecss/images/heading.gif) no-repeat 0 5px;}
+
+	body#splash #navlinks ul li{padding:0;background:none;}
+	body#splash #navlinks ul{padding:0;background:none;width:113px;}
+	body#splash #navlinks ul li#affiliates{position:absolute;margin-left:120px;top:0;left:0;}
+	body#splash #navlinks ul li#resources{padding:15px 0 0 0;}
+	body#splash #navlinks ul li ul{background:none;padding: 2px 0 5px 0;}
+	body#splash #navlinks ul li ul li {
+				font-size:0.65em;
+				display: list-item;
+				background:url(/ucomm/templatedependents/templatecss/images/dott.gif) repeat-x left bottom;
+				padding: 4px 0;
+				line-height:normal;}
+	body#splash #navlinks ul li ul li i{visibility:hidden;}
+	body#splash #navlinks ul li ul li a{padding:0 0 0 8px;background:url(/ucomm/templatedependents/templatecss/images/splash_dott.gif) no-repeat 0 3px;}
+	body#splash #navlinks ul li a span{padding:0 0 0 12px;}
+		
+	body#splash .col{margin:30px 0 0 0;clear:right;}
+	#featureimage{margin:0;top:0;position:absolute;left:0;z-index:1;}
+	#feature_story{
+		width:217px;
+		position:relative;
+		float:right;
+		margin:50px 0 0 0;
+		z-index:100;
+		padding:0;
+		}
+	#splash_top{position:relative;line-height:normal;min-height:328px;}
+
+	
+	/*not sure yet. */	
+	body#splash {background:#eee;}
+	body#splash #footer{background:#eee;border:none;}
+	body#splash	#footer #footer_floater {
+			border-top: 3px solid #AF0909; 
+			border-bottom: 1px solid #666;
+			padding:5px 11px 10px 11px;
+			background: #414241;}
+		body#splash #container div.clear {
+				min-height:0;
+				height:auto;	
+				padding:0 14px 0 14px;}
+
+	/*tabs. */	
+	  #tabs3 {
+      top:0;
+	  margin:307px 0 0 10px;
+	  font-size:91%;
+      width:100%;
+	  z-index:100;
+	  position:absolute;
+	  line-height:normal;
+      }
+    #tabs3 ul {
+	  margin:0;
+	  padding:0 10px 0 50px;
+	  list-style:none;
+      }
+    #tabs3 li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabs3 a {
+      float:left;
+      background:url(/ucomm/templatedependents/templatecss/images/tableft3.gif) no-repeat left bottom;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabs3 a span {
+      float:left;
+      display:block;
+      background:url(/ucomm/templatedependents/templatecss/images/tabright3.gif) no-repeat right bottom;
+      padding:4px 12px 4px 6px;
+      color:#FFF;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabs3 a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabs3 a:hover span {
+      color:#FFF;
+      }
+    #tabs3 a:hover, #tabs3 li.selected a{
+      background-position:0% -21px;
+      }
+    #tabs3 a:hover span, #tabs3 li.selected a span{
+      background-position:100% -21px;
+      }  	
+      
+      * html body#splash #container div.clear {padding:0 14px 20px 14px;}
+	  * html body#splash #navlinks ul li ul li {padding: 0 0 2px 0;margin:0;}
+	  * html #splash_top{height:328px}
+	  * html #tabs3 {margin:-22px 0 0 5px;font-size:91%;width:100%;position:relative;line-height:normal;}
+	  
+	  *+html body#splash #navlinks ul li ul li {padding: 0 0 2px 0;margin:0;}
+	  *+html body#splash #container div.clear {padding:0 14px 20px 14px;}
+	  *+html #tabs3 {margin:-22px 0 0 5px;font-size:91%;width:100%;position:relative;line-height:normal;}	

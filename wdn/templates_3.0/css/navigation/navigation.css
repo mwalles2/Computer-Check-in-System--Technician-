@@ -1,0 +1,137 @@
+@import url('breadcrumbs.css');
+
+/*
+All styles for the navigation
+Created: 05/22/2009
+Last edited: 05/26/2009
+Author: WDN
+
+*/
+#wdn_navigation_bar {
+	z-index:100;
+    margin:0 8px 0 0;
+    padding:0;
+    position:relative;
+    background: url(images/menuBGLeft.png) left bottom no-repeat;
+    width:100%;
+	}
+
+#wdn_navigation_wrapper{
+    background: url(images/menuBGRight.png) right bottom no-repeat;
+    padding:0 8px;
+    overflow:hidden;
+    margin-right:10px;
+}
+
+#navigation {
+    font-family: sans-serif;
+    overflow: hidden;
+    background: url(images/menuBGCenter.png) 0 bottom repeat-x;
+    max-width: 1830px;
+    clear: both;
+    position:relative;
+    padding-bottom:24px;
+}
+
+#navigation ul ul li:first-child {
+	display: block;
+}
+#navigation ul
+{
+	margin:0 0 0 8px;
+	padding:0 0 0 0;
+    position: relative;
+    width:100%;
+    clear:both;
+    overflow:auto;    
+}
+
+#navigation ul li ul {
+	background:none;
+	padding:0;
+}
+
+#navigation a
+{
+    color: #242424;
+    text-decoration: none;
+}
+
+#navigation a:hover
+{
+    color: #ba0000;
+}
+
+#navigation ul li{
+    width: 15.1%;
+    display: block;
+    float: left;
+    padding: 6px 0.6%;
+    margin-bottom: 10px;
+}
+#navigation ul li{
+	min-height: 0;
+}
+#navigation > ul > li {
+	/* see script.css */
+}
+#navigation ul li ul {
+    margin: 0;
+}
+
+#navigation ul li ul li{
+    clear: both;
+    padding: 0px;
+    width: 100%;
+    margin: 0;
+}
+
+#navigation ul li a{
+    display: block;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 3px 0px 6px 0px;
+    background-image: url(images/primaryBorderBottom.gif);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+}
+
+#navigation ul li ul li a{
+    font-size: 0.71em;
+    padding: 3px 0px 3px 0px;
+    font-weight: normal;
+    display: block;
+    background-image: url(images/secondaryBorderBottom.gif);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+}
+#navigation ul li ul li img{display:none;}
+#navigation-close{
+	display:none;
+	position:absolute;
+	top:0;
+	right:0;
+	height:16px;
+	width:16px;
+	background:url('images/closeSprite.png') no-repeat;
+}
+#navigation-close:hover{
+	background-position:0 -17px;
+	cursor:pointer;
+}
+
+#navigation-expand-collapse {
+	position:absolute;
+    bottom:11px;
+    font-size:13px;
+    width:100%;
+    text-align:center;
+}
+
+#wdn_navigation_wrapper.collapsed #navigation-expand-collapse {
+	/* add styles in here for the collapsed state */
+}
+
+#navigation form {
+    display:none;
+}

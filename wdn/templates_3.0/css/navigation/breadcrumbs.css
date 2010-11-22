@@ -1,0 +1,107 @@
+#breadcrumbs {
+	height:35px;
+    background:url('images/breadcrumbBarSprite2.png') 0 -36px;
+    margin:0 0 0 5px;
+    font-family:arial;
+    font-size:0.85em;
+    position:relative;
+    color:#fff;
+}
+
+#breadcrumbs a, #breadcrumbs a:link, #breadcrumbs a:visited {
+	color:#fff;
+	text-decoration:none;
+	padding:0 20px 0 5px;
+	display:inline-block;
+	margin:0 2px;
+	background:url('images/breadcrumbArrowSprite.png') top right no-repeat;
+}
+#breadcrumbs a acronym {
+	display:inline-block;
+	margin-top:-2px;
+}
+#breadcrumbs ul li:last-child a,
+#breadcrumbs ul li:last-child a:link,
+#breadcrumbs ul li:last-child a:visited {
+	background:none;
+}
+#breadcrumbs ul {
+	background:url('images/breadcrumbBarSprite2.png') no-repeat;
+	margin:0 0 0 -5px;
+	list-style:none;
+	position:relative;
+	height:36px;
+	width:100%;
+}
+#breadcrumbs ul:after {
+    content:'';
+    height:35px;
+    width:30px;
+    position:absolute;
+    margin:0 0 0 100%;
+    float:right;
+    display:block;
+    background:url('images/breadcrumbBarSprite2.png') 0 -72px no-repeat;
+}
+#breadcrumbs ul li {
+	float:left;
+	padding-top:10px;
+}
+#breadcrumbs ul li{
+	margin-left:2px;
+	padding-left:3px;
+	}
+
+#breadcrumbs ul li:first-child{
+	margin-left:5px;
+	}
+#breadcrumbs ul li.selected{
+	height:44px;
+	background:url('images/tabBGRight.png') top right no-repeat;
+	display:block;
+	margin:-11px 0 0 15px;
+	padding:0px;
+}
+#breadcrumbs ul li.selected{
+	margin-right:-8px;
+	}
+
+#breadcrumbs ul li.selected a,
+#breadcrumbs ul li.selected a:link,
+#breadcrumbs ul li.selected a:visited 
+{
+	height:31px;
+    background:url('images/tabBGLeft.png') 0 0 no-repeat;
+    padding:21px 20px 0 12px;
+    margin:0 10px 0 -15px;
+    position: relative;
+    z-index: 5;
+}
+#breadcrumbs ul li:first-child.selected {
+	margin-left:18px;
+	margin-right:-10px;
+	}
+
+#breadcrumbs ul li.selected a:after {
+	content:'';
+	margin:8px 0 0 30%;
+	width:20px;
+	height:10px;
+	display:block;
+	text-align:center;
+	background:url('../images/downIndicators.png') no-repeat;
+	padding:0px;
+}
+
+#breadcrumbs ul li div.storednav {
+    display:none;
+}
+
+#breadcrumbs img {
+    display:none;
+}
+
+#breadcrumbs abbr:after,
+#breadcrumbs acronym:after {
+	content:'';
+}

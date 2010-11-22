@@ -1,0 +1,82 @@
+/*
+All styles for the header
+Created: 05/22/2009
+Last edited: 05/22/2009
+Author: WDN
+
+*/
+
+@import url('toolbar.css');
+@import url('idm.css');
+
+#header {
+    background:url('images/headBG.png') no-repeat top left;
+    margin:-39px -11px -22px -13px;
+    padding:12px;
+    position:relative;
+    min-height:115px;
+}
+#header:after {
+	display:block;
+	content:'';
+	width:100%;
+	height:53px;
+	margin: -42px -5px 0 2px;
+	z-index:1000;
+}
+#header h1 {
+	display:block;
+	height:36px;
+    width:480px;
+	position:absolute;
+	background:url('../../images/title.png') no-repeat;
+	text-indent:-9000em;
+	overflow:hidden;
+	top:40px;
+    left:114px;
+}
+
+#wdn_search {
+    background:url('images/searchBG.png') no-repeat;
+    width:360px;
+    height:54px;
+    overflow:hidden;
+    position:absolute;
+    right:-3px;
+    top:2px;
+    color:#808080;
+    font-family:Helvetica, arial;
+}
+#wdn_search form label {
+    position:absolute;
+    z-index:10;
+    left:20px;
+    top:20px;
+    display:none;
+}
+#wdn_search form #q {
+	position:absolute;
+	left:13px;
+	top:12px;
+	width:285px;
+	font-size:1em;
+	z-index:9;
+	border:1px solid #e09a9a;
+	border-top-color:#da6868;
+	padding:4px;
+	color:#808080;
+}
+#wdn_search .search {
+    position:absolute;
+    right:18px;
+    top:12px;
+    background:url('images/searchMagnifyGlass.png') no-repeat;
+    display:block;
+    width:31px;
+    height:29px;
+    text-indent:-9999em;
+    border:none;
+}
+#wdn_search .search:hover {
+	cursor:pointer;
+}

@@ -1,0 +1,28 @@
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Global styles
+	Filename:		globalstyle.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+
+#maincontent ul.splashnav{
+	list-style:none;
+	padding:0;
+	}
+
+#maincontent ul.splashnav li{
+	background:url(/ucomm/templatedependents/templatecss/images/dott.gif) repeat-x left bottom;
+	padding: 4px 0;
+	line-height:normal;
+	}
+	
+#maincontent ul.splashnav li a{
+	padding:0 0 0 8px;
+	background:url(/ucomm/templatedependents/templatecss/images/splash_dott.gif) no-repeat 0 4px;
+	}
+	
+a.imagelink, a#leftRandomPromoAnchor, #footer a.imagelink{
+	background:none;
+	}

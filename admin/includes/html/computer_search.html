@@ -1,0 +1,396 @@
+		<div class="row">
+			<div id="search" class="cell" style="width:100%">
+				<div class="cell" style="width:10%">
+					<input type="button" value="Search" />
+				</div>
+				<div class="cell" style="width:55%">
+					<input type="text" size="40" />
+				</div>
+				<div class="cell" style="width:20%">
+					Sort by:
+					<select>
+						<option value="">Last Name</option>
+						<option value="">First Name</option>
+					</select>
+				</div>
+				<div class="cell" style="width:15%">
+					Advanced:
+					<input type="checkbox" onclick="advShowHide('search','advSearch',this)" disabled>
+				</div>
+			</div>
+		</div>
+		<div id="advSearch" style="display:none;">
+			<div class="row">
+				<div class="cell" style="border: #000 solid; border-width: 0 1px 0 1px; width:98%; margin:0 1% 0 1%; background:#ccc;">
+					<div class="cell" style="width:15%;">
+						Last Name:
+					</div>
+					<div class="cell">
+						<input type="text" size="20" />
+					</div>
+				</div>
+				<div class="cell" style="border: #000 solid; border-width: 0 1px 0 1px; width:98%; margin:0 1% 0 1%; background:#ccc;">
+					<div class="cell" style="width:15%;">
+						First Name:
+					</div>
+					<div class="cell">
+						<input type="text" size="20" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell" style="border: #000 solid; border-width: 0 1px 0 1px; width:98%; margin:0 1% 0 1%; background:#ccc;">
+					<div class="cell" style="width:15%">
+						Status:
+					</div>
+					<div class="cell">
+						<select>
+							<option value="">Is</option>
+							<option value="" selected>Is Not</option>
+							<option value="">Was</option>
+						</select>
+					</div>
+					<div class="cell">
+						<select>
+							<option value="new">New</option>
+							<option value="work">Work in progress</option>
+							<option value="user">Waiting for user</option>
+							<option value="done">Done</option>
+							<option value="done" selected>Picked Up</option>
+						</select>
+					</div>
+					<div class="cell" style="width:7%; float:right; text-align:right;">
+						<input type="button" value="-">
+					</div>
+				</div>
+			</div>
+			<div class="row" style="">
+				<div class="cell" style="border: #000 solid; border-width: 0 1px 0 1px; width:98%; margin:0 1% 0 1%; background:#ccc;">
+					<div class="cell" style="width:15%; text-align:right;">
+						<select>
+							<option value="">and</option>
+							<option value="" selected>or</option>
+						</select
+					</div>
+					<div class="cell">
+						<select>
+							<option value="">Is</option>
+							<option value="">Is Not</option>
+							<option value="" selected>Was</option>
+						</select>
+					</div>
+					<div class="cell">
+						<select>
+							<option value="new">New</option>
+							<option value="work">Work in progress</option>
+							<option value="user">Waiting for user</option>
+							<option value="done">Done</option>
+							<option value="done" selected>Picked Up</option>
+						</select>
+					</div>
+					<div class="cell">
+						<select>
+							<option value="">After</option>
+							<option value="">Before</option>
+							<option value="" selected>In the Last</option>
+						</select>
+						<input type="text" size="2" value="30"> Days
+					</div>
+					<div class="cell" style="width:7%; float:right; text-align:right;">
+						<input type="button" value="-">
+						<input type="button" value="+">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell" style="border: #000 solid; border-width: 0 1px 0 1px; width:98%; margin:0 1% 0 1%; background:#ccc;">
+					<div class="cell" style="width:15%">
+						Computer Type
+					</div>
+					<div class="cell" style="width:25%">
+						<select>
+							<option value="">Any</option>
+							<option value="">Desktop</option>
+							<option value="">Laptop</option>
+						</select>
+					</div>
+					<div class="cell" style="width:55%">
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell" style="border: #000 solid; border-width: 0 1px 0 1px; width:98%; margin:0 1% 0 1%; background:#ccc;">
+					<div class="cell" style="width:15%">
+						NUID
+					</div>
+					<div class="cell">
+						<input type="text" size="20" />
+					</div>
+					<div class="cell">
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell" style="border: #000 solid; border-width: 0 1px 0 1px; width:98%; margin:0 1% 0 1%; background:#ccc;">
+					<div class="cell" style="width:15%">
+						MAC Address
+					</div>
+					<div class="cell">
+						<input type="text" size="20" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell" style="border: #000 solid; border-width: 0 1px 0 1px; width:98%; margin:0 1% 0 1%; background:#ccc;">
+					<div class="cell" style="width:15%">
+						E-Mail
+					</div>
+					<div class="cell">
+						<input type="text" size="20" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell" style="border: #000 solid; border-width: 0 1px 1px 1px; width:98%; margin:0 1% 0 1%; background:#ccc;">
+					<div class="cell" style="width:15%">
+							Ticket Number
+					</div>
+					<div class="cell">
+						<input type="text" size="20" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row top_space"></div>
+
+		<div class="row">
+			<div id="35210784" class="cell" style="width:100%;">
+				<div class="cell" style="width:20%">
+					<div class="cell">
+						Schnell
+					</div>
+					<div class="cell" style="margin:0 0 0 5px;">
+						Jason
+					</div>
+				</div>
+				<div class="cell" style="width:20%">
+					35210784
+				</div>
+				<div class="cell" style="width:20%; text-align:center;">
+					(402) 472-3970<br>
+					(402) 555-5555
+				</div>
+				<div class="cell" style="width:20%; text-align:center;">
+					jschnell1@unl.edu
+				</div>
+				<div class="cell" style="width:20%; text-align:right;">
+					<input type="button" value="show" onclick="advShowHide('35210784','35210784more',this)">
+				</div>
+			</div>
+			<div id="35210784more" style="display:none">
+				<div class="row" style="width:98%; margin:0 1% 0 1%;">
+					<div class="cell" style="width:100%; border: #000 solid; border-width: 0 1px 0 1px; background:#ccc;">
+						<div class="cell" style="width:20%">
+							<a href="ticket_detail.php?tid=6">2006091600006</a>
+						</div>
+						<div class="cell" style="width:20%">
+							2006-09-16
+						</div>
+						<div class="cell" style="width:20%">
+							Other
+						</div>
+						<div class="cell" style="width:20%">
+							desk
+						</div>
+						<div class="cell" style="width:20%">
+							new
+						</div>
+					</div>
+				</div>
+				<div class="row" style="width:98%; margin:0 1% 0 1%;">
+					<div class="cell" style="width:100%; border: #000 solid; border-width: 0 1px 0 1px; background:#ccc;">
+						<div class="cell" style="width:20%">
+							<a href="ticket_detail.php?tid=9">2006091900009</a>
+						</div>
+						<div class="cell" style="width:20%">
+							2006-09-19
+						</div>
+						<div class="cell" style="width:20%">
+							Gateway
+						</div>
+						<div class="cell" style="width:20%">
+							laptop
+						</div>
+						<div class="cell" style="width:20%">
+							new
+						</div>
+					</div>
+				</div>
+				<div class="row" style="width:98%; margin:0 1% 0 1%;">
+					<div class="cell" style="width:100%;border: #000 solid; border-width: 0 1px 0 1px; background:#ccc;">
+						<div class="cell" style="width:20%">
+							<a href="ticket_detail.php?tid=11">20060919000011</a>
+						</div>
+						<div class="cell" style="width:20%">
+							2006-09-19
+						</div>
+						<div class="cell" style="width:20%">
+							Other
+						</div>
+						<div class="cell" style="width:20%">
+							desk
+						</div>
+						<div class="cell" style="width:20%">
+							new
+						</div>
+					</div>
+				</div>
+				<div class="row" style="width:98%; margin:0 1% 0 1%;">
+					<div class="cell" style="width:100%;border: #000 solid; border-width: 0 1px 1px 1px; background:#ccc;">
+						<div class="cell" style="width:20%">
+							<a href="ticket_detail.php?tid=13">20060919000013</a>
+						</div>
+						<div class="cell" style="width:20%">
+							2006-09-19
+						</div>
+						<div class="cell" style="width:20%">
+							Other
+						</div>
+						<div class="cell" style="width:20%">
+							desk
+						</div>
+						<div class="cell" style="width:20%">
+							new
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row top_space"></div>
+
+		<div class="row">
+			<div id="44159199" class="cell" style="width:100%;">
+				<div class="cell" style="width:20%">
+					<div class="cell">
+						Walles
+					</div>
+					<div class="cell" style="margin:0 0 0 5px;">
+						Micah
+					</div>
+				</div>
+				<div class="cell" style="width:20%">
+					44159199
+				</div>
+				<div class="cell" style="width:20%; text-align:center;">
+					(402) 472-3970
+				</div>
+				<div class="cell" style="width:20%; text-align:center;">
+					mwalles2@unl.edu
+				</div>
+				<div class="cell" style="width:20%; text-align:right;">
+					<input type="button" value="show" onclick="advShowHide('44159199','44159199more',this)">
+				</div>
+			</div>
+			<div id="44159199more" style="display:none;">
+				<div class="row" style="width:98%; margin:0 1% 0 1%;">
+					<div class="cell" style="width:100%; border: #000 solid; border-width: 0 1px 0 1px; background:#ccc;">
+						<div class="cell" style="width:20%">
+							<a href="ticket_detail.php?tid=14">00000000000014</a>
+						</div>
+						<div class="cell" style="width:20%">
+							0000-00-00
+						</div>
+						<div class="cell" style="width:20%">
+							Apple
+						</div>
+						<div class="cell" style="width:20%">
+							laptop
+						</div>
+						<div class="cell" style="width:20%">
+							new
+						</div>
+					</div>
+				</div>
+				<div class="row" style="width:98%; margin:0 1% 0 1%;">
+					<div class="cell" style="width:100%; border: #000 solid; border-width: 0 1px 0 1px; background:#ccc;">
+						<div class="cell" style="width:20%">
+							<a href="ticket_detail.php?tid=3">2006091600003</a>
+						</div>
+						<div class="cell" style="width:20%">
+							2006-09-16
+						</div>
+						<div class="cell" style="width:20%">
+							Apple
+						</div>
+						<div class="cell" style="width:20%">
+							laptop
+						</div>
+						<div class="cell" style="width:20%">
+							new
+						</div>
+					</div>
+				</div>
+				<div class="row" style="width:98%; margin:0 1% 0 1%;">
+					<div class="cell" style="width:100%; border: #000 solid; border-width: 0 1px 0 1px; background:#ccc;">
+						<div class="cell" style="width:20%">
+							<a href="ticket_detail.php?tid=5">2006091600005</a>
+						</div>
+						<div class="cell" style="width:20%">
+							2006-09-16
+						</div>
+						<div class="cell" style="width:20%">
+							Dell
+						</div>
+						<div class="cell" style="width:20%">
+							desk
+						</div>
+						<div class="cell" style="width:20%">
+							new
+						</div>
+					</div>
+				</div>
+				<div class="row" style="width:98%; margin:0 1% 0 1%;">
+					<div class="cell" style="width:100%; border: #000 solid; border-width: 0 1px 0 1px; background:#ccc;">
+						<div class="cell" style="width:20%">
+							<a href="ticket_detail.php?tid=7">2006091800007</a>
+						</div>
+						<div class="cell" style="width:20%">
+							2006-09-18
+						</div>
+						<div class="cell" style="width:20%">
+							Apple
+						</div>
+						<div class="cell" style="width:20%">
+							laptop
+						</div>
+						<div class="cell" style="width:20%">
+							work
+						</div>
+					</div>
+				</div>
+				<div class="row" style="width:98%; margin:0 1% 0 1%;">
+					<div class="cell" style="width:100%; border: #000 solid; border-width: 0 1px 1px 1px; background:#ccc;">
+						<div class="cell" style="width:20%">
+							<a href="ticket_detail.php?tid=15">20060921122315</a>
+						</div>
+						<div class="cell" style="width:20%">
+							2006-09-21
+						</div>
+						<div class="cell" style="width:20%">
+							Apple
+						</div>
+						<div class="cell" style="width:20%">
+							laptop
+						</div>
+						<div class="cell" style="width:20%">
+							new
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

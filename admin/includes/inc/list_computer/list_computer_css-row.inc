@@ -1,0 +1,4 @@
+	.locid{LOCATIONID}
+	{
+		display: {LOCATIONSTYLE};
+	}

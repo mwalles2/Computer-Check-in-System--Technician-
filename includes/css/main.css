@@ -1,0 +1,25 @@
+	<!--
+		.label1
+		{
+			float: left;
+			padding: 0 10px 0 0;
+		}
+		
+		.label2 { float: right; }
+		
+		.name, .date, .facstaffstu, .nuid
+		{
+			border-bottom: #000;
+			border-width: 0 0 1px 0;
+			border-style: none none solid none;
+			float: left;
+			text-align: center;
+			margin: 0 10px 0 0;
+		}
+
+		.name { width: 55%; }
+		.date { width: 20%; }
+		.facstaffstu { width: 40px; }
+		.nuid { width: 200px; }
+		.hidden { display: none;}
+	-->

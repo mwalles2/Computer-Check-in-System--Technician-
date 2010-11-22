@@ -1,0 +1,35 @@
+	.cell_auto
+	{
+		float: left;
+		vertical-align: top;
+		margin: 0 auto 0 auto;
+	}
+
+	.tab_side
+	{
+		border-color: #000;
+		border-width: 0 0 1px 0;
+		border-style: solid;
+		height: 26px;
+	}
+		
+	.tab_active
+	{
+		border-color: #000;
+		border-width: 1px 1px 0 1px;
+		border-style: solid;
+		text-align: center;
+		height: 25px;
+		cursor:pointer;
+	}
+		
+	.tab_inactive
+	{
+		border-color: #000;
+		border-width: 1px;
+		border-style: solid;
+		background-color: #CCC;
+		text-align: center;
+		height: 25px;
+		cursor: pointer;
+	}

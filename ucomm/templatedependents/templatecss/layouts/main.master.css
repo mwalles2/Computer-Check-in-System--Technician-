@@ -1,0 +1,1806 @@
+/* GENERATED FILE - DO NOT EDIT */
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Main styles
+	Filename:	default.master.css
+	Date:		June 22, 2006
+	-------------------------------------------------------------	*/
+
+/*	-------------------------------------------------------------
+	Base Body Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+* {
+	margin: 0;
+	padding: 0;
+	}
+
+a {
+	outline: none;
+	color: #900;
+	text-decoration: none;
+	background: url(/ucomm/templatedependents/templatecss/images/dott.gif) repeat-x bottom;
+	padding: 0 0 2px 0;
+	}
+
+a:hover {
+	color: #c00;
+	}
+	
+a:focus{
+	color: #c00!important;
+	}
+
+p {
+	margin: 0 0 1.1em 0;
+	}
+
+img {
+	border: none;
+	}
+
+body {
+	text-align: center;
+	font: 71%/150% "Lucida Grande",Verdana,Arial;
+	color: #434343;
+	}
+
+
+
+/*	-------------------------------------------------------------
+	Heading Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+#sec_nav h4, p.sec_main{
+	color: #353535;
+	font-weight: normal;
+	letter-spacing: -1px;
+	font: 1.6em Verdana,Helvetica,sans-serif;
+	}
+
+#right_area dt, #navlinks ul li, #leftcollinks h3, #footer h3 {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-weight:normal;
+	letter-spacing: -1px;
+	}
+
+#leftcollinks h3, #right_area dt, #navlinks ul li{
+	font-size: 1.4em;
+	}
+
+/*	-------------------------------------------------------------
+	Container/Skeleton Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+#header div.clear, #red-header div.clear{
+	margin: 0 auto;
+	width: 980px;
+	height:0;
+	z-index:3000;
+	position: relative;
+	text-align: left;
+	}
+	
+#container {
+	min-width: 988px;
+	text-align: left;
+	margin: -4px 0 0 0;
+	border-top: 2px solid #333;
+	background: #eee;
+	}
+
+#container div.clear:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	}
+	
+#container div.clear {
+	margin: 0 auto;
+	padding:0 14px 10px 14px;
+	min-height:768px;
+	width: 960px;
+	background: url(/ucomm/templatedependents/templatecss/images/bg_shadow.png) repeat-y;
+	text-align: left;
+	}
+	
+/*	-------------------------------------------------------------
+	Header Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#header {
+	min-width:988px;
+	background-color: #6e6e6e;
+	}
+
+#header:after {
+	content: ".";
+	display: block;
+	height:0;
+	clear: both;
+	visibility: hidden;
+	}
+
+#header ul {
+	width: 63%;
+	float: left;
+	letter-spacing: -0.05em;
+	list-style: none;
+	padding: 0 0 0 83px;
+	}
+
+#header ul li a {
+	display: block;
+	background: none;
+	color: #fff;
+	padding: 6px 8px 5px;
+	border-left: 1px solid #6e6e6e;
+	border-right: 1px solid #6e6e6e;
+	}
+
+#header ul li a:hover {
+	background-color: #434343;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+	}
+
+#header img#logo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: -5px 0 0 -20px;
+	z-index: 2000;
+	}
+
+#header div.clear #unlsearch {
+	float: right;
+	width: 27%;
+	text-align: right;
+	padding: 6px 0 0 0;
+	color: #fff;
+	}
+
+#unlsearch fieldset {
+	border:0px;
+	}
+
+#unlsearch input, #unlsearch select, #quicklinks select{
+	font-size: 0.9em;
+	margin: 0 2px 0 0;
+	border: 1px solid #333;
+	border-color: #333 #fff #fff #333;
+	}
+
+#unlsearch select option {padding-right:0;}
+
+#quicklinks select {width:173px;}
+
+#unlsearch a.go, #quicklinks a.go {
+	padding-right:13px;
+	background: url(/ucomm/templatedependents/templatecss/images/go.gif) no-repeat;
+	}
+	
+#unlsearch a.go span, #quicklinks a.go span {
+	visibility:hidden;
+	}
+
+/*	-------------------------------------------------------------
+	Second level (red) header Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#red-header {
+	min-width:988px;
+	height: 40px;
+	background:url(/ucomm/templatedependents/templatecss/images/red_head.gif) repeat-x;
+	border-top: 4px solid #333;
+	z-index: 1;
+	}
+
+#red-header h1 {
+	width: 323px;
+	height: 32px;
+	margin: 1px 0 0 82px;
+	background: url(/ucomm/templatedependents/templatecss/images/unl.gif) no-repeat 0 3px;
+	text-indent: -9999em;
+	}
+	
+/*	-------------------------------------------------------------
+	Quicklinks
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#quicklinks{position:absolute;
+	right:0;
+	top:0;
+	z-index:4000;
+	margin:42px 0 0 0;
+	}
+	
+/*	-------------------------------------------------------------
+	Breadcrumbs Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#breadcrumbs {
+	position:relative;
+	float: left;
+	margin: 8px 0 0 91px;
+	}
+
+#breadcrumbs ul {
+	list-style: none;
+	}
+
+#breadcrumbs ul li {
+	display: inline;
+	background: url(/ucomm/templatedependents/templatecss/images/bullet_breadcrumb.gif) no-repeat;
+	background-position: 0 3px;
+	padding: 0 0 0 11px;
+	}
+
+#breadcrumbs ul li.first, #breadcrumbs ul li:first-child {
+	display: inline;
+	background: none;
+	padding: 0;
+	}
+
+#breadcrumbs ul li a {
+	background: none;
+	}
+
+/*	-------------------------------------------------------------
+	Main title Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#title{
+	padding:65px 8px 30px;
+	}
+	
+#title #titlegraphic {
+	left:0;
+	position:absolute;
+	width: auto;
+	min-height:70px;
+	}
+
+#title ul {
+	position:absolute;
+	right:0;
+	width: 400px;
+	margin: 3px 5px 0 0;
+	font-size: 1.1em;
+	z-index:100;
+	text-transform: uppercase;
+	width:400px;
+	list-style: none;
+	}
+
+#title ul li {
+	display: inline;
+	background: url(/ucomm/templatedependents/templatecss/images/bullet_altnav.gif) no-repeat;
+	background-position: 0 3px;
+	padding: 0 0 0 11px;
+	}
+
+#title ul li.first, #title ul li:first-child {
+	background: none;
+	padding: 0;
+	}
+	
+#title ul li a:hover{
+	color:#c00
+	}
+
+/*	-------------------------------------------------------------
+	Navigation Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#container div.clear #navigation {
+	float: left;
+	clear: both;
+	width: 220px;
+	padding: 0 10px 20px;
+	position: relative;
+	overflow:hidden;
+	}
+
+#navigation div#nav_end {
+	height: 92px;
+	margin: -2.7em 0 0 79px;	
+	background: transparent url(/ucomm/templatedependents/templatecss/images/nav_end.gif) no-repeat;
+	}
+
+h4#sec_nav {
+	background: #434343 url(/ucomm/templatedependents/templatecss/images/nav_head.gif) no-repeat right top;
+	padding: 5px 0 7px 15px;
+	border-bottom: 3px solid #AF0909;	
+	margin: 3px 1px 0 0;
+	color: #fff;
+	font-weight: normal;
+	letter-spacing: -1px;
+	font: 1.6em Verdana,Helvetica,sans-serif;
+	}
+
+div#navlinks {
+	display: inline;
+	font-size: 1.1em;
+	}
+
+#navlinks ul {
+	width:206px;
+	padding:0 15px 0 6px;
+	position:relative;
+	background: url(/ucomm/templatedependents/templatecss/images/nav_shadow.gif) repeat-y 14px 0;}
+
+#navlinks ul li {
+	list-style: none;
+	line-height:1.1;
+	color: #434343; 
+     		    padding: 15px 0 7px 0;
+	background: url(/ucomm/templatedependents/templatecss/images/nav_border.gif) no-repeat;
+	background-position:7px -3px;
+	}
+		
+#navlinks ul li a {
+	color: #666;
+	background: none;
+	}
+
+#navlinks ul li a:hover {
+	color: #c00;
+	}
+
+#navlinks ul li ul {
+	margin:0;
+	width:205px;
+	padding: 0 5px 5px 0;
+	background:none;
+	}
+
+#navlinks ul li ul li {
+	display: inline;
+	font-size:0.7em;
+	padding:0;
+	letter-spacing:normal;
+	line-height:1.2;
+	background:none;
+	}
+
+/*	-------------------------------------------------------------
+	Left Random Promo Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+	
+#container div.clear #navigation #leftRandomPromo a, #title ul li a {
+	background: none;
+	}
+
+#container div.clear #navigation #leftcollinks {
+	text-align: left;
+	padding: 10px 20px 0 0;
+	width: 200px;
+	}
+
+#leftcollinks ul {
+	list-style: none;
+	}
+
+
+
+
+/*	-------------------------------------------------------------
+	Misc Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+	
+p.more {
+	text-align: right;
+	font-size: 0.95em;}
+	p.more a {
+	color: #434343;
+	background:none;
+	}
+
+.skipnav, #toolbar {
+	display: none;
+	}
+
+.toggle_click {
+	text-align: right;
+	}
+	
+#showlink{
+	position:absolute;top:14px;left:0;margin:0 0 0 122px;
+	}
+
+#showlink a{
+	display:block;
+	width:58px;
+	height:13px;
+	background:url(/ucomm/templatedependents/templatecss/images/showall.gif);
+	}
+	
+#showlink a:hover{
+	background-position:0 15px;
+	}
+		
+img#wordmark{
+	width:88px;position:absolute;top:0;right:0;margin:0 10px 0 0;
+	}
+	
+img#imagetag{
+	position:absolute;top:0;left:0;
+	}
+
+img#badge{
+	position:absolute;top:-88px;left:535px;
+	}
+
+
+/*	-------------------------------------------------------------
+	SIFR Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+#title h1, #title h2{font-family:Arial,Helvetica,sans-serif;line-height:150%}
+#title h1{font-size:2.5em;color:#6E6E6E;margin-bottom:-6px}
+#title h2{font-size:2.0em;color:#2E261D;margin-top:0px}
+.sIFR-flash{visibility:visible !important;margin:0}
+.sIFR-replaced{visibility:visible !important}
+span.sIFR-alternate{position:absolute;left:0;top:0;width:0;height:0;display:block;overflow:hidden}
+.sIFR-hasFlash #titlegraphic h1,.sIFR-hasFlash #titlegraphic h2{visibility:hidden}
+
+
+/*	-------------------------------------------------------------
+	Liquid Template Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+body#liquid #header,
+body.liquid #header,
+body#liquid #red-header,
+body.liquid #red-header,
+body#liquid #shelf,
+body.liquid #shelf,
+body#liquid #container,
+body.liquid #container,
+body#liquid #footer,
+body.liquid #footer {min-width:1000px;}
+body#liquid #header div.clear,
+body.liquid #header div.clear, 
+body#liquid #red-header div.clear,
+body.liquid #red-header div.clear, 
+body#liquid #footer #footer_floater,
+body.liquid #footer #footer_floater,
+body#liquid #container div.clear,
+body.liquid #container div.clear {margin: 0;padding:0;width: 100%;}
+body#liquid #container div.clear,
+body.liquid #container div.clear {background: #fff;}
+body#liquid #footer #footer_floater,
+body.liquid #footer #footer_floater {background: #414241;}
+body#liquid #footer .footer_col,
+body.liquid #footer .footer_col {width: 21%;}
+body#liquid #tabhandle,
+body.liquid #tabhandle {width: 100%;}
+body#liquid #header img#logo,
+body.liquid #header img#logo {margin: -5px 0 0 0;}
+body#liquid #red-header h1,
+body.liquid #red-header h1 {margin: 0 0 0 102px;}
+body#liquid #header ul,
+body.liquid #header ul {padding: 0;margin-left:102px;width: 60%;}
+body#liquid #footer #copyright,
+body.liquid #footer #copyright {margin-bottom:15px;}
+body#liquid #maincontent .col,
+body.liquid #maincontent .col {width:31%}
+body#liquid #maincontent .two_col,
+body.liquid #maincontent .two_col {width:62%}
+body#liquid #breadcrumbs,
+body.liquid #breadcrumbs {margin: 9px 0 0 111px;}
+body#liquid #container div.clear .altwrapper,
+body.liquid #container div.clear .altwrapper {width: 75%;}
+body#liquid #container div.clear .mainwrapper,
+body.liquid #container div.clear .mainwrapper {width: 75%;}
+body#liquid #container div.clear #maincontent,
+body.liquid #container div.clear #maincontent {width:98%;}
+body#liquid #container div.clear #main_right,
+body.liquid #container div.clear #main_right {float: left;}
+body#liquid #quicklinks,
+body.liquid #quicklinks {margin:42px 1px 0 0;}
+body#liquid #main_right,
+body.liquid #main_right {overflow:visible;}
+		
+		
+/*	-------------------------------------------------------------
+	Document/Print Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+body#doc {
+	background:#eee;
+	margin:30px 0 10px 0;
+}
+	
+body#doc #header, body#doc #container, body#doc #red-header, body#doc #footer {
+	min-width:0;
+}
+
+body#doc #header img#logo {
+	margin: -32px 0 0 -12px;
+}
+	
+body#doc #header div.clear {
+	width:740px;
+}
+	
+body#doc #header {
+	background:#eee;
+}
+	
+body#doc #header ul, 
+body#doc #header #unlsearch, 
+body#doc #shelf, 
+body#doc #navigation, 
+body#doc #title ul, 
+body#doc #quicklinks {
+	display:none;
+}
+	
+body#doc #red-header, 
+body#doc #red-header div.clear, 
+body#doc #footer, 
+body#doc #container div.clear {
+	padding: 0 10px;
+	width: 720px;
+	margin: 0 auto;
+}
+
+body#doc #breadcrumbs {
+	margin-left: 79px;
+}
+	
+body#doc #red-header h1 {
+	margin-left: 70px;
+}
+	
+body#doc #container div.clear .mainwrapper,
+body#doc #container div.clear .altwrapper {
+	width:100%;
+}
+	
+body#doc #container div.clear {
+	width:720px;
+	background:#fff;
+}
+	
+body#doc #container {
+	border:none;
+}
+	
+body#doc #footer #footer_floater {
+	min-height: 50px;
+	padding: 0;
+	width: 720px;
+	margin: 0 auto;
+	background:none;
+}
+	
+body#doc img#wordmark {
+	margin: 0;
+}
+
+
+/*	-------------------------------------------------------------
+	Pop Up Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+body#popup #header div.clear,  body#popup #red-header div.clear,  body#popup #footer #footer_floater, body#popup #container div.clear {margin: 0;padding:0;width: 100%;}
+body#popup #header, body#popup #container, body#popup #red-header, body#popup #footer {min-width:0;}
+body#popup #header a{background:url(/ucomm/templatedependents/templatecss/images/3d_N_pop.png) no-repeat;position: absolute;left: 0;top: 0;z-index: 2000;height:50px;width:50px;}
+body#popup #container{border:none}
+body#popup #container div.clear {background: #fff;border:none;min-height:0;}
+body#popup #container div.clear #maincontent {padding:0 0 0 10px;margin:0;}
+body#popup #footer .footer_col {width: 21%;}
+body#popup #footer #footer_floater {background: #414241;}	
+body#popup #red-header{margin-top:7px;border:none;background:url(/ucomm/templatedependents/templatecss/images/shad_pop.gif) repeat-x 0 2px;}
+body#popup #titlegraphic h2, body#popup #header img#logo, body#popup #red-header h1, body#popup #header ul, body#popup #header #unlsearch, body#popup #shelf, body#popup #navigation, body#popup #breadcrumbs, body#popup #title ul, body#popup #quicklinks{
+	display:none;}
+body#popup #titlegraphic h1{position:absolute;top:0;margin:-103px 0 0 45px;}
+body#popup #title h1{font-size:2em;color:#6E6E6E;}
+body#popup #footer #copyright{margin-bottom:15px;}
+body#popup #main_right{overflow:visible;}
+body#popup #maincontent .col{width:31%}
+body#popup #maincontent .two_col {width:62%}
+body#popup #container div.clear .altwrapper, body#popup #container div.clear .mainwrapper{	margin-top:-145px;width: 98%;}
+body#popup #container div.clear #main_right, #header ul li {float: left;}
+
+
+/*	-------------------------------------------------------------
+	Positioning fixes for DW Design View
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#container div.clear #navigation, #title #titlegraphic, #container div.clear, #main_right{position:relative;}
+#main_right{overflow:hidden}/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Search forms formating
+	Filename:		search.master.css
+	Date:			2007-03-06
+	-------------------------------------------------------------	*/
+
+/*	-------------------------------------------------------------
+	base search forms formating info
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+	
+#local_search{
+	background: url(/ucomm/templatedependents/templatecss/images/nav_shadow.gif) repeat-y 14px 0;
+	}
+
+#localSearchQuery{
+	padding-top: 15px;	
+	padding-bottom: 1ex;
+	}	
+
+#local_search form{
+	width: 160px;
+	display: inline;
+	}
+
+#localSearchQuery-field {
+	border:1px solid #999999;
+	height:1.5em;
+	width:160px;
+	display: inline;
+	float: left;
+	margin-right: 8px;
+	margin-left: 6px;
+	padding-left: 1px;
+	}
+
+#localSearchQuery-field:hover {
+	border: 1px solid #ffd900;
+	}
+
+#localSearch-Button {
+	background-image:url(/ucomm/templatedependents/templatecss/images/system-search.gif);
+	background-repeat:no-repeat;
+	width:35px;
+	height:35px;
+	padding-left:5px;
+	top: -10px;
+	position: relative;
+	}
+
+#local_search label.overlabel {
+	margin-left: 12px;
+	color:#666666;
+	padding-top: 2px;
+	}
+
+#local_search label.overlabel-apply {
+	position: absolute;
+	top: 58px;
+	left: 24px;
+	color:#666666;
+	}
+	/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Footer classes
+	Filename:		footer.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+#footer {
+	min-width:988px;
+	clear: both; 
+	color: #eaeaea; 
+	position: relative; 
+	background: #414241; 
+	border-top: 3px solid #af0909; 
+	text-align: center;
+	}
+	
+#footer #footer_floater {
+ 	margin: 0 auto;
+	padding:5px 14px 5px 14px;
+	position:relative;
+	width: 960px;
+	min-height:60px;
+	text-align: left;
+	background: #414241 url(/ucomm/templatedependents/templatecss/images/foot_shadow.gif) repeat-y;
+	}
+	
+#footer h3 {
+	 font-size: 17px;
+	 letter-spacing: -1px;
+	 color: #fff;
+	 padding:30px 0 15px 0;
+	 }
+
+#footer .footer_col {
+	width: 220px;
+	float: left;
+	padding: 0 10px 20px;
+	text-align:left;
+	}	
+
+#footer a {
+	color: #fff;
+	text-decoration: none;
+	padding: 0 0 2px 0;
+	background: url(/ucomm/templatedependents/templatecss/images/dottWhite.gif) repeat-x bottom;
+	margin:0 3px;	
+	}
+
+#footer a.external {
+	padding-right: 13px;
+	background: url(/ucomm/templatedependents/templatecss/images/external_link.gif) center right no-repeat;
+	}
+
+.footer_logo {
+	padding-top: 20px;
+	border: 0px;
+	}
+
+#footer .footer_logo a {
+	border: 0px;
+	}
+	
+#footer #copyright{
+	margin:15px auto 0 auto;
+	position:relative;
+	padding:0 100px 20px 10px;
+	text-align:left;
+	clear:both;
+	}
+	
+#footer #copyright ul {margin:0px;padding:0 10px;display:inline;}
+#footer #copyright ul li{display:inline;}
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Basic layout classes
+	Filename:		layout.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+/*	-------------------------------------------------------------
+	Background color classes
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+.bgcolcream, .bgcolscarlet{background-color: #F8F5EA;}
+.bgcolfixed {background-color: #EEE;}
+.bgcolmedgray, .bgcoldkgray{background: #e7e7d6;}
+
+/*	-------------------------------------------------------------
+	Zen Box
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+.zenboxsolid, .zenboxfixed{
+	border: 1px solid #C9C28C;
+	position:relative;
+	background-color: #FFFCE9; 
+	padding:4px 10px; 
+	}
+
+.zenboxfeature  { 
+	border: 1px dashed #C9C28C;
+	background-color: #FFFCE9;
+	padding:4px 10px;
+	}
+
+/* Forms */
+		
+form select option{
+	padding-right: .5em;
+} 		
+
+
+/*	-------------------------------------------------------------
+	Main Content Area Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#container div.clear .mainwrapper, #container div.clear .altwrapper {
+	width: 720px;
+	}
+
+#container div.clear #main_right {
+	font-size: 1.1em;
+	}
+
+#container div.clear #maincontent {
+	float: left;
+	padding: 0 10px;
+	position:relative;
+	}
+		
+#maincontent ul, #footer ul{
+	list-style: square;
+	padding: 0 0 1.1em 30px;
+	}
+	
+#maincontent ol{
+	padding: 0 0 1.1em 36px;
+	}
+
+#maincontent dd {
+	padding: 0 0 0 30px;
+	}
+
+#maincontent .col, #maincontent .one_col{
+	width:220px;
+	padding:0 10px;
+	float:left;
+	position:relative;
+	}
+
+#maincontent .two_col {
+	float:left;
+	width:460px;
+	padding:0 10px;
+	}
+
+#maincontent .three_col {
+	float:left;
+	width:700px;
+	padding:0 10px;
+	}
+
+#maincontent .col_half{
+	width:100px;
+	padding:0 10px;
+	float:left;
+	position:relative;
+	}
+
+#maincontent .left {padding-left:0;float:left;}
+
+#maincontent .right {padding-right:0;float:right;}
+
+#maincontent .clear{clear:both;}
+
+#container div.clear #maincontent .clear, #container div.clear #maincontent .clr {
+	clear:both;
+	margin:0;
+	padding:0;
+	min-height:0;
+	width:auto;
+	height:auto;
+	background:none;
+	}
+
+#maincontent table th{text-align:center;}
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Shelf styles
+	Filename:		shelf.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+/*	-------------------------------------------------------------
+	Base Shelf Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#shelf {
+	position:absolute;
+	z-index:1000;
+	width:100%;
+	min-width:988px;
+	left:0;
+	margin-top:0;
+	text-align:left;
+	}
+	
+#shelf #toolcontainer {
+	width:100%;
+	background:#545654;
+	margin-top:-2px;
+	list-style:inside;
+	}
+	
+#tabhandle, #sitetools {
+	width:980px;
+	margin:0px auto;
+	}
+	
+#sitetools, #tabhandle {
+	position:relative;
+	}
+
+#toolcontainer img {
+	border:none;
+	}
+
+.toolResultsMask {
+	overflow: hidden; 
+	position: relative; 
+	width: 220px;
+	}
+
+.toolResults {
+	position: relative;
+	margin-top:0px;
+	width: 190px;
+	}
+
+#shelf .scrollButton{
+	position: absolute;
+	right: 0px;
+	cursor: pointer;
+	}
+
+/*	-------------------------------------------------------------
+	Shelf Button Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#alertbox {padding:4px;border:1px solid #690713;
+ 	border-color:#e21f1f #690713 #690713 #e21f1f;width:600px;top:0;left:0;margin:20px 0 0 190px;z-index:99999999;position:absolute;background-color:#CC0000;}
+#toolcontainer{position:relative;}
+#alertboxContent{line-height:1.2;}
+#alertboxContent h1{background:#860615;font-size:1.4em;padding:4px;margin-bottom:2px;}
+#alertbox a#closeAlert{position:absolute;top:0;right:0;font-size:0.9em;margin:6px 8px 0 0;}
+
+/*	-------------------------------------------------------------
+	Shelf Button Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/	
+#shelf ul#shelf_button{
+	list-style:none;
+	position:absolute;
+	z-index:1000;
+	right:0;
+	top:0;
+	margin:0;
+	width:184px;
+	height:23px;
+	background:transparent url(/ucomm/templatedependents/templatecss/images/shelf.png) no-repeat;}
+		
+	
+#shelf ul.current li a#cam{
+	background:transparent url(/ucomm/templatedependents/templatecss/images/up.gif) no-repeat 25px 6px;
+	padding-left:20px;
+	}	
+			
+#shelf ul#shelf_button li{
+	float:left;
+	text-indent:-9999em;
+	}
+		
+#shelf ul#shelf_button li a{
+	display:block;
+	background:none;
+	height:15px;
+	}
+
+#shelf ul#shelf_button li a#cal{margin-left:22px;width:10px;}
+#shelf ul#shelf_button li a#cam{margin-left:8px;width:18px;}
+#shelf ul#shelf_button li a#finder{margin-left:6px;width:32px;}
+#shelf ul#shelf_button li a#weather{margin-left:3px;width:42px;}
+
+#shelf #webcam a#closeshelf{
+	display:block;
+	width:18px;
+	height:14px;
+	border:none;
+	position:absolute;
+	padding:0 0 0 0;
+	margin:10px 10px 0 0;
+	top:0;right:0;
+	text-indent:-9999px;
+	background:url(/ucomm/templatedependents/templatecss/images/shelf_close.gif) no-repeat left top;
+	}
+
+#shelf #webcam a#closeshelf:hover{
+	background-position:-18px 0;
+}
+
+#tooltab {
+	width:100%;
+	top:35px;
+	left:0px;
+	}
+
+#shelf, #shelf a {
+color:#FFF;
+}
+
+#sitetools {
+	width:960px;
+	padding:0 10px;
+	margin:0px auto;
+	height:300px;
+	}
+
+#sitetools .tool {
+	float:left;
+	margin-top:30px;
+	width:220px;
+	padding:0 10px;
+	height:250px;
+	}
+	
+#sitetools a{
+	text-decoration:none;
+	background: url(/ucomm/templatedependents/templatecss/images/dottWhite.gif) repeat-x bottom;
+}
+			
+#sitetools h3 {
+	font-size: 16px;
+	margin-bottom: 15px;
+	text-align:left;
+	}
+
+#sitetools h4{
+	font-size:15px;
+	color:#eee;
+	font-weight:bold;
+	letter-spacing:0;
+	}
+
+
+
+/*	-------------------------------------------------------------
+	People Finder Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/		
+#peoplefinder input{
+	width:196px;
+	padding:2px;
+	border:1px solid #353333;
+	background:#666;
+	}
+
+#peoplefinder input:focus{
+	background:#eee;
+	}
+
+#peoplefinder {
+	position:relative;
+	}
+
+#peoplefinder #pfprogress {
+	position:absolute;
+	left:8px;
+	top:75px;
+	}
+
+#peoplefinder ul{list-style:none;}
+#peoplefinder ul li{padding:6px;}
+#peoplefinder ul li.alt{background:#666;border-bottom:1px solid #4f4f4f;border-top:1px solid #4f4f4f;}
+#peoplefinder .cNav{text-align:right;letter-spacing:-2px;}
+#peoplefinder .cNav a{margin-left:4px;}
+#peoplefinder .fn{float:left;font-weight:bold;margin-right:4px;}
+#peoplefinder .eppa, #peoplefinder .title{font-size:0.8em;}
+#peoplefinder .cInfo{margin-left:10px;}
+
+#upArrowPF {
+	z-index: 2;
+	top: 0px;
+	}
+
+#dragButtonPF {
+	z-index: 100;
+	}
+
+#downArrowPF {
+	z-index: 2; 
+	bottom: 0px;
+	}
+
+#trackBarPF {
+	top: 18px;
+	}
+
+#trackBarPF img{
+	height: 168px;
+	width: 18px;
+	}
+
+#pfResultsMask.toolResultsMask {
+	margin-top: 10px;
+	height: 168px;
+	}
+
+/*search result*/
+p.ppl_Sresult{
+	margin:0 0 0 0;
+	padding:5px 4px;
+	border-top:1px solid #3c3c3c;
+	}
+	
+p.ppl_Sresult.alt{
+	background:#474947;
+	}
+	
+hr.ppl_Sresult_line{
+	display:none;
+	height:0px;
+	}
+
+
+/*	-------------------------------------------------------------
+	Webcam Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/		
+#webcam .toolcontent img {
+	width:216px;
+	height:162px;margin:0 auto;
+	border:2px solid #FFF;
+	}
+
+#webcam div {
+	padding:0px;
+	overflow:hidden;
+	}
+
+#webcam{
+	text-align:center;
+	}
+	
+#webcam ul{
+	border-bottom:1px solid #999;
+	clear:both;
+	font-size:10px;
+	list-style:none;
+	line-height:normal;
+	padding:0 0 21px 0;
+	margin:6px 0 0 0;
+	}
+
+#webcam ul li{
+	display:inline;
+	float:left;
+	border:1px solid #999;
+	margin:0 0 0 3px;
+	}
+
+#webcam ul li.current{
+	border-bottom:1px solid #545654;
+	}
+
+#webcam ul li a{
+	display:block;
+	background:none;
+	padding:4px 0;
+	width:65px;
+	margin:0 2px 0 0;
+	}
+
+#webcam ul li a:hover, #webcam ul li a:focus{
+	color:#ccc!important;
+	}			
+
+#webcam #camcontent{
+	float:right;
+	padding:10px 0 0 0;
+	text-align:center;
+	}
+	
+
+/*	-------------------------------------------------------------
+	Calendar Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/	
+#calcontent{
+	text-align:left;
+	color:white;
+	}
+
+#calcontent h2{
+	color:#FFFFFF;
+	padding-bottom:20px;
+	}
+	
+#calcontent abbr:after{
+	content:'';
+	}
+			
+.dtstart, .dtend, .dtstamp{
+	border:none;
+	}
+			
+#calendar .sec_main{
+	background-position:0 3px;
+	position:relative;
+	}
+
+#upArrowCal {
+	z-index: 2;
+	top: 0px;
+	}
+
+#dragButtonCal {
+	z-index: 100;
+	}
+
+#downArrowCal {
+	z-index: 2; 
+	bottom: 0px;
+	}
+
+#trackBarCal {
+	top: 18px;
+	}
+
+#trackBarCal img{
+	height: 184px;
+	width: 18px;
+	}
+
+#calcontent.toolResultsMask {
+	margin-top: 10px;
+	height: 220px;
+	}
+
+#shelf .toolResults .day_cal table{
+	border-collapse:collapse;	
+	padding:0 25px 0 0;
+	}
+	
+#shelf #sitetools .day_cal th a{
+	border-bottom:none;
+	background:none
+	}
+
+#shelf .day_cal tr.alt{
+	background:#474947;
+	}
+
+#shelf .day_cal tr:hover{
+	background:none;
+	}
+
+#shelf .day_cal th{
+	background:#3a3838;
+	border-bottom:none;
+	padding:3px;
+	}
+
+#shelf .day_cal{
+	margin-top:0px;
+	}
+
+#shelf .day_cal td{
+	padding:6px 0;margin:0;
+	vertical-align:top;
+	border-top:1px solid #3c3c3c;
+	}
+	
+#shelf .day_cal .vevent .date {
+	font-size:0px;
+	}
+
+#shelf .day_cal .vevent .dtstart {
+	font-size:10px;
+	}
+
+#shelf .day_cal h4 {
+	font-size:1.2em;
+	}
+
+#shelf .day_cal .dtend,
+#shelf .day_cal .permalink,
+#shelf .day_cal #feeds,
+#shelf .day_cal #day_nav,
+#shelf .day_cal .description{
+	display:none;
+	}
+			
+/* How to calculate sizes:
+For .toolResultsMask
+Overall width 220 --- constant
+Overall height 200 --- changes from tool to tool
+arrow boxes 18x18 --- constant
+drag box 18x25 --- constant
+dragHeight = 25 --- constant
+trackHeight = (overall height) - 2 x (arrow boxes height)  --- changes from tool to tool
+trackHeight = 200 - 2x18 = 164
+width for .toolResults - constant set at 190
+(overall width) - (track width)
+220 - 18 = 202 - a bit more to make it look nice
+The following are id's of things - so the need to be unique
+trackObj, upObj, downObj ,dragObj, contentMaskObj, contentObj
+
+Note if the trackHeight is changed, the trackBar image must be changed along with the parameter in the 
+function that calls the creation of the scrollbar in script in shelf.main.js
+*/
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	hCard/vCard formating
+	Filename:		hcard.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+/*	-------------------------------------------------------------
+	base vcard formating info
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+.vcard{
+}
+
+/* Full Name */
+.fn, .org{
+	display: block;
+}
+
+.fn{
+	font-size: 1.2em;	
+}
+
+/* Job title for faculty/staff
+Year and major for students */
+.title{
+	font-style: oblique;
+}
+
+/* University name */
+.organization-name, .organization-unit{
+	display: block;
+}
+
+/* Only for faculty/staff */
+.organization-unit{
+	font-style: oblique;
+}
+
+/* address formating */
+.adr{
+	margin-left: 10px;
+}
+
+.locality:after{
+	content: ", ";
+}	
+	
+.street-address, .post-office-box {
+	display: block;
+}
+
+/* Stupid IE */
+.post-office-box:before{
+	content: "P.O. Box ";
+}
+
+/* phone formating */
+.tel{
+	margin-left: 10px;
+	display: block;
+}
+
+/* type formating */
+.type:after{
+	content: ": ";
+}
+
+.vcard span.email {
+	display:block;
+}
+
+
+/* Peoplefinder specific */
+
+/* We want to hide the type of address/phone number by default */
+#peoplefinder .type{
+	display: none;
+}
+
+#peoplefinder #workAdr:before{
+	content: "Local address:";
+	margin-left: -10px;
+}
+
+
+#peoplefinder #homeAdr:before{
+	content: "Permanent:";
+	margin-left: -10px;
+}
+
+
+#peoplefinder .country-name{
+	display: none;
+}
+
+#peoplefinder span.email{
+	display:block;
+}
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Current weather conditions formating
+	Filename:		weather.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+.weathertempf{
+	font-size:35px;
+	font-style:normal;
+	}
+
+.weathertempc, .weatherconditions, .weatherasof{
+	font-style:normal;
+	}
+	
+.weatherforecast{
+	padding-top:8px;
+	padding-bottom:8px;
+	font-style:italic;
+	}
+
+#upArrowWeather {
+	z-index: 2;
+	top: 0px;
+	}
+
+#dragButtonWeather {
+	z-index: 100;
+	}
+
+#downArrowWeather {
+	z-index: 2; 
+	bottom: 0px;
+	}
+
+#trackBarWeather {
+	top: 18px;
+	}
+
+#trackBarWeather img{
+	height: 184px;
+	width: 18px;
+	}
+
+#weatherresults{
+	padding-top:10px;
+	}
+
+#weatherresults a.external {
+	padding-right: 13px;
+	background: url(/ucomm/templatedependents/templatecss/images/external_link.gif) center right no-repeat;
+	}
+
+#weathercontent.toolResultsMask {height: 220px;}
+	/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Global styles
+	Filename:		globalstyle.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+
+#maincontent ul.splashnav{
+	list-style:none;
+	padding:0;
+	}
+
+#maincontent ul.splashnav li{
+	background:url(/ucomm/templatedependents/templatecss/images/dott.gif) repeat-x left bottom;
+	padding: 4px 0;
+	line-height:normal;
+	}
+	
+#maincontent ul.splashnav li a{
+	padding:0 0 0 8px;
+	background:url(/ucomm/templatedependents/templatecss/images/splash_dott.gif) no-repeat 0 4px;
+	}
+	
+a.imagelink, a#leftRandomPromoAnchor, #footer a.imagelink{
+	background:none;
+	}/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Classes for images with and without borders
+	Filename:		images.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+/*	-------------------------------------------------------------
+	Image Box
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/			
+
+.image_large{
+	margin: 0 0 10px 0;
+	padding:10px 0 0 0;
+	position:relative;
+	text-align: center;
+	}
+	
+.image_large_16x9{
+	margin: 0 0 10px 0;
+	padding:8px 0 0 0;
+	position:relative;
+	text-align: center;
+	}
+
+.image_medium_16x9, 
+.image_medium_4x3, 
+.image_medium_3x2, 
+.image_medium, 
+.image_small_16x9, 
+.image_small_4x3, 
+.image_small_square, 
+.image_small_tall, 
+.image_small_short,
+.image_medium,
+.image_small_4x3,
+.image_small_4x3_vertical,
+.image_small_3x2_vertical,
+.image_small_3x2,
+.image_small_square, 
+.image_small_tall, 
+.image_small_short {
+	margin: 0 0 10px 0;
+	padding:5px 0 0 0;
+	position:relative;
+	text-align: center;
+	}
+		
+	
+.image_large{background: url(/ucomm/templatedependents/templatecss/images/promo_680x210.gif) no-repeat;width: 700px;height: 242px;}
+.image_large img {width:680px;height:210px;}
+
+.image_large_16x9{background: url(/ucomm/templatedependents/templatecss/images/large_16x9.gif) no-repeat;width: 700px;height: 407px;}
+.image_large_16x9 img {width:680px;height:383px;}
+
+.image_medium{background: url(/ucomm/templatedependents/templatecss/images/promo_450x210.gif) no-repeat;width: 460px;height: 234px;}
+.image_medium img {width:450px;height:210px;}
+
+.image_medium_16x9{background: url(/ucomm/templatedependents/templatecss/images/medium_16x9.gif) no-repeat;width: 460px;height: 277px;}
+.image_medium_16x9 img {width:450px;height:253px;}
+
+.image_medium_4x3{background: url(/ucomm/templatedependents/templatecss/images/medium_4x3.gif) no-repeat;width: 460px;height: 352px;}
+.image_medium_4x3 img {width:450px;height:338px;}
+
+.image_medium_3x2{background: url(/ucomm/templatedependents/templatecss/images/medium_3x2.gif) no-repeat;width: 460px;height: 314px;}
+.image_medium_3x2 img {width:450px;height:300px;}
+
+.image_small_square{background: url(/ucomm/templatedependents/templatecss/images/promo_210x210.gif) no-repeat;width: 220px;height: 234px;}
+.image_small_square img {width:210px;height:210px;}
+
+.image_small_16x9{background: url(/ucomm/templatedependents/templatecss/images/small_16x9.gif) no-repeat;width: 220px;height: 142px;}
+.image_small_16x9 img {width:210px;height:118px;}
+
+.image_small_tall{background: url(/ucomm/templatedependents/templatecss/images/promo_210x315.gif) no-repeat;width: 220px;height: 339px;}
+.image_small_tall img {width:210px;height:315px;}
+
+.image_small_3x2{background: url(/ucomm/templatedependents/templatecss/images/small_3x2.gif) no-repeat;width: 220px;height: 164px;}
+.image_small_3x2 img {width:210px;height:140px;}
+
+.image_small_3x2_vertical{background: url(/ucomm/templatedependents/templatecss/images/promo_210x315.gif) no-repeat;width: 220px;height: 339px;}
+.image_small_3x2_vertical img {width:210px;height:315px;}
+
+.image_small_short{background: url(/ucomm/templatedependents/templatecss/images/promo_210x80.gif) no-repeat;width: 220px;height: 104px;}
+.image_small_short img {width:210px;height:80px;}
+
+.image_small_4x3_vertical{background: url(/ucomm/templatedependents/templatecss/images/small_4x3_vertical.gif) no-repeat;width: 220px;height: 304px;}
+.image_small_4x3_vertical img {width:210px;height:280px;}
+
+.image_small_4x3{background: url(/ucomm/templatedependents/templatecss/images/promo_210x158.gif) no-repeat;width: 220px;height: 182px;}
+.image_small_4x3 img {width:210px;height:158px;}
+
+
+.image_large a img, 
+.image_medium a img {
+	width:auto;
+	height:auto;
+	}
+	
+#imagetag, .imagetag {
+	width:auto;
+	height:auto;
+	}
+
+.image_large img{
+	margin: 0 auto;
+	}
+
+.caption {
+	margin-top: -17px;
+	line-height: normal;
+	color: #555;
+	font-size: 75%;
+	text-align: justify;
+}
+
+.image_large a.imagetag {
+	position: absolute;
+	background: none;
+	top:0;
+	left:0;
+	}
+	
+/* without shadow container image */
+img.right_image {
+	float: right;
+	margin: 3px 0 0 7px;
+	padding: 3px;
+	border: 1px solid #ccc;
+	}
+
+img.left_image {
+	float: left;
+	margin: 3px 7px 0 0;
+	padding: 3px;
+	border: 1px solid #ccc;
+	}
+	
+img.center_image {
+	float:none;
+	margin: 3px 7px 0 0;
+	padding: 3px;
+	border: 1px solid #ccc;
+	}
+	
+	/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Basic typographic formating classes
+	Filename:		typography.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+/* Old things we need to define to be something */
+.sserifstoryhead, .sserifstoryheadred {font-size: 1.2em;}
+
+/* Headers */
+
+#maincontent h1, #maincontent h2, #maincontent h3{
+	line-height:1.2;
+	font-weight: normal;
+	padding-top: .2em;
+	padding-bottom: .3em;
+	}
+
+#maincontent h4, #maincontent h5, #maincontent h6{
+	line-height:1.2;
+	font-weight: normal;
+	padding-top: .1em;
+	padding-bottom: .2em;	
+	}
+
+#maincontent h1{
+	font-size: 1.7em;
+	}
+		
+#maincontent h2{
+	font-size: 1.5em;
+	}
+		
+#maincontent h3{
+	font-size: 1.4em;
+	}
+
+#maincontent h4{
+	font-size: 1.3em;
+	}
+
+#maincontent h5{
+	font-size: 1.2em;
+	}
+
+#maincontent h6{
+	font-size: 0.9em;
+	}
+
+#maincontent .sec_main{
+	background: url(/ucomm/templatedependents/templatecss/images/heading.gif);
+	padding-left: 0.7em;
+	background-position: left .74ex;
+	padding-top: 3px;
+	padding-bottom: 4pt;
+	background-repeat: no-repeat;
+	}
+
+#maincontent .sec_header {
+	background-color: #e3e3e3;
+	background: #e3e3e3 url(/ucomm/templatedependents/templatecss/images/heading.gif) left center no-repeat;
+	background-position: 6px .90ex;
+	border-left: 6px #434443 solid;
+	padding-left: 20px;
+	padding-bottom: 4pt;
+	padding-top: 3px;
+	margin-bottom: 8px;
+	font: 1.6em Verdana,Helvetica,sans-serif;
+	color: #353535;
+	letter-spacing: -1px;
+}
+
+/* sup and sub */
+sub, sup {
+	line-height:0;
+	}
+/* abbr and acronym */		
+		
+abbr, acronym { text-decoration:none; border-bottom:none;}
+
+abbr:after, acronym:after {
+	font-size: 67%;
+	content: "?";
+	vertical-align:super;
+	display: inline;
+	float: none;
+	color: #c60202;
+	}
+
+/* pre and code */	
+
+.code{
+	font-size: 90%;
+	font-weight: bold;
+	font-family:"Courier New", Courier, mono;
+	}
+
+pre {
+	font-family:"Courier New", Courier, mono;
+	font-size: 95%;
+	}
+	
+
+
+/*	-------------------------------------------------------------
+	Text coloring
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/	
+
+.highlight-navy, .sserifstoryheadnavy{color:#005387;}
+
+.highlight-green{color:#509B09;}
+
+.highlight-red, .sserifstoryheadred{color:#990000;}
+
+		/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Classes to add background images for mime types
+	Filename:		typography.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+/* mime-type like */
+a.external {
+	padding-right: 13px;
+	background: url(/ucomm/templatedependents/templatecss/images/external_link.gif) center right no-repeat;
+	}
+
+a.mail-message-new,
+a.text-vcard,
+a.application-pdf,
+a.application-certificate,
+a.application-x-executable,
+a.audio-x-generic,
+a.font-x-generic,
+a.image-x-generic,
+a.package-x-generic,
+a.text-html,
+a.text-x-generic,
+a.text-x-generic-template,
+a.text-x-script,
+a.video-x-generic,
+a.x-office-address-book,
+a.x-office-calendar,
+a.x-office-document,
+a.x-office-document-template,
+a.x-office-drawing,
+a.x-office-drawing-template,
+a.x-office-presentation,
+a.x-office-presentation-template,
+a.x-office-spreadsheet,
+a.x-office-spreadsheet-template,
+a.application-msword,
+a.application-vnd-ms-excel,
+a.application-vnd-ms-powerpoint,
+a.application-zip,
+a.feed-icon
+	{
+	padding: 3px 18px 0px 0px;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	}
+
+a.mail-message-new{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/mail-message-new.gif);}
+a.text-vcard{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/text-vcard.gif);}					
+a.application-pdf{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/application-pdf.gif);}
+a.application-certificate{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/application-certificate.gif);}
+a.application-x-executable{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/application-x-executable.gif);}
+a.audio-x-generic{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/audio-x-generic.gif);}
+a.font-x-generic{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/font-x-generic.gif);}
+a.image-x-generic{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/image-x-generic.gif);}
+a.package-x-generic{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/package-x-generic.gif);}
+a.text-html{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/text-html.gif);}
+a.text-x-generic{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/text-x-generic.gif);}
+a.text-x-generic-template{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/text-x-generic-template.gif);}
+a.text-x-script{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/text-x-script.gif);}
+a.video-x-generic{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/video-x-generic.gif);}
+a.x-office-address-book{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/x-office-address-book.gif);}
+a.x-office-calendar{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/x-office-calendar.gif);}
+a.x-office-document{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/x-office-document.gif);}
+a.x-office-document-template{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/x-office-document-template.gif);}
+a.x-office-drawing{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/x-office-drawing.gif);}
+a.x-office-drawing-template{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/x-office-drawing-template.gif);}
+a.x-office-presentation{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/x-office-presentation.gif);}
+a.x-office-presentation-template{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/x-office-presentation-template.gif);}
+a.x-office-spreadsheet{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/x-office-spreadsheet.gif);}
+a.x-office-spreadsheet-template{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/x-office-spreadsheet-template.gif);}
+a.application-msword{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/application-msword.gif);}
+a.application-vnd-ms-excel{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/application-vnd-ms-excel.gif);}
+a.application-vnd-ms-powerpoint{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/application-vnd-ms-powerpoint.gif);}
+a.application-zip{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/application-zip.gif);}
+a.feed-icon{background-image: url(/ucomm/templatedependents/templatecss/images/mimetypes/feed-icon.gif);}

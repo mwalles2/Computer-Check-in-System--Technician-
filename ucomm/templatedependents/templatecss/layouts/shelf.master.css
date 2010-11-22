@@ -1,0 +1,429 @@
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Shelf styles
+	Filename:		shelf.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+/*	-------------------------------------------------------------
+	Base Shelf Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#shelf {
+	position:absolute;
+	z-index:1000;
+	width:100%;
+	min-width:988px;
+	left:0;
+	margin-top:0;
+	text-align:left;
+	}
+	
+#shelf #toolcontainer {
+	width:100%;
+	background:#545654;
+	margin-top:-2px;
+	list-style:inside;
+	}
+	
+#tabhandle, #sitetools {
+	width:980px;
+	margin:0px auto;
+	}
+	
+#sitetools, #tabhandle {
+	position:relative;
+	}
+
+#toolcontainer img {
+	border:none;
+	}
+
+.toolResultsMask {
+	overflow: hidden; 
+	position: relative; 
+	width: 220px;
+	}
+
+.toolResults {
+	position: relative;
+	margin-top:0px;
+	width: 190px;
+	}
+
+#shelf .scrollButton{
+	position: absolute;
+	right: 0px;
+	cursor: pointer;
+	}
+
+/*	-------------------------------------------------------------
+	Shelf Button Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#alertbox {padding:4px;border:1px solid #690713;
+ 	border-color:#e21f1f #690713 #690713 #e21f1f;width:600px;top:0;left:0;margin:20px 0 0 190px;z-index:99999999;position:absolute;background-color:#CC0000;}
+#toolcontainer{position:relative;}
+#alertboxContent{line-height:1.2;}
+#alertboxContent h1{background:#860615;font-size:1.4em;padding:4px;margin-bottom:2px;}
+#alertbox a#closeAlert{position:absolute;top:0;right:0;font-size:0.9em;margin:6px 8px 0 0;}
+
+/*	-------------------------------------------------------------
+	Shelf Button Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/	
+#shelf ul#shelf_button{
+	list-style:none;
+	position:absolute;
+	z-index:1000;
+	right:0;
+	top:0;
+	margin:0;
+	width:184px;
+	height:23px;
+	background:transparent url(/ucomm/templatedependents/templatecss/images/shelf.png) no-repeat;}
+		
+	
+#shelf ul.current li a#cam{
+	background:transparent url(/ucomm/templatedependents/templatecss/images/up.gif) no-repeat 25px 6px;
+	padding-left:20px;
+	}	
+			
+#shelf ul#shelf_button li{
+	float:left;
+	text-indent:-9999em;
+	}
+		
+#shelf ul#shelf_button li a{
+	display:block;
+	background:none;
+	height:15px;
+	}
+
+#shelf ul#shelf_button li a#cal{margin-left:22px;width:10px;}
+#shelf ul#shelf_button li a#cam{margin-left:8px;width:18px;}
+#shelf ul#shelf_button li a#finder{margin-left:6px;width:32px;}
+#shelf ul#shelf_button li a#weather{margin-left:3px;width:42px;}
+
+#shelf #webcam a#closeshelf{
+	display:block;
+	width:18px;
+	height:14px;
+	border:none;
+	position:absolute;
+	padding:0 0 0 0;
+	margin:10px 10px 0 0;
+	top:0;right:0;
+	text-indent:-9999px;
+	background:url(/ucomm/templatedependents/templatecss/images/shelf_close.gif) no-repeat left top;
+	}
+
+#shelf #webcam a#closeshelf:hover{
+	background-position:-18px 0;
+}
+
+#tooltab {
+	width:100%;
+	top:35px;
+	left:0px;
+	}
+
+#shelf, #shelf a {
+color:#FFF;
+}
+
+#sitetools {
+	width:960px;
+	padding:0 10px;
+	margin:0px auto;
+	height:300px;
+	}
+
+#sitetools .tool {
+	float:left;
+	margin-top:30px;
+	width:220px;
+	padding:0 10px;
+	height:250px;
+	}
+	
+#sitetools a{
+	text-decoration:none;
+	background: url(/ucomm/templatedependents/templatecss/images/dottWhite.gif) repeat-x bottom;
+}
+			
+#sitetools h3 {
+	font-size: 16px;
+	margin-bottom: 15px;
+	text-align:left;
+	}
+
+#sitetools h4{
+	font-size:15px;
+	color:#eee;
+	font-weight:bold;
+	letter-spacing:0;
+	}
+
+
+
+/*	-------------------------------------------------------------
+	People Finder Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/		
+#peoplefinder input{
+	width:196px;
+	padding:2px;
+	border:1px solid #353333;
+	background:#666;
+	}
+
+#peoplefinder input:focus{
+	background:#eee;
+	}
+
+#peoplefinder {
+	position:relative;
+	}
+
+#peoplefinder #pfprogress {
+	position:absolute;
+	left:8px;
+	top:75px;
+	}
+
+#peoplefinder ul{list-style:none;}
+#peoplefinder ul li{padding:6px;}
+#peoplefinder ul li.alt{background:#666;border-bottom:1px solid #4f4f4f;border-top:1px solid #4f4f4f;}
+#peoplefinder .cNav{text-align:right;letter-spacing:-2px;}
+#peoplefinder .cNav a{margin-left:4px;}
+#peoplefinder .fn{float:left;font-weight:bold;margin-right:4px;}
+#peoplefinder .eppa, #peoplefinder .title{font-size:0.8em;}
+#peoplefinder .cInfo{margin-left:10px;}
+
+#upArrowPF {
+	z-index: 2;
+	top: 0px;
+	}
+
+#dragButtonPF {
+	z-index: 100;
+	}
+
+#downArrowPF {
+	z-index: 2; 
+	bottom: 0px;
+	}
+
+#trackBarPF {
+	top: 18px;
+	}
+
+#trackBarPF img{
+	height: 168px;
+	width: 18px;
+	}
+
+#pfResultsMask.toolResultsMask {
+	margin-top: 10px;
+	height: 168px;
+	}
+
+/*search result*/
+p.ppl_Sresult{
+	margin:0 0 0 0;
+	padding:5px 4px;
+	border-top:1px solid #3c3c3c;
+	}
+	
+p.ppl_Sresult.alt{
+	background:#474947;
+	}
+	
+hr.ppl_Sresult_line{
+	display:none;
+	height:0px;
+	}
+
+
+/*	-------------------------------------------------------------
+	Webcam Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/		
+#webcam .toolcontent img {
+	width:216px;
+	height:162px;margin:0 auto;
+	border:2px solid #FFF;
+	}
+
+#webcam div {
+	padding:0px;
+	overflow:hidden;
+	}
+
+#webcam{
+	text-align:center;
+	}
+	
+#webcam ul{
+	border-bottom:1px solid #999;
+	clear:both;
+	font-size:10px;
+	list-style:none;
+	line-height:normal;
+	padding:0 0 21px 0;
+	margin:6px 0 0 0;
+	}
+
+#webcam ul li{
+	display:inline;
+	float:left;
+	border:1px solid #999;
+	margin:0 0 0 3px;
+	}
+
+#webcam ul li.current{
+	border-bottom:1px solid #545654;
+	}
+
+#webcam ul li a{
+	display:block;
+	background:none;
+	padding:4px 0;
+	width:65px;
+	margin:0 2px 0 0;
+	}
+
+#webcam ul li a:hover, #webcam ul li a:focus{
+	color:#ccc!important;
+	}			
+
+#webcam #camcontent{
+	float:right;
+	padding:10px 0 0 0;
+	text-align:center;
+	}
+	
+
+/*	-------------------------------------------------------------
+	Calendar Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/	
+#calcontent{
+	text-align:left;
+	color:white;
+	}
+
+#calcontent h2{
+	color:#FFFFFF;
+	padding-bottom:20px;
+	}
+	
+#calcontent abbr:after{
+	content:'';
+	}
+			
+.dtstart, .dtend, .dtstamp{
+	border:none;
+	}
+			
+#calendar .sec_main{
+	background-position:0 3px;
+	position:relative;
+	}
+
+#upArrowCal {
+	z-index: 2;
+	top: 0px;
+	}
+
+#dragButtonCal {
+	z-index: 100;
+	}
+
+#downArrowCal {
+	z-index: 2; 
+	bottom: 0px;
+	}
+
+#trackBarCal {
+	top: 18px;
+	}
+
+#trackBarCal img{
+	height: 184px;
+	width: 18px;
+	}
+
+#calcontent.toolResultsMask {
+	margin-top: 10px;
+	height: 220px;
+	}
+
+#shelf .toolResults .day_cal table{
+	border-collapse:collapse;	
+	padding:0 25px 0 0;
+	}
+	
+#shelf #sitetools .day_cal th a{
+	border-bottom:none;
+	background:none
+	}
+
+#shelf .day_cal tr.alt{
+	background:#474947;
+	}
+
+#shelf .day_cal tr:hover{
+	background:none;
+	}
+
+#shelf .day_cal th{
+	background:#3a3838;
+	border-bottom:none;
+	padding:3px;
+	}
+
+#shelf .day_cal{
+	margin-top:0px;
+	}
+
+#shelf .day_cal td{
+	padding:6px 0;margin:0;
+	vertical-align:top;
+	border-top:1px solid #3c3c3c;
+	}
+	
+#shelf .day_cal .vevent .date {
+	font-size:0px;
+	}
+
+#shelf .day_cal .vevent .dtstart {
+	font-size:10px;
+	}
+
+#shelf .day_cal h4 {
+	font-size:1.2em;
+	}
+
+#shelf .day_cal .dtend,
+#shelf .day_cal .permalink,
+#shelf .day_cal #feeds,
+#shelf .day_cal #day_nav,
+#shelf .day_cal .description{
+	display:none;
+	}
+			
+/* How to calculate sizes:
+For .toolResultsMask
+Overall width 220 --- constant
+Overall height 200 --- changes from tool to tool
+arrow boxes 18x18 --- constant
+drag box 18x25 --- constant
+dragHeight = 25 --- constant
+trackHeight = (overall height) - 2 x (arrow boxes height)  --- changes from tool to tool
+trackHeight = 200 - 2x18 = 164
+width for .toolResults - constant set at 190
+(overall width) - (track width)
+220 - 18 = 202 - a bit more to make it look nice
+The following are id's of things - so the need to be unique
+trackObj, upObj, downObj ,dragObj, contentMaskObj, contentObj
+
+Note if the trackHeight is changed, the trackBar image must be changed along with the parameter in the 
+function that calls the creation of the scrollbar in script in shelf.main.js
+*/

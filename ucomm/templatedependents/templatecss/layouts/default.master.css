@@ -1,0 +1,605 @@
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Main styles
+	Filename:	default.master.css
+	Date:		June 22, 2006
+	-------------------------------------------------------------	*/
+
+/*	-------------------------------------------------------------
+	Base Body Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+* {
+	margin: 0;
+	padding: 0;
+	}
+
+a {
+	outline: none;
+	color: #900;
+	text-decoration: none;
+	background: url(/ucomm/templatedependents/templatecss/images/dott.gif) repeat-x bottom;
+	padding: 0 0 2px 0;
+	}
+
+a:hover {
+	color: #c00;
+	}
+	
+a:focus{
+	color: #c00!important;
+	}
+
+p {
+	margin: 0 0 1.1em 0;
+	}
+
+img {
+	border: none;
+	}
+
+body {
+	text-align: center;
+	font: 71%/150% "Lucida Grande",Verdana,Arial;
+	color: #434343;
+	}
+
+
+
+/*	-------------------------------------------------------------
+	Heading Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+#sec_nav h4, p.sec_main{
+	color: #353535;
+	font-weight: normal;
+	letter-spacing: -1px;
+	font: 1.6em Verdana,Helvetica,sans-serif;
+	}
+
+#right_area dt, #navlinks ul li, #leftcollinks h3, #footer h3 {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-weight:normal;
+	letter-spacing: -1px;
+	}
+
+#leftcollinks h3, #right_area dt, #navlinks ul li{
+	font-size: 1.4em;
+	}
+
+/*	-------------------------------------------------------------
+	Container/Skeleton Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+#header div.clear, #red-header div.clear{
+	margin: 0 auto;
+	width: 980px;
+	height:0;
+	z-index:3000;
+	position: relative;
+	text-align: left;
+	}
+	
+#container {
+	min-width: 988px;
+	text-align: left;
+	margin: -4px 0 0 0;
+	border-top: 2px solid #333;
+	background: #eee;
+	}
+
+#container div.clear:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	}
+	
+#container div.clear {
+	margin: 0 auto;
+	padding:0 14px 10px 14px;
+	min-height:768px;
+	width: 960px;
+	background: url(/ucomm/templatedependents/templatecss/images/bg_shadow.png) repeat-y;
+	text-align: left;
+	}
+	
+/*	-------------------------------------------------------------
+	Header Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#header {
+	min-width:988px;
+	background-color: #6e6e6e;
+	}
+
+#header:after {
+	content: ".";
+	display: block;
+	height:0;
+	clear: both;
+	visibility: hidden;
+	}
+
+#header ul {
+	width: 63%;
+	float: left;
+	letter-spacing: -0.05em;
+	list-style: none;
+	padding: 0 0 0 83px;
+	}
+
+#header ul li a {
+	display: block;
+	background: none;
+	color: #fff;
+	padding: 6px 8px 5px;
+	border-left: 1px solid #6e6e6e;
+	border-right: 1px solid #6e6e6e;
+	}
+
+#header ul li a:hover {
+	background-color: #434343;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+	}
+
+#header img#logo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: -5px 0 0 -20px;
+	z-index: 2000;
+	}
+
+#header div.clear #unlsearch {
+	float: right;
+	width: 27%;
+	text-align: right;
+	padding: 6px 0 0 0;
+	color: #fff;
+	}
+
+#unlsearch fieldset {
+	border:0px;
+	}
+
+#unlsearch input, #unlsearch select, #quicklinks select{
+	font-size: 0.9em;
+	margin: 0 2px 0 0;
+	border: 1px solid #333;
+	border-color: #333 #fff #fff #333;
+	}
+
+#unlsearch select option {padding-right:0;}
+
+#quicklinks select {width:173px;}
+
+#unlsearch a.go, #quicklinks a.go {
+	padding-right:13px;
+	background: url(/ucomm/templatedependents/templatecss/images/go.gif) no-repeat;
+	}
+	
+#unlsearch a.go span, #quicklinks a.go span {
+	visibility:hidden;
+	}
+
+/*	-------------------------------------------------------------
+	Second level (red) header Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#red-header {
+	min-width:988px;
+	height: 40px;
+	background:url(/ucomm/templatedependents/templatecss/images/red_head.gif) repeat-x;
+	border-top: 4px solid #333;
+	z-index: 1;
+	}
+
+#red-header h1 {
+	width: 323px;
+	height: 32px;
+	margin: 1px 0 0 82px;
+	background: url(/ucomm/templatedependents/templatecss/images/unl.gif) no-repeat 0 3px;
+	text-indent: -9999em;
+	}
+	
+/*	-------------------------------------------------------------
+	Quicklinks
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#quicklinks{position:absolute;
+	right:0;
+	top:0;
+	z-index:4000;
+	margin:42px 0 0 0;
+	}
+	
+/*	-------------------------------------------------------------
+	Breadcrumbs Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#breadcrumbs {
+	position:relative;
+	float: left;
+	margin: 8px 0 0 91px;
+	}
+
+#breadcrumbs ul {
+	list-style: none;
+	}
+
+#breadcrumbs ul li {
+	display: inline;
+	background: url(/ucomm/templatedependents/templatecss/images/bullet_breadcrumb.gif) no-repeat;
+	background-position: 0 3px;
+	padding: 0 0 0 11px;
+	}
+
+#breadcrumbs ul li.first, #breadcrumbs ul li:first-child {
+	display: inline;
+	background: none;
+	padding: 0;
+	}
+
+#breadcrumbs ul li a {
+	background: none;
+	}
+
+/*	-------------------------------------------------------------
+	Main title Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#title{
+	padding:65px 8px 30px;
+	}
+	
+#title #titlegraphic {
+	left:0;
+	position:absolute;
+	width: auto;
+	min-height:70px;
+	}
+
+#title ul {
+	position:absolute;
+	right:0;
+	width: 400px;
+	margin: 3px 5px 0 0;
+	font-size: 1.1em;
+	z-index:100;
+	text-transform: uppercase;
+	width:400px;
+	list-style: none;
+	}
+
+#title ul li {
+	display: inline;
+	background: url(/ucomm/templatedependents/templatecss/images/bullet_altnav.gif) no-repeat;
+	background-position: 0 3px;
+	padding: 0 0 0 11px;
+	}
+
+#title ul li.first, #title ul li:first-child {
+	background: none;
+	padding: 0;
+	}
+	
+#title ul li a:hover{
+	color:#c00
+	}
+
+/*	-------------------------------------------------------------
+	Navigation Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#container div.clear #navigation {
+	float: left;
+	clear: both;
+	width: 220px;
+	padding: 0 10px 20px;
+	position: relative;
+	overflow:hidden;
+	}
+
+#navigation div#nav_end {
+	height: 92px;
+	margin: -2.7em 0 0 79px;	
+	background: transparent url(/ucomm/templatedependents/templatecss/images/nav_end.gif) no-repeat;
+	}
+
+h4#sec_nav {
+	background: #434343 url(/ucomm/templatedependents/templatecss/images/nav_head.gif) no-repeat right top;
+	padding: 5px 0 7px 15px;
+	border-bottom: 3px solid #AF0909;	
+	margin: 3px 1px 0 0;
+	color: #fff;
+	font-weight: normal;
+	letter-spacing: -1px;
+	font: 1.6em Verdana,Helvetica,sans-serif;
+	}
+
+div#navlinks {
+	display: inline;
+	font-size: 1.1em;
+	}
+
+#navlinks ul {
+	width:206px;
+	padding:0 15px 0 6px;
+	position:relative;
+	background: url(/ucomm/templatedependents/templatecss/images/nav_shadow.gif) repeat-y 14px 0;}
+
+#navlinks ul li {
+	list-style: none;
+	line-height:1.1;
+	color: #434343; 
+     		    padding: 15px 0 7px 0;
+	background: url(/ucomm/templatedependents/templatecss/images/nav_border.gif) no-repeat;
+	background-position:7px -3px;
+	}
+		
+#navlinks ul li a {
+	color: #666;
+	background: none;
+	}
+
+#navlinks ul li a:hover {
+	color: #c00;
+	}
+
+#navlinks ul li ul {
+	margin:0;
+	width:205px;
+	padding: 0 5px 5px 0;
+	background:none;
+	}
+
+#navlinks ul li ul li {
+	display: inline;
+	font-size:0.7em;
+	padding:0;
+	letter-spacing:normal;
+	line-height:1.2;
+	background:none;
+	}
+
+/*	-------------------------------------------------------------
+	Left Random Promo Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+	
+#container div.clear #navigation #leftRandomPromo a, #title ul li a {
+	background: none;
+	}
+
+#container div.clear #navigation #leftcollinks {
+	text-align: left;
+	padding: 10px 20px 0 0;
+	width: 200px;
+	}
+
+#leftcollinks ul {
+	list-style: none;
+	}
+
+
+
+
+/*	-------------------------------------------------------------
+	Misc Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+	
+p.more {
+	text-align: right;
+	font-size: 0.95em;}
+	p.more a {
+	color: #434343;
+	background:none;
+	}
+
+.skipnav, #toolbar {
+	display: none;
+	}
+
+.toggle_click {
+	text-align: right;
+	}
+	
+#showlink{
+	position:absolute;top:14px;left:0;margin:0 0 0 122px;
+	}
+
+#showlink a{
+	display:block;
+	width:58px;
+	height:13px;
+	background:url(/ucomm/templatedependents/templatecss/images/showall.gif);
+	}
+	
+#showlink a:hover{
+	background-position:0 15px;
+	}
+		
+img#wordmark{
+	width:88px;position:absolute;top:0;right:0;margin:0 10px 0 0;
+	}
+	
+img#imagetag{
+	position:absolute;top:0;left:0;
+	}
+
+img#badge{
+	position:absolute;top:-88px;left:535px;
+	}
+
+
+/*	-------------------------------------------------------------
+	SIFR Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+#title h1, #title h2{font-family:Arial,Helvetica,sans-serif;line-height:150%}
+#title h1{font-size:2.5em;color:#6E6E6E;margin-bottom:-6px}
+#title h2{font-size:2.0em;color:#2E261D;margin-top:0px}
+.sIFR-flash{visibility:visible !important;margin:0}
+.sIFR-replaced{visibility:visible !important}
+span.sIFR-alternate{position:absolute;left:0;top:0;width:0;height:0;display:block;overflow:hidden}
+.sIFR-hasFlash #titlegraphic h1,.sIFR-hasFlash #titlegraphic h2{visibility:hidden}
+
+
+/*	-------------------------------------------------------------
+	Liquid Template Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+body#liquid #header,
+body.liquid #header,
+body#liquid #red-header,
+body.liquid #red-header,
+body#liquid #shelf,
+body.liquid #shelf,
+body#liquid #container,
+body.liquid #container,
+body#liquid #footer,
+body.liquid #footer {min-width:1000px;}
+body#liquid #header div.clear,
+body.liquid #header div.clear, 
+body#liquid #red-header div.clear,
+body.liquid #red-header div.clear, 
+body#liquid #footer #footer_floater,
+body.liquid #footer #footer_floater,
+body#liquid #container div.clear,
+body.liquid #container div.clear {margin: 0;padding:0;width: 100%;}
+body#liquid #container div.clear,
+body.liquid #container div.clear {background: #fff;}
+body#liquid #footer #footer_floater,
+body.liquid #footer #footer_floater {background: #414241;}
+body#liquid #footer .footer_col,
+body.liquid #footer .footer_col {width: 21%;}
+body#liquid #tabhandle,
+body.liquid #tabhandle {width: 100%;}
+body#liquid #header img#logo,
+body.liquid #header img#logo {margin: -5px 0 0 0;}
+body#liquid #red-header h1,
+body.liquid #red-header h1 {margin: 0 0 0 102px;}
+body#liquid #header ul,
+body.liquid #header ul {padding: 0;margin-left:102px;width: 60%;}
+body#liquid #footer #copyright,
+body.liquid #footer #copyright {margin-bottom:15px;}
+body#liquid #maincontent .col,
+body.liquid #maincontent .col {width:31%}
+body#liquid #maincontent .two_col,
+body.liquid #maincontent .two_col {width:62%}
+body#liquid #breadcrumbs,
+body.liquid #breadcrumbs {margin: 9px 0 0 111px;}
+body#liquid #container div.clear .altwrapper,
+body.liquid #container div.clear .altwrapper {width: 75%;}
+body#liquid #container div.clear .mainwrapper,
+body.liquid #container div.clear .mainwrapper {width: 75%;}
+body#liquid #container div.clear #maincontent,
+body.liquid #container div.clear #maincontent {width:98%;}
+body#liquid #container div.clear #main_right,
+body.liquid #container div.clear #main_right {float: left;}
+body#liquid #quicklinks,
+body.liquid #quicklinks {margin:42px 1px 0 0;}
+body#liquid #main_right,
+body.liquid #main_right {overflow:visible;}
+		
+		
+/*	-------------------------------------------------------------
+	Document/Print Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+body#doc {
+	background:#eee;
+	margin:30px 0 10px 0;
+}
+	
+body#doc #header, body#doc #container, body#doc #red-header, body#doc #footer {
+	min-width:0;
+}
+
+body#doc #header img#logo {
+	margin: -32px 0 0 -12px;
+}
+	
+body#doc #header div.clear {
+	width:740px;
+}
+	
+body#doc #header {
+	background:#eee;
+}
+	
+body#doc #header ul, 
+body#doc #header #unlsearch, 
+body#doc #shelf, 
+body#doc #navigation, 
+body#doc #title ul, 
+body#doc #quicklinks {
+	display:none;
+}
+	
+body#doc #red-header, 
+body#doc #red-header div.clear, 
+body#doc #footer, 
+body#doc #container div.clear {
+	padding: 0 10px;
+	width: 720px;
+	margin: 0 auto;
+}
+
+body#doc #breadcrumbs {
+	margin-left: 79px;
+}
+	
+body#doc #red-header h1 {
+	margin-left: 70px;
+}
+	
+body#doc #container div.clear .mainwrapper,
+body#doc #container div.clear .altwrapper {
+	width:100%;
+}
+	
+body#doc #container div.clear {
+	width:720px;
+	background:#fff;
+}
+	
+body#doc #container {
+	border:none;
+}
+	
+body#doc #footer #footer_floater {
+	min-height: 50px;
+	padding: 0;
+	width: 720px;
+	margin: 0 auto;
+	background:none;
+}
+	
+body#doc img#wordmark {
+	margin: 0;
+}
+
+
+/*	-------------------------------------------------------------
+	Pop Up Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+body#popup #header div.clear,  body#popup #red-header div.clear,  body#popup #footer #footer_floater, body#popup #container div.clear {margin: 0;padding:0;width: 100%;}
+body#popup #header, body#popup #container, body#popup #red-header, body#popup #footer {min-width:0;}
+body#popup #header a{background:url(/ucomm/templatedependents/templatecss/images/3d_N_pop.png) no-repeat;position: absolute;left: 0;top: 0;z-index: 2000;height:50px;width:50px;}
+body#popup #container{border:none}
+body#popup #container div.clear {background: #fff;border:none;min-height:0;}
+body#popup #container div.clear #maincontent {padding:0 0 0 10px;margin:0;}
+body#popup #footer .footer_col {width: 21%;}
+body#popup #footer #footer_floater {background: #414241;}	
+body#popup #red-header{margin-top:7px;border:none;background:url(/ucomm/templatedependents/templatecss/images/shad_pop.gif) repeat-x 0 2px;}
+body#popup #titlegraphic h2, body#popup #header img#logo, body#popup #red-header h1, body#popup #header ul, body#popup #header #unlsearch, body#popup #shelf, body#popup #navigation, body#popup #breadcrumbs, body#popup #title ul, body#popup #quicklinks{
+	display:none;}
+body#popup #titlegraphic h1{position:absolute;top:0;margin:-103px 0 0 45px;}
+body#popup #title h1{font-size:2em;color:#6E6E6E;}
+body#popup #footer #copyright{margin-bottom:15px;}
+body#popup #main_right{overflow:visible;}
+body#popup #maincontent .col{width:31%}
+body#popup #maincontent .two_col {width:62%}
+body#popup #container div.clear .altwrapper, body#popup #container div.clear .mainwrapper{	margin-top:-145px;width: 98%;}
+body#popup #container div.clear #main_right, #header ul li {float: left;}
+
+
+/*	-------------------------------------------------------------
+	Positioning fixes for DW Design View
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#container div.clear #navigation, #title #titlegraphic, #container div.clear, #main_right{position:relative;}
+#main_right{overflow:hidden}

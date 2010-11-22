@@ -1,0 +1,5 @@
+Currently we embed:
+
+Basic Latin
+Punctuation
+ßàáâãäåæçèéêëìíîïñòóôõöøùúûüýÿ–—‘’“”•…∑−∕∙√∞∫ƒπ×÷±

@@ -1,0 +1,100 @@
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	hCard/vCard formating
+	Filename:		hcard.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+/*	-------------------------------------------------------------
+	base vcard formating info
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+.vcard{
+}
+
+/* Full Name */
+.fn, .org{
+	display: block;
+}
+
+.fn{
+	font-size: 1.2em;	
+}
+
+/* Job title for faculty/staff
+Year and major for students */
+.title{
+	font-style: oblique;
+}
+
+/* University name */
+.organization-name, .organization-unit{
+	display: block;
+}
+
+/* Only for faculty/staff */
+.organization-unit{
+	font-style: oblique;
+}
+
+/* address formating */
+.adr{
+	margin-left: 10px;
+}
+
+.locality:after{
+	content: ", ";
+}	
+	
+.street-address, .post-office-box {
+	display: block;
+}
+
+/* Stupid IE */
+.post-office-box:before{
+	content: "P.O. Box ";
+}
+
+/* phone formating */
+.tel{
+	margin-left: 10px;
+	display: block;
+}
+
+/* type formating */
+.type:after{
+	content: ": ";
+}
+
+.vcard span.email {
+	display:block;
+}
+
+
+/* Peoplefinder specific */
+
+/* We want to hide the type of address/phone number by default */
+#peoplefinder .type{
+	display: none;
+}
+
+#peoplefinder #workAdr:before{
+	content: "Local address:";
+	margin-left: -10px;
+}
+
+
+#peoplefinder #homeAdr:before{
+	content: "Permanent:";
+	margin-left: -10px;
+}
+
+
+#peoplefinder .country-name{
+	display: none;
+}
+
+#peoplefinder span.email{
+	display:block;
+}

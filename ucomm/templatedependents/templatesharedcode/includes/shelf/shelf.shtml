@@ -1,0 +1,102 @@
+<div id="shelf">
+	<div id="toolcontainer">
+		<div id="sitetools" style="display:none">
+				<div id="calendar" class="tool">
+				<h3>UNL Calendar</h3>
+				<div id="calcontent" class="toolResultsMask">
+					<div id="upArrowCal" class="scrollButton">
+						<img alt="Up arrow" src="/ucomm/templatedependents/templatecss/images/upArrow.gif" />
+					</div>  
+					<div id="downArrowCal" class="scrollButton">
+						<img alt="Down arrow" src="/ucomm/templatedependents/templatecss/images/downArrow.gif"/>
+					</div>
+					<div id="dragButtonCal" class="scrollButton" style="top: 18px">
+						<img alt="Scrollbar indicator" src="/ucomm/templatedependents/templatecss/images/dragButton.gif"/>
+					</div>
+					<div id="trackBarCal" class="scrollButton">
+						<img alt="Scrollbar" src="/ucomm/templatedependents/templatecss/images/scrollTrack.gif"/>
+					</div>
+					<div id="calresults" class="toolResults">
+						<img alt="Loading data from events.unl.edu..." src="/ucomm/templatedependents/templatecss/images/loadingContent.gif"/>
+					</div>
+				</div>
+			</div>
+
+			<div id="peoplefinder" class="tool">
+				<h3>UNL Peoplefinder</h3>
+				<div id="pfcontent" class="toolcontent">
+					<form action="http://peoplefinder.unl.edu/" method="get" onsubmit="queuePFRequest(document.getElementById('pq').value,'pfresults'); return false;">
+						<div>
+							<label for="pq">Search People:</label>
+							<input type="text" id="pq" name="pq" onkeyup="queuePFRequest(this.value,'pfresults');" />
+							<img src="/ucomm/templatedependents/templatecss/images/transpixel.gif" id="pfprogress" alt="progress" /> </div>
+					</form>
+					<div id="pfResultsMask" class="toolResultsMask">
+						<div id="upArrowPF" class="scrollButton">
+							<img alt="Up arrow" src="/ucomm/templatedependents/templatecss/images/upArrow.gif"/>
+						</div>  
+						<div id="downArrowPF" class="scrollButton">
+							<img alt="Down arrow" src="/ucomm/templatedependents/templatecss/images/downArrow.gif"/>
+						</div>
+						<div id="dragButtonPF" class="scrollButton" style="top: 18px">
+							<img alt="Scrollbar indicator" src="/ucomm/templatedependents/templatecss/images/dragButton.gif"/>
+						</div>
+						<div id="trackBarPF" class="scrollButton">
+							<img alt="Scrollbar" src="/ucomm/templatedependents/templatecss/images/scrollTrack.gif"/>
+						</div>	
+						<div id="pfresults" class="toolResults"></div>
+					</div> 
+				</div>
+			</div>
+			
+			<div id="unlweather" class="tool">
+				<h3>Lincoln Weather</h3>
+				<div id="weathercontent" class="toolResultsMask">
+					<div id="upArrowWeather" class="scrollButton">
+						<img alt="Up arrow" src="/ucomm/templatedependents/templatecss/images/upArrow.gif" />
+					</div>  
+					<div id="downArrowWeather" class="scrollButton">
+						<img alt="Down arrow" src="/ucomm/templatedependents/templatecss/images/downArrow.gif"/>
+					</div>
+					<div id="dragButtonWeather" class="scrollButton" style="top: 18px">
+						<img alt="Scrollbar indicator" src="/ucomm/templatedependents/templatecss/images/dragButton.gif"/>
+					</div>
+					<div id="trackBarWeather" class="scrollButton">
+						<img alt="Scrollbar" src="/ucomm/templatedependents/templatecss/images/scrollTrack.gif"/>
+					</div>
+					
+					<div id="weatherresults" class="toolResults">
+						<img alt="Loading data from NOAA..." src="/ucomm/templatedependents/templatecss/images/loadingContent.gif"/>
+					</div>
+				</div>
+			</div>
+
+			<div id="webcam" class="tool">
+			<a href="#" onclick="return tabExpand();" id="closeshelf" title="close shelf">Close shelf</a>
+				<h3>UNL Webcams</h3>
+				<ul id="tablist">
+					<li class="current" onclick="camtab(this)"><a href="http://www.unl.edu/unlpub/cam/cam1.jpg" onclick="updateWebcam(this); return false;">City Union</a></li>
+					<li onclick="camtab(this)"><a href="http://www.unl.edu/unlpub/cam/cam2.jpg" onclick="updateWebcam(this); return false;">Rotunda</a></li>
+					<li onclick="camtab(this)"><a href="http://www.unl.edu/unlpub/cam/cam3.jpg" onclick="updateWebcam(this); return false;">East Union</a></li>
+				</ul>
+				<div id="camcontent" class="toolcontent">
+					<img id="webcamuri" alt="UNL Webcams" src="/ucomm/templatedependents/templatecss/images/transpixel.gif" />
+				</div>
+			</div> <!-- close unlwebcam -->
+
+		</div> <!-- close sitetools -->
+	</div> <!-- close toolcontainer -->
+	<div id="tabhandle">
+		<ul id="shelf_button" onclick="return tabExpand();">
+			<li><a href="http://events.unl.edu/" id="cal" title="Calendar" accesskey="1"><abbr title="Calendar">cal</abbr></a></li>
+			<li><a href="http://peoplefinder.unl.edu/" id="finder" title="Peoplefinder"><abbr title="Peoplefinder">people</abbr></a></li>
+			<li><a href="http://forecast.weather.gov/MapClick.php?CityName=Lincoln&amp;state=NE&amp;site=OAX" id="weather" title="Weather">weather</a></li>
+			<li><a href="http://www.unl.edu/unlpub/cam/cam1.shtml" id="cam" title="Camera"><abbr title="Camera">cam</abbr></a></li>
+			
+		</ul>
+			
+	</div>
+	<!-- close tabhandle -->
+
+</div>
+<!-- close shelf -->

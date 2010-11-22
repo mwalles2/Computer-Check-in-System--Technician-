@@ -1,0 +1,18 @@
+#local_search{background: url(/ucomm/templatedependents/templatecss/images/nav_shadow.gif) repeat-y 14px 0;}
+#localSearchQuery{padding-top: 15px;padding-bottom: 1ex;}	
+#local_search form{width: 160px;display: inline;}
+#localSearchQuery-field {border:1px solid #999999;height:1.5em;width:160px;display: inline;float: left;margin-right: 8px;margin-left: 6px;padding-left: 1px;}
+#localSearchQuery-field:hover {border: 1px solid #ffd900;}
+#localSearch-Button {background-image:url(/ucomm/templatedependents/templatecss/images/system-search.gif);background-repeat:no-repeat;width:35px;height:35px;padding-left:5px;top: -10px;position: relative;}
+#local_search label.overlabel {margin-left: 12px;color:#666666;padding-top: 2px;}
+#local_search label.overlabel-apply {position: absolute;top: 58px;left: 24px;color:#666666;}
+
+/* Spry.Effect.js, Adobe, http://labs.adobe.com/technologies/spry/ Spry is available under the BSD license */
+/* scrollbar.js Travis Beckham http://www.squidfingers.com/code/dhtml/?id=divscroller No license mentioned on website. We modifided the code added to it to fix things. */
+/* slight.js, Aaron Boodman, http://boring.youngpup.net/2001/sleight Creative Commons Attribution 2.0  license. */
+/* AjaxExtended, Alex Serebryakov, http://ajaxextended.com/, distributable under MIT license  */
+/* zebra.js, David F. Miller, "Zebra Tables" A List Apart #173, http://www.alistapart.com/copyright/  */
+/* overLabels.js, Mike Brittain, "Making Compact Forms More Accessible" A List Apart # 229, http://www.alistapart.com/copyright/ */
+/* Icons, http://tango.freedesktop.org/, Creative Commons Attribution Share-Alike license.  */
+/* Icons, http://www.famfamfam.com/lab/icons/silk/, Creative Commons Attribution 2.5 License  */
+/* Icons, http://www.feedicons.com/ */

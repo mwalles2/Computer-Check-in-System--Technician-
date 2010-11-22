@@ -1,0 +1,96 @@
+<div id="header">
+	<div class="clear"> <a href="http://www.unl.edu/" title="UNL website"><img src="/ucomm/templatedependents/templatecss/images/logo.png" alt="UNL graphic identifier" id="logo" /></a>
+		<ul>
+            <li><a href="http://www.unl.edu/ucomm/visitor/" title="Information and resources for visiting the University of Nebraska in Lincoln, Nebraska">Visitor</a></li>
+            <li><a href="http://www.unl.edu/ucomm/prospective/" title="Information for Prospective Undergraduate, Graduate, Law and Distance Students">Prospective Student</a></li>
+            <li><a href="http://www.unl.edu/ucomm/current/" title="Links and Information for Current UNL Students">Current Student</a></li>
+            <li><a href="http://www.unl.edu/ucomm/facstaff/" title="Links and Information for UNL Faculty &amp; Staff">Faculty &amp; Staff</a></li>
+            <li><a href="http://www.unl.edu/ucomm/business/" title="Information for UNL Partners in Business, Industry &amp; Government">Business, Industry &amp; Government</a></li>
+		</ul>
+		<div id="unlsearch">
+			<form id="SearchBarForm" onsubmit="return executeQuery( document.getElementById('SearchBarForm'), 'NewSearch', false )" action="http://www.google.com/u/UNL1?sa=Google+Search&amp;q=" method="get">
+			        <fieldset>
+					<label for="q">Search: 
+					<input accesskey="f" id="q" alt="Search string" name="q" size="14" maxlength="256" type="text" />
+					</label>
+					<label for="whichDatabase">
+					<select title="Choose which area to search" id="whichDatabase" name="whichDatabase">
+						<option value="http://www.unl.edu/ucomm/search/?q=">UNL Web</option>
+						<option value="http://peoplefinder.unl.edu/?q=">UNL People</option>
+						<option value="http://www.google.com/search?hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;q=">Worldwide</option>
+					</select>
+					</label>
+					<a href="http://www.google.com/u/UNL1?sa=Google+Search&amp;q=" class="go" accesskey="g" onclick="return executeQuery( document.forms.SearchBarForm, 'NewSearch', false )"><span>Go</span></a>
+					</fieldset>
+			</form>
+		</div>
+		<div id="quicklinks">
+			<select title="UNL Quick Links" id="quicklinkdd" name="quicklinkdd"> 
+			<option>UNL Quick Links</option>
+			<optgroup label="UNL Selected Resources">
+			<option value="http://www.unl.edu/ucomm/aboutunl/">About UNL</option>
+			<option value="http://www.unl.edu/regrec/calendar/calendar_main.shtml">Academic Calendar</option>
+			<option value="http://www.unl.edu/ucomm/admin/">Administrative Units</option>
+			<option value="http://admissions.unl.edu/apply/">Apply for Admission</option>
+			<option value="http://www.unl.edu/ucomm/depts/">Colleges and Departments</option>
+			<option value="http://www.nufoundation.org/Shop/showDivision.sp?cat=67">Gifts to Your University</option>
+			<option value="http://www.unl.edu/ucomm/news/">News</option>
+			<option value="http://www.unl.edu/ucomm/chancllr/">Office of the Chancellor</option>
+			<option value="http://stuafs.unl.edu/parents.shtml">Parents Association</option>
+			<option value="http://irp.unl.edu/factbooks.html">UNL Fact Book</option>
+			<option value="http://bf.unl.edu/NUPoliciesProceduresInfoLinks.shtml">UNL Policies</option>
+			<option value="http://www.unl.edu/ucomm/unltoday/">UNL Today</option>
+			</optgroup>
+			<optgroup label="Visitor">
+			<option value="http://www1.unl.edu/tour/">Campus Tour &amp; Maps</option>
+			<option value="http://events.unl.edu/">UNL Events</option>
+			<option value="http://www.unl.edu/ucomm/visitor/">more ...</option>
+			</optgroup>
+			<optgroup label="Prospective Student">
+			<option value="http://admissions.unl.edu/">Undergraduate Admissions</option>
+			<option value="http://www.unl.edu/gradstudies/">Graduate Studies</option>
+			<option value="http://extended.unl.edu/">Extended Education</option>
+			<option value="http://law.unl.edu/">College of Law</option>
+			<option value="http://www.unl.edu/ucomm/prospective/">more ...</option>
+			</optgroup>
+			<optgroup label="Current Student">
+			<option value="http://wam.unl.edu/">WAM!</option>
+			<option value="http://my.unl.edu/">MyUNL</option>
+			<option value="http://unlsched.unl.edu/nusched/index.jsp">Schedule of Classes</option>
+			<option value="http://iris.unl.edu/">Libraries</option>
+			<option value="http://www.unl.edu/involved/">Student Involvement</option>
+			<option value="http://www.unl.edu/ucomm/current/">more ...</option>
+			</optgroup>
+			<optgroup label="Faculty &amp; Staff">
+			<option value="http://ess.nebraska.edu/">ESS</option>
+			<option value="http://hr.unl.edu/">Human Resources</option>
+			<option value="http://ucommxsrv1.unl.edu/scarlet/">The Scarlet</option>
+			<option value="http://www.unl.edu/asenate/welcome.htm">Academic Senate</option>
+			<option value="http://notes.unl.edu/">Notes</option>
+			<option value="http://www.unl.edu/ucomm/facstaff/">more ...</option>
+			</optgroup>
+			<optgroup label="Business Industry &amp; Government">
+			<option value="http://research.unl.edu/">Office of Research</option>
+			<option value="http://otd.unl.edu/">Technology Development</option>
+			<option value="http://www.unl.edu/ucomm/business/rental.shtml">Rental Space at UNL</option>
+			<option value="http://www.unl.edu/ucomm/business/">more ...</option>
+			</optgroup>
+			<optgroup label="Affiliates">
+			<option value="http://www.huskers.com/">Huskers</option>
+			<option value="http://www.huskeralum.com/">Alumni</option>
+			<option value="http://www.liedcenter.org/">Lied Center</option>
+			<option value="http://www.netnebraska.org/television/">NET</option>
+			<option value="http://theross.org/">Ross Theatre</option>
+			<option value="http://www.sheldonartgallery.org/">Sheldon Gallery</option>
+			<option value="http://www-museum.unl.edu/">State Museum</option>
+			<option value="http://nebraskapress.unl.edu/">UofN Press</option>
+			<option value="http://www.quiltstudy.org/">Quilt Study</option>
+			<option value="http://www.nufoundation.org/">NU Foundation</option>
+			<option value="http://www.nebraska.edu/">NU System</option>
+			</optgroup>
+			</select>
+			<label for="quicklinkdd"><a class="go" href="javascript:MM_jumpMenu('parent',document.getElementById('quicklinkdd'),1)" title="Select a Quick Link and click GO"><span>Go</span></a></label>
+		</div>
+	</div>
+</div>
+<!-- close header -->

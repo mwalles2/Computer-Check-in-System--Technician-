@@ -1,0 +1,113 @@
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Basic layout classes
+	Filename:		layout.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+/*	-------------------------------------------------------------
+	Background color classes
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+.bgcolcream, .bgcolscarlet{background-color: #F8F5EA;}
+.bgcolfixed {background-color: #EEE;}
+.bgcolmedgray, .bgcoldkgray{background: #e7e7d6;}
+
+/*	-------------------------------------------------------------
+	Zen Box
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+.zenboxsolid, .zenboxfixed{
+	border: 1px solid #C9C28C;
+	position:relative;
+	background-color: #FFFCE9; 
+	padding:4px 10px; 
+	}
+
+.zenboxfeature  { 
+	border: 1px dashed #C9C28C;
+	background-color: #FFFCE9;
+	padding:4px 10px;
+	}
+
+/* Forms */
+		
+form select option{
+	padding-right: .5em;
+} 		
+
+
+/*	-------------------------------------------------------------
+	Main Content Area Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+#container div.clear .mainwrapper, #container div.clear .altwrapper {
+	width: 720px;
+	}
+
+#container div.clear #main_right {
+	font-size: 1.1em;
+	}
+
+#container div.clear #maincontent {
+	float: left;
+	padding: 0 10px;
+	position:relative;
+	}
+		
+#maincontent ul, #footer ul{
+	list-style: square;
+	padding: 0 0 1.1em 30px;
+	}
+	
+#maincontent ol{
+	padding: 0 0 1.1em 36px;
+	}
+
+#maincontent dd {
+	padding: 0 0 0 30px;
+	}
+
+#maincontent .col, #maincontent .one_col{
+	width:220px;
+	padding:0 10px;
+	float:left;
+	position:relative;
+	}
+
+#maincontent .two_col {
+	float:left;
+	width:460px;
+	padding:0 10px;
+	}
+
+#maincontent .three_col {
+	float:left;
+	width:700px;
+	padding:0 10px;
+	}
+
+#maincontent .col_half{
+	width:100px;
+	padding:0 10px;
+	float:left;
+	position:relative;
+	}
+
+#maincontent .left {padding-left:0;float:left;}
+
+#maincontent .right {padding-right:0;float:right;}
+
+#maincontent .clear{clear:both;}
+
+#container div.clear #maincontent .clear, #container div.clear #maincontent .clr {
+	clear:both;
+	margin:0;
+	padding:0;
+	min-height:0;
+	width:auto;
+	height:auto;
+	background:none;
+	}
+
+#maincontent table th{text-align:center;}

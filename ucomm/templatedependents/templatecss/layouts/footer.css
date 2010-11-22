@@ -1,0 +1,21 @@
+#footer {min-width:988px;clear: both;color: #eaeaea;position: relative;background: #414241;border-top: 3px solid #af0909;text-align: center;}
+#footer #footer_floater {margin: 0 auto;padding:5px 14px 5px 14px;position:relative;width: 960px;min-height:60px;text-align: left;background: #414241 url(/ucomm/templatedependents/templatecss/images/foot_shadow.gif) repeat-y;}
+#footer h3 {font-size: 17px;letter-spacing: -1px;color: #fff;padding:30px 0 15px 0;}
+#footer .footer_col {width: 220px;float: left;padding: 0 10px 20px;text-align:left;}	
+#footer a {color: #fff;text-decoration: none;padding: 0 0 2px 0;background: url(/ucomm/templatedependents/templatecss/images/dottWhite.gif) repeat-x bottom;margin:0 3px;}
+#footer a.external {padding-right: 13px;background: url(/ucomm/templatedependents/templatecss/images/external_link.gif) center right no-repeat;}
+.footer_logo {padding-top: 20px;border: 0px;}
+#footer .footer_logo a {border: 0px;}
+#footer #copyright{margin:15px auto 0 auto;position:relative;padding:0 100px 20px 10px;text-align:left;clear:both;}
+#footer #copyright ul {margin:0px;padding:0 10px;display:inline;}
+#footer #copyright ul li{display:inline;}
+
+/* Spry.Effect.js, Adobe, http://labs.adobe.com/technologies/spry/ Spry is available under the BSD license */
+/* scrollbar.js Travis Beckham http://www.squidfingers.com/code/dhtml/?id=divscroller No license mentioned on website. We modifided the code added to it to fix things. */
+/* slight.js, Aaron Boodman, http://boring.youngpup.net/2001/sleight Creative Commons Attribution 2.0  license. */
+/* AjaxExtended, Alex Serebryakov, http://ajaxextended.com/, distributable under MIT license  */
+/* zebra.js, David F. Miller, "Zebra Tables" A List Apart #173, http://www.alistapart.com/copyright/  */
+/* overLabels.js, Mike Brittain, "Making Compact Forms More Accessible" A List Apart # 229, http://www.alistapart.com/copyright/ */
+/* Icons, http://tango.freedesktop.org/, Creative Commons Attribution Share-Alike license.  */
+/* Icons, http://www.famfamfam.com/lab/icons/silk/, Creative Commons Attribution 2.5 License  */
+/* Icons, http://www.feedicons.com/ */

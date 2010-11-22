@@ -1,0 +1,153 @@
+/*this is used to style the month widget
+place this within the head of your doc.
+
+<link rel="stylesheet" type="text/css" media="screen" href="/ucomm/templatedependents/templatecss/components/monthwidget.css" />
+<script type="text/javascript" src="/ucomm/templatedependents/templatesharedcode/scripts/UNLevent_monthWidget.js"></script>
+
+
+see the /ucomm/templatedependents/templatesharedcode/scripts/UNLevent_monthWidget.js
+*/
+.eventBox{
+	background:#eee;
+	border:2px solid #d0d0d0;
+	position:absolute;
+	margin:-25px 0 0 5px;
+	width:210px;	
+	min-height:50px;
+	left:0;
+	text-align:left;
+	font-size:11px;
+}
+.eventBox h1{
+	font-size:11px !important;
+	font-weight:bold;
+	width:205px;
+	padding:4px;
+	color:#fff;
+	margin:-2px 0 2px -2px;
+	background:#900;
+	position:relative;
+	border-right:1px solid #720a0a;
+	border-bottom:1px solid #720a0a;
+}
+.eventContainer{
+	background:transparent url(images/monthwidget_arrow.gif) no-repeat;
+	display:block;
+	width:218px;
+	min-height:50px;
+	position:absolute;
+	margin:-22px 0 0 18px;
+	z-index:9999;
+}
+
+.eventBox a{
+	display:block;
+	border-bottom:1px dashed #d3d3d3;
+	padding:2px 4px;
+}
+.eventBox a:hover{
+	background:#f9f9f9;
+}
+
+* html .eventContainer, *html .eventBox{height:50px;}
+* html .eventContainer{margin:-8px 0 0 3px;}
+*+html .eventContainer{margin:-8px 0 0 3px;}
+
+table.wp-calendar {clear:both;width:200px;border-collapse:collapse;}
+table.wp-calendar td{
+	padding:7px;
+	border-top:1px solid #3E83C9;
+}
+
+/* Calendar Widget */
+.wp-calendar a:hover{text-decoration:underline;}
+.wp-calendar a{background:none;}
+
+table.wp-calendar thead th{
+	border-top:1px solid #ddd;border-bottom:3px #ddd;color:#333;
+	text-align:left;font-size:8.5pt!important;
+}
+
+table.wp-calendar td, table.wp-calendar th{
+	text-align:center;
+	padding:4px;
+}
+table.wp-calendar td{
+	border:1px solid #ddd;
+}
+table.wp-calendar td.selected{
+	background-color:#ecf4f8;
+}
+table.wp-calendar td#onselect{
+	background-color:#3e83c9;
+}
+table.wp-calendar td#onselect a{
+	color:#fff!important;
+}
+table.wp-calendar td#next{
+	background:url(http://events.unl.edu/templates/default/images/calnav.gif) no-repeat;
+
+}
+table.wp-calendar td#prev{
+ 	background:url(http://events.unl.edu/templates/default/images/calnav.gif) no-repeat;
+	
+}
+table.wp-calendar tr:hover{
+	background:none;
+}
+table.wp-calendar td:hover{
+	background:#ffffcc;
+}
+table.wp-calendar td.pad:hover{background:none}
+
+table.wp-calendar #today_image{
+	width:36px;
+	height:18px;
+	position:absolute;
+	margin:-32px 0 0 -12px;
+	background:url(http://events.unl.edu/templates/default/images/todayimage.png) no-repeat 0 0;
+}
+/*table.wp-calendar td.today {
+	background:#ecf4f8;
+}*/
+.day_cal table.wp-calendar td.today {
+	color:#fff;
+}
+.month_cal table.wp-calendar td#onselect {
+	background:#eee;
+}
+.month_cal table.wp-calendar td#onselect a{
+	color:#900;
+}
+.month_cal table.wp-calendar td#onselect {
+	position:relative;z-index:1;
+}
+.month_cal table.wp-calendar td #today_image{
+	position:absolute;
+	top:0;
+	right:0;
+	margin:3px 2px 0 0;
+}
+table.wp-calendar caption {height: 3em;}
+span.location{font-size:0.75em;color:#3A8103;margin-left:20px;}
+
+table.ongoing{margin:5px 0 0 0;}
+table.ongoing td{border:none;padding:4px;}
+table.ongoing th{}
+/*caption nav*/
+table.wp-calendar caption{padding-left:30px;}
+table.wp-calendar caption span{display:block;height:31px;background:url(http://events.unl.edu/templates/default/images/monthviewnav_mid.gif) repeat-x 0 0;float:left;}
+table.wp-calendar caption span.monthvalue, table.wp-calendar caption span.yearvalue{
+margin-top:0;padding:8px 3px 0;}
+table.wp-calendar caption a{margin-bottom:5px;color:#fff;}
+table.wp-calendar caption a:hover{color:#fff;}
+table.wp-calendar caption a#prev_month, table.wp-calendar caption a#next_month{text-indent:-9999em;
+	display:block;background:#fff url(http://events.unl.edu/templates/default/images/monthviewnav_prev.gif) no-repeat; width:22px; height:31px;}
+table.wp-calendar caption a#next_month{background:url(http://events.unl.edu/templates/default/images/monthviewnav_next.gif) no-repeat;}
+table.wp-calendar caption a#prev_month:hover, table.wp-calendar caption a#next_month:hover{
+background-position:0 -45px;
+}
+* html table.wp-calendar td #today_image{margin: -15px 0 0 -23px;}
+*+html table.wp-calendar td #today_image{margin: -15px 0 0 -23px;}
+
+#container div.clear #navigation {overflow:visible;}

@@ -1,0 +1,128 @@
+/* Print CSS Document */
+.sIFR-flash, object, embed {
+display: none !important;
+height: 0;
+width: 0;
+position: absolute;
+overflow: hidden;
+}
+span.sIFR-alternate {
+visibility: visible !important;
+display: block !important;
+position: static !important;
+left: auto !important;
+top: auto !important;
+width: auto !important;
+height: auto !important;
+overflow: visible !important;
+}
+
+			* {
+				margin: 0;
+				padding: 0;}
+		
+			p {
+				margin: 0 0 1.1em 0;}
+			
+			img {
+				border: none;
+				margin:10px 0;}
+				
+			 a{text-decoration:underline;background:none;}
+			 	
+			body {
+				text-align: left;			
+				font: 71%/150% "Lucida Grande",Verdana,Arial;
+				color: #434343;}
+			
+			#maincontent h1, #maincontent h2, #maincontent h3{
+				line-height:1.2;
+				font-weight: normal;
+				padding-top: .2em;
+				padding-bottom: .3em;
+			}
+			
+			#maincontent h4, #maincontent h5, #maincontent h6{
+				line-height:1.2;			
+				font-weight: normal;
+				padding-top: .1em;
+				padding-bottom: .2em;				
+			}
+			
+			#maincontent h1{
+				font-size: 1.7em;
+			}
+					
+			#maincontent h2{
+				font-size: 1.5em;
+			}
+		
+			#maincontent h3{
+				font-size: 1.4em;
+			}
+
+			#maincontent h4{
+				font-size: 1.3em;
+			}
+
+			#maincontent h5{
+				font-size: 1.2em;
+			}
+
+			#maincontent h6{
+				font-size: 0.9em;
+			}
+				
+			#maincontent ul, #footer ul{
+				list-style: square;
+				padding: 0 0 1.1em 30px;}
+
+			#maincontent ol{
+				padding: 0 0 1.1em 36px;}
+
+			#maincontent dd {
+				padding: 0 0 0 30px;
+			}
+			
+			#header img#logo {width:50px!important;height:50px!important;float:left;}
+			
+			 body, #header, #container, #footer, #footer #footer_floater, p.sec_main, #title, body#doc #red-header, #red-header, #red-header div.clear{width: auto !important;margin: 0 !important;padding: 0 !important}
+			 #red-header h1{font-size:2.0em;color:#990000;padding:35px 0 0 0;line-height:1px;position:relative;top:-60px;left:60px;}
+			 #titlegraphic{padding:7px 0 0 0;margin:-2.0em 0 6px 0;clear:both}
+			 #titlegraphic h1{font-size:2.0em;line-height:normal;}
+			 #titlegraphic h2{font-size:1.7em;color:#666;}
+			 #titlegraphic h1, #titlegraphic h2{font-family:Arial, Helvetica, sans-serif;font-weight:normal;}
+			 #maincontent{border-top:1px solid #999;}
+			 .skipnav, #header ul, #shelf, #navigation, #breadcrumbs,  #title ul, #copyright span, #wordmark{display:none;}
+			 #header #quicklinks, #header #unlsearch{visibility:hidden;}
+			 #footer{border-top:1px solid #666;}
+		     #maincontent a[href]:after {
+			   content: " (" attr(href) ") ";
+			   font-size: 90%;}
+		
+/*	-------------------------------------------------------------
+	Background color classes
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+			.bgcolcream, .bgcolscarlet{background-color: #F8F5EA;}
+			.bgcolfixed {background-color: #EEE;}
+			.bgcolmedgray, .bgcoldkgray{background: #e7e7d6;}
+
+/*	-------------------------------------------------------------
+	Zen Box
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+			body#doc .zenboxsolid, body#doc .zenboxfixed, body#doc .zenboxfeature{ border: none;}
+			body#doc .zenboxsolid, body#doc .zenboxfixed{border: 1px solid #C9C28C}
+			.zenboxsolid, .zenboxfixed{ border: none;position:relative; padding:0 10px; }
+			.zenboxfeature  { 
+				border: none;
+				position:relative;
+				padding:0 10px;}
+
+/*	-------------------------------------------------------------
+	Text coloring
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/	
+			.highlight-navy, sserifstoryheadnavy{color:#005387;}
+			.highlight-green{color:#509B09;}
+			.highlight-red, .sserifstoryheadred{color:#990000;}
+					
+			

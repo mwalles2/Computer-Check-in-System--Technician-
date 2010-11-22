@@ -1,0 +1,61 @@
+body.popup {
+	background-image:none;
+}
+body.popup #wdn_navigation_bar,
+body.popup #wdn_search,
+body.popup #wdn_tool_links,
+body.popup #header h1,
+body.popup #header:after {
+    display:none;
+}
+
+body.popup #logo {
+    width:50px;
+    background-image:none;
+    position:absolute;
+    left:4px;
+    top:4px;
+}
+
+body.popup #wdn_wrapper {
+    border:none;
+    padding:0px;
+    margin:0px;
+    width:100%;
+    min-width:0px;
+}
+
+body.popup #wdn_content_wrapper {
+    width:100%;
+    margin:0px;
+}
+
+body.popup #header {
+    height:40px !important;
+    overflow:hidden;
+    margin:0px;
+    min-height:40px;
+    background:none;
+    width:50px;
+    position:absolute;
+}
+
+body.popup #titlegraphic {
+    margin-top:15px;
+    padding-left:60px;
+    padding-bottom:20px;
+    font-size:0.8em;
+    background:url('images/shad_pop.gif') repeat-x;
+}
+
+body.popup #titlegraphic h2 {
+	display:none;
+}
+
+body.popup #footer .footer_col {
+    display:none;
+}
+
+body.popup #footer #wdn_copyright {
+    border:none;
+}

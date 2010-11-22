@@ -1,0 +1,41 @@
+#saved
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #0C0;
+	padding: 3px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	width: 200px;
+	height: 1.5em;
+	z-index:200;
+}
+
+#failed
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #C00;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	width: 200px;
+	height: 1.5em;
+	z-index:200;
+}
+
+#updating
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	color: #fff;
+	background-color: #00C;
+//	filter: alpha(opacity=0);
+//	opacity: 0;
+	display:none;
+	width: 200px;
+	height: 1.5em;
+	z-index:200;
+}

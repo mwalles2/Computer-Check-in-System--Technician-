@@ -1,0 +1,31 @@
+.bgcolcream, .bgcolscarlet{background-color: #F8F5EA;}
+.bgcolfixed {background-color: #EEE;}
+.bgcolmedgray, .bgcoldkgray{background: #e7e7d6;}
+.zenboxsolid, .zenboxfixed{border: 1px solid #C9C28C;position:relative;background-color: #FFFCE9;padding:4px 10px;}
+.zenboxfeature  {border: 1px dashed #C9C28C;background-color: #FFFCE9;padding:4px 10px;}
+form select option{padding-right: .5em;} 		
+#container div.clear .mainwrapper, #container div.clear .altwrapper {width: 720px;}
+#container div.clear #main_right {font-size: 1.1em;}
+#container div.clear #maincontent {float: left;padding: 0 10px;position:relative;}
+#maincontent ul, #footer ul{list-style: square;padding: 0 0 1.1em 30px;}
+#maincontent ol{padding: 0 0 1.1em 36px;}
+#maincontent dd {padding: 0 0 0 30px;}
+#maincontent .col, #maincontent .one_col{width:220px;padding:0 10px;float:left;position:relative;}
+#maincontent .two_col {float:left;width:460px;padding:0 10px;}
+#maincontent .three_col {float:left;width:700px;padding:0 10px;}
+#maincontent .col_half{width:100px;padding:0 10px;float:left;position:relative;}
+#maincontent .left {padding-left:0;float:left;}
+#maincontent .right {padding-right:0;float:right;}
+#maincontent .clear{clear:both;}
+#container div.clear #maincontent .clear, #container div.clear #maincontent .clr {clear:both;margin:0;padding:0;min-height:0;width:auto;height:auto;background:none;}
+#maincontent table th{text-align:center;}
+
+/* Spry.Effect.js, Adobe, http://labs.adobe.com/technologies/spry/ Spry is available under the BSD license */
+/* scrollbar.js Travis Beckham http://www.squidfingers.com/code/dhtml/?id=divscroller No license mentioned on website. We modifided the code added to it to fix things. */
+/* slight.js, Aaron Boodman, http://boring.youngpup.net/2001/sleight Creative Commons Attribution 2.0  license. */
+/* AjaxExtended, Alex Serebryakov, http://ajaxextended.com/, distributable under MIT license  */
+/* zebra.js, David F. Miller, "Zebra Tables" A List Apart #173, http://www.alistapart.com/copyright/  */
+/* overLabels.js, Mike Brittain, "Making Compact Forms More Accessible" A List Apart # 229, http://www.alistapart.com/copyright/ */
+/* Icons, http://tango.freedesktop.org/, Creative Commons Attribution Share-Alike license.  */
+/* Icons, http://www.famfamfam.com/lab/icons/silk/, Creative Commons Attribution 2.5 License  */
+/* Icons, http://www.feedicons.com/ */

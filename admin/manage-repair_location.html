@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+		"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Main</title>
+	<meta name="generator" content="BBEdit 7.1.4">
+	<link rel="stylesheet" href="../includes/css/main-style.css" type="text/css">
+	<link rel="stylesheet" href="../includes/css/main-ajax.css" type="text/css">
+	<link rel="stylesheet" href="../includes/css/error.css" type="text/css">
+	<link rel="stylesheet" href="includes/css/general.css" type="text/css">
+	<link rel="stylesheet" href="includes/css/manage-repair_location.css" type="text/css">
+
+	<script type="text/javascript" language="javascript" src="../includes/js/xmlrequest.js"></script>
+	<script type="text/javascript" language="javascript" src="includes/js/xmlrequest_auth.js"></script>
+	<script type="text/javascript" language="javascript" src="includes/js/admin.js"></script>
+
+	<script type="text/javascript" language="javascript" src="includes/js/manage-repair_location/manage-repair_location.js"></script>
+	<script type="text/javascript" language="javascript" src="includes/js/manage-repair_location/manage-repair_location-ajax.js"></script>
+
+</head>
+<body>
+	<div id="saved">Update Saved . . .</div>
+	<div id="failed">Update Failed . . .</div>
+	<div id="updating">Updating . . .</div>
+	<div style="position: fixed; top: 0px; left: 0px; width: 200px; heigh: 30px; padding: 5px 5px 5px 0;  background-color: #1560BD; float:left; height: 100%;">
+		<div id="nav">
+			Welcome, Micah A Walles
+			<ul>
+				<li>Tech
+					<ul>
+						<li><a href="computer_list.php">Open Tickets</a></li>
+						<li><a href="my_list.php">My Tickets</a></li>
+						<li><a href="computer_search.php">Search</a></li>
+						<li><a href="stale_computers.php">Stale</a></li>
+						<li><a href="ldap_search.php">LDAP Search</a></li>
+					</ul>
+				</li>
+				<li>Management
+					<ul>
+						<li>Options</li>
+						<li>Checklist</li>
+						<li>Locations</li>
+						<li>Statuses</li>
+					</ul>
+				</li>
+				<li>Admin
+					<ul>
+						<li><a href="admin-add_user.php">Add User</a></li>
+						<li><a href="admin-remove_user.php">Remove User</a></li>
+						<li><a href="admin-edit_user.php">Edit User</a></li>
+						<li>Add Module</li>
+					</ul>
+				</li>
+
+				<li><a href="javascript:logout()">Log Out</a></li>
+			</ul>
+		</div>
+	</div>
+	<div style="float:left; width:100%">
+		<div style="padding:20px 0 0 200px;">
+			<form name="mainForm">
+				<div class="row cell add" style="text-align:right;">Add Tab</div>
+				<div id="tabs">
+					<div class="row">
+						<div class="cell round_top_tab darkBlueBackground" style="width:25%; text-align:center;" id="tab1" onclick="editTabOptions('tab1')">
+							<span id="tab1Label" onclick="editTabName('tab1')">
+								<span id="tab1LabelName">501 Building</span>
+								<span id="tab1LabelNameEdit" style="display:none">
+									<input type="text" name="tab1LabelNameEditTextbox" value="501 Building" onblur="saveTabName('tab1')" />
+								</span>
+								<span id="tab1LabelDefault">*</span>
+							</span>
+						</div>
+					</div>
+					<div class="row cell side_borders darkBlueBackground" style="padding:0; display:none;" id="tab1Options">
+						<div class="cell" style="width:98%; margin:0 auto;">
+							<div class="cell" id="tab1OptionsDefault">
+								<input type="checkbox" name="tab1OptionsDefaultCheckbox" id="tab1OptionsDefaultCheckbox" checked /> Default
+							</div>
+							<div class="remove" id="tab1OptionsRemove">Remove</div>
+							<div class="add" onclick="saveIpRange('tab1')">Add IP Range</div>
+						</div>
+					</div>
+					<div class="row cell top_border bottom_space" id="tab1IpRanges">
+						<div class="cell greyBg bottom_side_borders" id="tab1IpRanges">
+							<div class="row" style="width:98%; margin:0 auto;" id="tab1IpRange1">
+								<span class="ipRange cell" id="tab1IpRange1Span" onclick="editIpRange('tab1IpRange1')">
+									<div class="cell" id="tab1IpRange1StartIp">
+										129.93.35.1
+									</div>
+									<div class="cell" id="tab1IpRange1StartIpEdit" style="display:none;">
+										<input type="text" size="15" name="tab1IpRange1StartIpEditTextbox" value="129.93.35.1" />
+									</div>
+									<div class="cell" style="width:3em; text-align:center;" id="tab1IpRange1Dash">
+										-
+									</div>
+									<div class="cell" id="tab1IpRange1EndIp">
+										129.93.35.254
+									</div>
+									<div class="cell" id="tab1IpRange1EndIpEdit" style="display:none;">
+										<input type="text" size="15" name="tab1IpRange1EndIpEditTextbox" value="129.93.35.254" />
+									</div>
+									<div class="cell save" id="tab1IpRange1Save" onclick="saveIpRange('tab1IpRange1')" style="display:none;">Save</div>
+								</span>
+								<div class="remove" id="tab1IpRange1Remove" onclick="removeIpRange('tab1IpRange1')">Remove</div>
+							</div>
+							<div class="row" style="width:98%; margin:0 auto;" id="tab1IpRange2">
+								<span class="ipRange cell" id="tab1IpRange2Span" onclick="editIpRange('tab1IpRange2')">
+									<div class="cell" id="tab1IpRange2StartIp">
+										129.93.140.1
+									</div>
+									<div class="cell" id="tab1IpRange2StartIpEdit" style="display:none;">
+										<input type="text" size="15" name="tab1IpRange2StartIpEditTextbox" value="129.93.140.1" />
+									</div>
+									<div class="cell" style="width:3em; text-align:center;" id="tab1IpRange2Dash">
+										-
+									</div>
+									<div class="cell" id="tab1IpRange2EndIp">
+										129.93.140.254
+									</div>
+									<div class="cell" id="tab1IpRange2EndIpEdit" style="display:none;">
+										<input type="text" size="15" name="tab1IpRange2EndIpEditTextbox" value="129.93.140.254" />
+									</div>
+									<div class="cell save" id="tab1IpRange2Save" onclick="saveIpRange('tab1IpRange2')" style="display:none;">Save</div>
+								</span>
+								<div class="remove" id="tab1IpRange2Remove" onclick="removeIpRange('tab1IpRange2')">Remove</div>
+							</div>
+						</div>
+					</div>
+					<div class="row cell">
+						<div class="cell round_top_tab darkBlueBackground" style="width:25%; text-align:center;">
+							<span>Resnet</span>
+						</div>
+					</div>
+					<div class="row cell side_borders darkBlueBackground" style="padding:0;">
+						<div class="cell" style="width:98%; margin:0 auto; display:none;">
+							<div class="cell">
+								<input type="checkbox" /> Default
+							</div>
+							<div class="remove">Remove</div>
+						</div>
+					</div>
+					<div class="row cell top_border bottom_space">
+						<div class="cell greyBg bottom_side_borders">
+							<div class="row" style="width:98%; margin:0 auto;">
+								<div class="cell">
+									129.93.XXX.1
+								</div>
+								<div class="cell" style="width:3em; text-align:center;">
+									-
+								</div>
+								<div class="cell">
+									129.93.XXX.254
+								</div>
+								<div class="remove">Remove</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<form action="javascript:null" method="get" id="loginForm" name="loginForm">
+		<div class="error" id="authLogin">
+			<div class="errorhead">&nbsp;</div>
+			<div class="errorbody">
+				Your session has timed out, please login again.
+				<br>Username: <input type="text" name="username">
+				<br>Password: <input type="password" name="password">
+				<input type="text" value="" name="uri">
+				<br><input type="submit" value="Login" onclick="login()">
+			</div>
+			<div class="errorfoot">&nbsp;</div>
+		</div>
+	</form>
+
+	<div id="shadow" class="shadow"></div>
+
+	<div id="log" class="row_wide top_space hidden"></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+/*	-------------------------------------------------------------
+	University of Nebraska-Lincoln
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Basic typographic formating classes
+	Filename:		typography.master.css
+	Date:			2007-02-20
+	-------------------------------------------------------------	*/
+
+/* Old things we need to define to be something */
+.sserifstoryhead, .sserifstoryheadred {font-size: 1.2em;}
+
+/* Headers */
+
+#maincontent h1, #maincontent h2, #maincontent h3{
+	line-height:1.2;
+	font-weight: normal;
+	padding-top: .2em;
+	padding-bottom: .3em;
+	}
+
+#maincontent h4, #maincontent h5, #maincontent h6{
+	line-height:1.2;
+	font-weight: normal;
+	padding-top: .1em;
+	padding-bottom: .2em;	
+	}
+
+#maincontent h1{
+	font-size: 1.7em;
+	}
+		
+#maincontent h2{
+	font-size: 1.5em;
+	}
+		
+#maincontent h3{
+	font-size: 1.4em;
+	}
+
+#maincontent h4{
+	font-size: 1.3em;
+	}
+
+#maincontent h5{
+	font-size: 1.2em;
+	}
+
+#maincontent h6{
+	font-size: 0.9em;
+	}
+
+#maincontent .sec_main{
+	background: url(/ucomm/templatedependents/templatecss/images/heading.gif);
+	padding-left: 0.7em;
+	background-position: left .74ex;
+	padding-top: 3px;
+	padding-bottom: 4pt;
+	background-repeat: no-repeat;
+	}
+
+#maincontent .sec_header {
+	background-color: #e3e3e3;
+	background: #e3e3e3 url(/ucomm/templatedependents/templatecss/images/heading.gif) left center no-repeat;
+	background-position: 6px .90ex;
+	border-left: 6px #434443 solid;
+	padding-left: 20px;
+	padding-bottom: 4pt;
+	padding-top: 3px;
+	margin-bottom: 8px;
+	font: 1.6em Verdana,Helvetica,sans-serif;
+	color: #353535;
+	letter-spacing: -1px;
+}
+
+/* sup and sub */
+sub, sup {
+	line-height:0;
+	}
+/* abbr and acronym */		
+		
+abbr, acronym { text-decoration:none; border-bottom:none;}
+
+abbr:after, acronym:after {
+	font-size: 67%;
+	content: "?";
+	vertical-align:super;
+	display: inline;
+	float: none;
+	color: #c60202;
+	}
+
+/* pre and code */	
+
+.code{
+	font-size: 90%;
+	font-weight: bold;
+	font-family:"Courier New", Courier, mono;
+	}
+
+pre {
+	font-family:"Courier New", Courier, mono;
+	font-size: 95%;
+	}
+	
+
+
+/*	-------------------------------------------------------------
+	Text coloring
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/	
+
+.highlight-navy, .sserifstoryheadnavy{color:#005387;}
+
+.highlight-green{color:#509B09;}
+
+.highlight-red, .sserifstoryheadred{color:#990000;}
+
+		

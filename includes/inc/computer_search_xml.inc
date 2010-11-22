@@ -1,0 +1,9 @@
+	<person>
+		<name>{NAME}</name>
+		<given>{GIVEN}</given>
+		<surname>{SURNAME}</surname>
+		<nuid>{NUID}</nuid>
+		<username>{USERNAME}</username>
+{PHONE}
+{EMAIL}
+	</person>

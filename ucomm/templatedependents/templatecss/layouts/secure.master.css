@@ -1,0 +1,26 @@
+/*	-------------------------------------------------------------
+	secure Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+	body#secure {background:#eee;}
+	body#secure #footer{background:#eee;border:none;}
+	body#secure #footer #footer_floater {
+			 border-top: 3px solid #AF0909; 
+			 border-bottom: 1px solid #666;
+			 padding:5px 11px 10px 11px;
+			 background: #414241;}
+	body#secure #container div.clear {
+			min-height:inherit;
+			height:auto;
+			padding:0 14px 0 14px;}
+	
+body#secure #quicklinks, body#secure #unlsearch, body#secure #header ul, body#secure #shelf, body#secure #showlink{display:none;}
+body#secure a#lock{background:#333 url(/ucomm/templatedependents/templatecss/images/lock_go.gif) no-repeat 5px -32px;color:#fff;padding:4px 7px 5px 25px;}
+body#secure a#lock:hover{background-position:5px -8px;}
+body#secure #secure_form table.forms {background:#eee;border-collapse:collapse;width:auto;}
+body#secure #secure_form table.forms td, body#secure #secure_form table.forms th {padding:6px;vertical-align:middle;border-bottom:1px solid #ccc;}
+body#secure #secure_form table.forms tr.last td, body#secure #secure_form table.forms tr.last th {border-bottom:none;}
+body#secure #secure_form table.forms th {padding-right:12px;text-align:left;}
+body#secure #secure_form table.forms th strong {color:#333;}
+body#secure #secure_form fieldset {position:relative;display:block;background:#eee;padding:0 20px;margin:20px auto;border:5px solid #ddd;float:left;width:440px;}
+body#secure #secure_form legend {position:relative;background:#666;border:1px solid #333;padding:3px 6px;margin:0;color:#fff;font-weight:bold;font-size:10px;}
+body#secure #header {height:2.4em;}

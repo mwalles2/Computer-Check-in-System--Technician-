@@ -1,0 +1,84 @@
+	.checklist_table
+	{
+		width: 80%;
+		padding: 0px;
+		margin: 0px 10% 0px 10%;
+	}
+
+	.checklist_note
+	{
+		clear:both;
+		width: 90%;
+		border-color: #000;
+		border-width: 1px;
+		border-style: solid;
+		background-color: #39F;
+		padding: 0px;
+		margin: 3px 5% 10px 5%;
+	}
+	
+	.hidden
+	{
+		display:none;
+	}
+
+	.attached_note
+	{
+		text-align: center;
+		width:25px;
+	}
+	
+	.done
+	{
+		background-color: #0C0;
+	}
+	
+	.empty { background-color: #33F; }
+
+	.add_box
+	{
+		clear: both;
+		width: 90%;
+		margin: 5px 5% 5px 5%;
+		border-color: #000;
+		border-width: 1px;
+		border-style: solid;
+		background-color: #CCC;
+		padding: 5px;
+	}
+
+	#nav A:LINK, #nav A:VISITED
+	{
+		color: #FFF;
+		text-decoration: none;
+	}
+
+	#nav ul
+	{
+		list-style-type:none;
+		margin: 0 20px 0 20px;
+		padding: 0;
+	}
+
+	#nav ul li
+	{
+		font-variant: small-caps;
+		font-size: larger;
+		padding: 0 0 20px 0;
+	}
+
+	#nav ul li ul
+	{
+		border: 1px solid #ccf;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		margin: 0 0 0 0;
+		padding: 10px
+	}
+
+	#nav ul li ul li
+	{
+		font-variant: normal;
+		font-size: smaller;
+		padding: 0 0 0 0;
+	}
