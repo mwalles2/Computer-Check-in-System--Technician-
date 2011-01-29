@@ -29,6 +29,9 @@
 	</div>
 	<div style="float:left; width:100%">
 		<div style="padding:20px 0 0 200px;">
+			<div style="width:100%; padding:0 20px 0 20px; margin:0 0 20px 0;">
+				<h2 style="border-width:0 0 1px 0; border-style:solid; border-color:#000; width:100%;">{TITLE}</h2>
+			</div>
 {CONTENT}		</div>
 	</div>
 	<form action="javascript:null" method="get" id="loginForm" name="loginForm">

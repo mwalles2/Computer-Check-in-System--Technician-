@@ -1,0 +1,30 @@
+	.name:hover
+	{
+		background-color:#CCC;
+		-moz-box-shadow:inset -5px -5px 5px #AAA;
+		-webkit-box-shadow:inset -5px -5px 5px #AAA;
+		box-shadow:inset -5px -5px 5px #AAA;
+	}
+
+	.name > input
+	{
+		display: none;
+	}
+	
+	.name.active, .name:hover.active
+	{
+		background-color:#888;
+		-moz-box-shadow:inset -5px -5px 5px #666;
+		-webkit-box-shadow:inset -5px -5px 5px #666;
+		box-shadow:inset -5px -5px 5px #666;
+	}
+
+	.name.active > span, .name:hover.active > span
+	{
+		display: none;
+	}
+
+	.name.active > input, .name:hover.active > input
+	{
+		display: inline;
+	}

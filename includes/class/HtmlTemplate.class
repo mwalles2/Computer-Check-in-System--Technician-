@@ -23,23 +23,19 @@
 			{
 				if($variable == "SCRIPTSRC")
 				{
-					$this->src["javascript"] .= "\t<script type=\"text/javascript\" language=\"javascript\" src=\"".$value."\"></script>\n";
+					(isset($this->src["javascript"]))?$this->src["javascript"] .= "\t<script type=\"text/javascript\" language=\"javascript\" src=\"".$value."\"></script>\n":$this->src["javascript"] = "\t<script type=\"text/javascript\" language=\"javascript\" src=\"".$value."\"></script>\n";
 				}
 				elseif($variable == "SCRIPTCODE")
 				{
-					//echo $value."<br>\n";
-					$this->code["javascript"] .= "\t\t".$value."\n";
-					//echo $this->code["javascript"]."<br>\n";
+					(isset($this->code["javascript"]))?$this->code["javascript"] .= "\t\t".$value."\n":$this->code["javascript"] = "\t\t".$value."\n";
 				}
 				else if($variable == "CSSSRC")
 				{
-					$this->src["CSS"] .= "\t<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"".$value."\" hreflang=\"EN\" />";
+					(isset($this->src["CSS"]))?$this->src["CSS"] .= "\t<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"".$value."\" hreflang=\"EN\" />":$this->src["CSS"] = "\t<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"".$value."\" hreflang=\"EN\" />";
 				}
 				elseif($variable == "CSSCODE")
 				{
-					//echo $value."<br>\n";
-					$this->code["CSS"] .= "\t\t".$value."\n";
-					//echo $this->code["javascript"]."<br>\n";
+					(isset($this->code["CSS"]))?$this->code["CSS"] .= "\t\t".$value."\n":$this->code["CSS"] = "\t\t".$value."\n";
 				}
 				else
 				{

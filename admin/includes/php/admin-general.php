@@ -15,7 +15,9 @@
 		$tech_query = mysql_query ("select * from tech where techid = ".$_COOKIE["TECHID"]);
 		$tech_row = mysql_fetch_array($tech_query);
 
-		if($_GET["template"] == "new")
+		(isset($_GET["template"]))?$template=$_GET["template"]:$template="main";
+
+		if($template == "new")
 		{
 			$page = new HtmlTemplate("includes/inc/admin-new.inc");
 			$page -> SetParameter("TECH", $tech_row['name']);

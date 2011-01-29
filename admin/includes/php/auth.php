@@ -43,20 +43,20 @@
 	}
 
 	$no_auth = true;
-	if($_COOKIE['TECHID'] && $_COOKIE['TECHHASH'])
+	if(isset($_COOKIE['TECHID']) && isset($_COOKIE['TECHHASH']))
 	{
 		$cookie_results = mysql_query("select * from login where techid = \"".$_COOKIE['TECHID']."\" && hash = \"".$_COOKIE['TECHHASH']."\" && ip =\"".$_SERVER['REMOTE_ADDR']."\"");
 		if(mysql_num_rows($cookie_results) > 0)
 		{
 			$cookie_row = mysql_fetch_array($cookie_results);
-			if((strtotime($cookie_row[last])+(60*60)) > time())
+			if((strtotime($cookie_row['last'])+(60*60)) > time())
 			{
 				set_auth($_COOKIE['TECHID'],"u");
-				$no_auth =false;
+				$no_auth = false;
 			}
 		}
 	}
-	if($_POST['username'] && $_POST['password'])
+	if(isset($_POST['username']) && isset($_POST['password']))
 	{
 		$tech_query = mysql_query("select * from tech where username = \"".$_POST['username']."\" and status != \"none\"");
 		if(mysql_num_rows($tech_query) > 0)
@@ -90,7 +90,7 @@
 	{
 		$file_path = dirname(__FILE__);
 
-		($_POST['uri'] != "")?$path=str_replace("*AMP*","&",$_POST['uri']):$path = $_SERVER["REQUEST_URI"];
+		(isset($_POST['uri']))?$path=str_replace("*AMP*","&",$_POST['uri']):$path = $_SERVER["REQUEST_URI"];
 		if(strpos($path,"includes") === false)
 		{
 			$out = new HtmlTemplate($file_path."/../inc/login_main.inc");

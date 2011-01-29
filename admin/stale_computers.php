@@ -6,11 +6,11 @@
 	list($page, $connect, $tech_row) = start_admin_page("Stale Computers");
 	$current_locid = get_location($connect);
 
-	($_GET['time'])?$time = strtotime($_GET['time']):$time = time();
+	(isset($_GET['time']))?$time = strtotime($_GET['time']):$time = time();
 
 	$out_list = array();
 
-	$brand_new_result = mysql_query("select ticket.tid, user.name, ticket.indate, computer.brand, computer.type, ticket.status, ticket.untildate, ticket.locid from ticket, user, ttc, computer where ticket.untildate = '0000-00-00' and ticket.outdate = '0000-00-00 00:00:00' and ticket.tid=ttc.tid and ttc.compid=computer.compid and ticket.nuid=user.nuid and ticket.status = 'new' order by ticket.INDATE");
+	$brand_new_result = mysql_query("select ticket.tid, user.name, ticket.indate, computer.brand, computer.type, ticket.status, ticket.untildate, ticket.express, ticket.locid, locations.name as location_name from ticket, user, ttc, computer, locations where ticket.tid=ttc.tid and ttc.compid=computer.compid and ticket.outdate = '0000-00-00 00:00:00' and ticket.untildate = '0000-00-00' and ticket.nuid=user.nuid and ticket.locid = locations.locid and ticket.status = 'new' order by ticket.INDATE");
 
 	while($brand_new_row=mysql_fetch_array($brand_new_result,MYSQL_ASSOC))
 	{
@@ -22,14 +22,13 @@
 		}
 	}
 
-	$result = mysql_query("select ticket.tid, user.name, ticket.indate, computer.brand, computer.type, ticket.status, ticket.untildate, ticket.locid, MAX(notes.cDate) as cDate from ticket, user, ttc, computer, notes, ntt where ticket.untildate = '0000-00-00' and notes.nid = ntt.nid and ntt.tid = ticket.tid and ticket.outdate = '0000-00-00 00:00:00' and ticket.status != 'repair' and notes.nType != 'system' and ticket.tid=ttc.tid and ttc.compid=computer.compid and ticket.nuid=user.nuid group by ticket.tid HAVING cDate < '".date("Y-m-d H:i:s",$time - (4 * 24 * 60 * 60))."' order by ticket.INDATE");
-
+	$result = mysql_query("select ticket.tid, user.name, ticket.indate, computer.brand, computer.type, ticket.status, ticket.untildate, ticket.locid, ticket.express, locations.name as location_name, MAX(notes.cDate) as cDate from ticket, user, ttc, computer, notes, ntt, locations where ticket.untildate = '0000-00-00' and notes.nid = ntt.nid and ntt.tid = ticket.tid and ticket.outdate = '0000-00-00 00:00:00' and ticket.status != 'repair' and notes.nType != 'system' and ticket.tid=ttc.tid and ttc.compid=computer.compid and ticket.nuid=user.nuid and ticket.locid = locations.locid group by ticket.tid HAVING cDate < '".date("Y-m-d H:i:s",$time - (4 * 24 * 60 * 60))."' order by ticket.INDATE");
 	while($row=mysql_fetch_array($result,MYSQL_ASSOC))
 	{
 		$out_list = create_rows($row, $out_list);
 	}
 
-	$result = mysql_query("select ticket.tid, user.name, ticket.indate, computer.brand, computer.type, ticket.status, ticket.untildate, MAX(notes.cDate) as cDate from ticket, user, ttc, computer, notes, ntt where ticket.untildate = '0000-00-00' and notes.nid = ntt.nid and ntt.tid = ticket.tid and ticket.outdate = '0000-00-00 00:00:00' and ticket.status = 'repair' and notes.nType != 'system' and ticket.tid=ttc.tid and ttc.compid=computer.compid and ticket.nuid=user.nuid group by ticket.tid HAVING cDate < '".date("Y-m-d H:i:s",$time - (8 * 24 * 60 * 60))."' order by ticket.INDATE");
+	$result = mysql_query("select ticket.tid, user.name, ticket.indate, computer.brand, computer.type, ticket.status, ticket.untildate, ticket.locid, ticket.express, locations.name as location_name, MAX(notes.cDate) as cDate from ticket, user, ttc, computer, notes, ntt, locations where ticket.untildate = '0000-00-00' and notes.nid = ntt.nid and ntt.tid = ticket.tid and ticket.outdate = '0000-00-00 00:00:00' and ticket.status = 'repair' and notes.nType != 'system' and ticket.tid=ttc.tid and ttc.compid=computer.compid and ticket.nuid=user.nuid and ticket.locid = locations.locid group by ticket.tid HAVING cDate < '".date("Y-m-d H:i:s",$time - (8 * 24 * 60 * 60))."' order by ticket.INDATE");
 	while($row=mysql_fetch_array($result,MYSQL_ASSOC))
 	{
 		$out_list = create_rows($row, $out_list);

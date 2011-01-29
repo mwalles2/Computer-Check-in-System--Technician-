@@ -6,17 +6,17 @@
 	list($page, $connect, $tech_row) = start_admin_page("LDAP Search");
 
 	$out = "";
-	if (isset($_POST['given']) || isset($_POST['sur']) || isset($_POST['username']) || isset($_POST['nuid']))
+	if (isset($_POST['given']) || isset($_POST['sur']) || isset($_GET['username']) || isset($_POST['nuid']))
 	{
 		require_once("../includes/php/db.php");
 		require_once("../includes/php/ldap_info.php");
 
-		$LDAP_link = ldap_connect($LDAP_server);
+		$LDAP_link = ldap_connect("ldap-test-3.unl.edu");
 		if(ldap_bind($LDAP_link,$LDAP_dn,$LDAP_password))
 		{
 			$out = "<table style='clear:both;'>\n";
 			$nuid = ($_POST['nuid'])?"(unlUNCWID=".$_POST['nuid'].")":"";
-			$filter = "(&(givenName=*".$_POST['given']."*)(sn=*".$_POST['sur']."*)(uid=*".$_POST['username']."*)".$nuid.")";
+			$filter = "(&(givenName=*".$_POST['given']."*)(sn=*".$_POST['sur']."*)(uid=*".$_GET['username']."*)".$nuid.")";
 			$filter = str_replace("**","*",$filter);
 //			echo "Filter: ".$filter."<br>";
 //			echo "LDAP_base_dn: ".$LDAP_base_dn."<br>";

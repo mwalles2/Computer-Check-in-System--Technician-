@@ -30,7 +30,7 @@
 
 		$date = substr($row["indate"],0,10);
 		$date = substr($row["indate"],0,10);
-		$list_row -> SetParameter ("ROWNUM",		count($out_list[$area])+1);
+		$list_row -> SetParameter ("ROWNUM",		(isset($out_list[$area]))?count($out_list[$area])+1:1);
 		$list_row -> SetParameter ("TID",			$row["tid"]);
 		$list_row -> SetParameter ("TICKETNUM",		$ticketNum);
 		$list_row -> SetParameter ("NAME",			$row["name"]);

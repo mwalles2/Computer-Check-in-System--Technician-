@@ -1,0 +1,12 @@
+#Apple OS files
+.DS_Store
+
+#local config
+includes/php/db.php
+
+#pdf folders
+pdf/
+admin/pdf/
+
+#Expresso project file
+gateway_test.esproj/
