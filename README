@@ -1,0 +1,19 @@
+INSTALLATION
+To install this on a new server you will need to make sure that the following directories are writebale by the webserver:
+
+{WEBSERVERROOT}/admin/pdf/
+{WEBSERVERROOT}/pdf/
+
+These directories are where the PDF files will be store for checking in and out repairs as well as where the stale computer list will be stored.
+
+CONFIG FILE
+The two files that need to set up are:
+
+{WEBSERVERROOT}/includes/php/db.php
+{WEBSERVERROOT}/includes/php/ldap_info.php
+
+There are examples of these files in the includes directory.
+
+STATIC PDF
+The static PDF folder ({WEBSERVERROOT}/pdf/static/) is where any and all static PDFs are store for printing.  Currently there is only one file
+being used this way.  That file is a pricelist that prints on the back of the users copy of the check-in sheet.  The file is named pricelist.pdf

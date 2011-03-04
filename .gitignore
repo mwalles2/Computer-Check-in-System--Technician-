@@ -1,0 +1,5 @@
+#Apple OS files
+.DS_Store
+
+#Expresso project file
+*.esproj/
