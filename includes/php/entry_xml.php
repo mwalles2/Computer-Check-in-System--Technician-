@@ -13,6 +13,7 @@
 	$cardAuth = false;
 	$msg = false;
 
+	/*  This needs to be moved to the database.*/
 	$check_in_cards  = array("6271390000869234","1111");
 	$check_out_cards = array("6271394000004081","2222");
 	$no_auth_domains = array("bigred.unl.edu","unl.edu","unlnotes.unl.edu","unlserve.unl.edu");
@@ -51,7 +52,7 @@
 				list($username,$domain) = split ("@",$_GET["username"]);
 				if(in_array($domain, $auth_domains))
 				{
-					$server = "notes.unl.edu";
+					$server = "notes.unl.edu"; // Needs to be set up in the database.
 					$base_dn = "";
 					$uid = $username;
 				}
