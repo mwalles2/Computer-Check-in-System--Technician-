@@ -1,0 +1,752 @@
+-- MySQL dump 10.11
+--
+-- Host: localhost    Database: tickets
+-- ------------------------------------------------------
+-- Server version	5.0.91-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `accounts`
+--
+
+DROP TABLE IF EXISTS `accounts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `accounts` (
+  `aid` int(11) NOT NULL auto_increment,
+  `tid` int(11) default NULL,
+  `username` blob,
+  `password` blob,
+  PRIMARY KEY  (`aid`)
+) ENGINE=MyISAM AUTO_INCREMENT=5399 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `address`
+--
+
+DROP TABLE IF EXISTS `address`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `address` (
+  `addressid` int(11) NOT NULL auto_increment,
+  `tid` int(11) default NULL,
+  `nuid` text,
+  `street` blob,
+  `city` blob,
+  `state` blob,
+  `zip` blob,
+  PRIMARY KEY  (`addressid`)
+) ENGINE=MyISAM AUTO_INCREMENT=2917 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `charges`
+--
+
+DROP TABLE IF EXISTS `charges`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `charges` (
+  `chid` int(11) NOT NULL auto_increment,
+  `tid` int(11) default NULL,
+  `chargetable` text,
+  `tableid` int(11) default NULL,
+  `quantity` double default NULL,
+  PRIMARY KEY  (`chid`)
+) ENGINE=MyISAM AUTO_INCREMENT=80 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `checklist`
+--
+
+DROP TABLE IF EXISTS `checklist`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `checklist` (
+  `CheckID` int(11) NOT NULL auto_increment,
+  `TID` int(11) default NULL,
+  `CompID` int(11) default NULL,
+  `nuid` text,
+  `CLIID` int(11) default NULL,
+  `TechID` int(11) default NULL,
+  `CLO` int(11) default NULL,
+  `CLNote` blob,
+  `ModDate` date default NULL,
+  `status` blob,
+  `CLHID` int(11) default NULL,
+  PRIMARY KEY  (`CheckID`)
+) ENGINE=MyISAM AUTO_INCREMENT=190830 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `checklistheader`
+--
+
+DROP TABLE IF EXISTS `checklistheader`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `checklistheader` (
+  `CLHID` int(11) NOT NULL auto_increment,
+  `header` blob,
+  PRIMARY KEY  (`CLHID`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `checklistitem`
+--
+
+DROP TABLE IF EXISTS `checklistitem`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `checklistitem` (
+  `CLIID` int(11) NOT NULL auto_increment,
+  `Active` tinyint(1) default NULL,
+  `Text` blob,
+  `CLIOrder` int(11) default NULL,
+  `CLHID` int(11) default NULL,
+  PRIMARY KEY  (`CLIID`)
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `checklistnotes`
+--
+
+DROP TABLE IF EXISTS `checklistnotes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `checklistnotes` (
+  `cln` int(11) NOT NULL auto_increment,
+  `CheckID` int(11) default NULL,
+  `techid` int(11) default NULL,
+  `modDate` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  `note` blob,
+  PRIMARY KEY  (`cln`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `checkliststatus`
+--
+
+DROP TABLE IF EXISTS `checkliststatus`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `checkliststatus` (
+  `cls` int(11) NOT NULL auto_increment,
+  `CheckID` int(11) default NULL,
+  `techid` int(11) default NULL,
+  `modDate` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  `stuatus` blob,
+  PRIMARY KEY  (`cls`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `computer`
+--
+
+DROP TABLE IF EXISTS `computer`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `computer` (
+  `CompID` int(11) NOT NULL auto_increment,
+  `TID` int(11) default NULL,
+  `nuid` text,
+  `Brand` blob,
+  `Type` blob,
+  `serialnum` blob,
+  PRIMARY KEY  (`CompID`),
+  KEY `CompID` (`CompID`),
+  KEY `computers` (`CompID`)
+) ENGINE=MyISAM AUTO_INCREMENT=8659 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `config`
+--
+
+DROP TABLE IF EXISTS `config`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `config` (
+  `configid` int(11) NOT NULL auto_increment,
+  `name` blob,
+  `value` blob,
+  PRIMARY KEY  (`configid`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `contact`
+--
+
+DROP TABLE IF EXISTS `contact`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact` (
+  `cid` int(11) NOT NULL auto_increment,
+  `nuid` text,
+  `data` blob,
+  `type` blob,
+  `location` int(11) default NULL,
+  `service` int(11) default NULL,
+  `active` tinyint(1) default '1',
+  `normalized` blob,
+  `contactme` tinyint(1) default '0',
+  PRIMARY KEY  (`cid`)
+) ENGINE=MyISAM AUTO_INCREMENT=15202 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `contact_locations`
+--
+
+DROP TABLE IF EXISTS `contact_locations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact_locations` (
+  `clid` int(11) NOT NULL auto_increment,
+  `name` text,
+  `display_order` int(11) default NULL,
+  `active` tinyint(1) default '1',
+  PRIMARY KEY  (`clid`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `contact_services`
+--
+
+DROP TABLE IF EXISTS `contact_services`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact_services` (
+  `csid` int(11) NOT NULL auto_increment,
+  `name` text,
+  `display_order` int(11) default NULL,
+  `active` tinyint(1) default '1',
+  `autocontact` tinyint(1) default '0',
+  PRIMARY KEY  (`csid`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `contact_services_verify`
+--
+
+DROP TABLE IF EXISTS `contact_services_verify`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact_services_verify` (
+  `csvid` int(11) NOT NULL auto_increment,
+  `csid` int(11) default NULL,
+  `cid` int(11) default NULL,
+  `verify` tinyint(1) default NULL,
+  PRIMARY KEY  (`csvid`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `contacttoticket`
+--
+
+DROP TABLE IF EXISTS `contacttoticket`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contacttoticket` (
+  `cttid` int(11) NOT NULL auto_increment,
+  `cid` int(11) default NULL,
+  `tid` int(11) default NULL,
+  `nuid` text,
+  PRIMARY KEY  (`cttid`)
+) ENGINE=MyISAM AUTO_INCREMENT=21008 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `error`
+--
+
+DROP TABLE IF EXISTS `error`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `error` (
+  `eid` int(11) NOT NULL auto_increment,
+  `errorno` int(11) default NULL,
+  `error` text,
+  `tid` int(11) default NULL,
+  `cdate` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  `note` text,
+  PRIMARY KEY  (`eid`)
+) ENGINE=MyISAM AUTO_INCREMENT=26040 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ethernet`
+--
+
+DROP TABLE IF EXISTS `ethernet`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ethernet` (
+  `EID` int(11) NOT NULL auto_increment,
+  `TID` int(11) default NULL,
+  `CompID` int(11) default NULL,
+  `Internal` tinyint(1) default NULL,
+  `Wireless` tinyint(1) default NULL,
+  `MAC` blob,
+  PRIMARY KEY  (`EID`)
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `graph_data`
+--
+
+DROP TABLE IF EXISTS `graph_data`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `graph_data` (
+  `gdid` int(11) NOT NULL auto_increment,
+  `gd_name` text,
+  `value` text,
+  `date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`gdid`)
+) ENGINE=MyISAM AUTO_INCREMENT=378 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `location_range`
+--
+
+DROP TABLE IF EXISTS `location_range`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `location_range` (
+  `locrid` int(11) NOT NULL auto_increment,
+  `locid` int(11) default NULL,
+  `startip` blob,
+  `endip` blob,
+  `startiplong` bigint(20) default '0',
+  `endiplong` bigint(20) default '0',
+  PRIMARY KEY  (`locrid`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `locations`
+--
+
+DROP TABLE IF EXISTS `locations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `locations` (
+  `locid` int(11) NOT NULL auto_increment,
+  `name` blob,
+  `active` tinyint(1) default NULL,
+  `primary_range` tinyint(1) default '0',
+  PRIMARY KEY  (`locid`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `login`
+--
+
+DROP TABLE IF EXISTS `login`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `login` (
+  `loginid` int(11) NOT NULL auto_increment,
+  `ip` blob,
+  `techid` int(11) default NULL,
+  `hash` blob,
+  `login_time` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  `last` timestamp NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`loginid`)
+) ENGINE=MyISAM AUTO_INCREMENT=29448 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ncard`
+--
+
+DROP TABLE IF EXISTS `ncard`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ncard` (
+  `ncid` int(11) NOT NULL auto_increment,
+  `nuid` blob,
+  `transactionID` int(11) default NULL,
+  `registerID` int(11) default NULL,
+  `amount` float default NULL,
+  `date` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  `tid` int(11) default NULL,
+  PRIMARY KEY  (`ncid`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `notes`
+--
+
+DROP TABLE IF EXISTS `notes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `notes` (
+  `nid` int(11) NOT NULL auto_increment,
+  `nType` blob,
+  `note` longblob,
+  `cDate` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  `techid` int(11) default NULL,
+  PRIMARY KEY  (`nid`),
+  KEY `notes` (`nid`)
+) ENGINE=MyISAM AUTO_INCREMENT=105471 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ntt`
+--
+
+DROP TABLE IF EXISTS `ntt`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ntt` (
+  `nttid` int(11) NOT NULL auto_increment,
+  `nid` int(11) default NULL,
+  `tid` int(11) default NULL,
+  `nuid` text,
+  PRIMARY KEY  (`nttid`),
+  KEY `notes` (`tid`,`nid`)
+) ENGINE=MyISAM AUTO_INCREMENT=105089 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `parts`
+--
+
+DROP TABLE IF EXISTS `parts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `parts` (
+  `pid` int(11) NOT NULL auto_increment,
+  `partnum` int(11) default NULL,
+  `description` blob,
+  `cost` double default NULL,
+  `price` double default NULL,
+  `manpartnum` text,
+  PRIMARY KEY  (`pid`)
+) ENGINE=MyISAM AUTO_INCREMENT=3845 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `pre_comp_val`
+--
+
+DROP TABLE IF EXISTS `pre_comp_val`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pre_comp_val` (
+  `pcvid` int(11) NOT NULL auto_increment,
+  `pcv_name` text,
+  `value` text,
+  PRIMARY KEY  (`pcvid`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `rates`
+--
+
+DROP TABLE IF EXISTS `rates`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rates` (
+  `rid` int(11) NOT NULL auto_increment,
+  `title` text,
+  `rate` double default NULL,
+  `addeddate` date default NULL,
+  PRIMARY KEY  (`rid`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `rateset`
+--
+
+DROP TABLE IF EXISTS `rateset`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rateset` (
+  `rsid` int(11) NOT NULL auto_increment,
+  `newdate` date default NULL,
+  `enddate` date default NULL,
+  PRIMARY KEY  (`rsid`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `repairtype`
+--
+
+DROP TABLE IF EXISTS `repairtype`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `repairtype` (
+  `rtid` int(11) NOT NULL auto_increment,
+  `name` blob,
+  `symbol` blob,
+  `active` tinyint(1) default NULL,
+  PRIMARY KEY  (`rtid`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `rrs`
+--
+
+DROP TABLE IF EXISTS `rrs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rrs` (
+  `rrsid` int(11) NOT NULL auto_increment,
+  `rid` int(11) default NULL,
+  `rsid` int(11) default NULL,
+  PRIMARY KEY  (`rrsid`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `search_index`
+--
+
+DROP TABLE IF EXISTS `search_index`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `search_index` (
+  `SIID` int(11) NOT NULL auto_increment,
+  `TableID` blob,
+  `TableIDNum` int(11) default NULL,
+  `TableName` blob,
+  `Type` blob,
+  `data` text,
+  PRIMARY KEY  (`SIID`),
+  KEY `search` (`SIID`),
+  FULLTEXT KEY `data_2` (`data`),
+  FULLTEXT KEY `data` (`data`),
+  FULLTEXT KEY `data_3` (`data`)
+) ENGINE=MyISAM AUTO_INCREMENT=39403 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `status`
+--
+
+DROP TABLE IF EXISTS `status`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `status` (
+  `statid` int(11) NOT NULL auto_increment,
+  `status_text` text,
+  `short_text` text,
+  `sort_order` int(11) default NULL,
+  `display_order` int(11) default NULL,
+  PRIMARY KEY  (`statid`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `tech`
+--
+
+DROP TABLE IF EXISTS `tech`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tech` (
+  `techid` int(11) NOT NULL auto_increment,
+  `username` blob,
+  `nuid` text,
+  `name` text,
+  `status` blob,
+  PRIMARY KEY  (`techid`),
+  FULLTEXT KEY `name` (`name`)
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `temp1`
+--
+
+DROP TABLE IF EXISTS `temp1`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `temp1` (
+  `t1id` int(11) NOT NULL auto_increment,
+  `nuid` text,
+  `normalized` blob,
+  PRIMARY KEY  (`t1id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12170 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `temp2`
+--
+
+DROP TABLE IF EXISTS `temp2`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `temp2` (
+  `cid` int(11) NOT NULL auto_increment,
+  `nuid` text,
+  `data` blob,
+  `type` blob,
+  `location` int(11) default NULL,
+  `service` int(11) default NULL,
+  `active` tinyint(1) default '1',
+  `normalized` blob,
+  `contactme` tinyint(1) default '0',
+  PRIMARY KEY  (`cid`)
+) ENGINE=MyISAM AUTO_INCREMENT=12170 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `temp3`
+--
+
+DROP TABLE IF EXISTS `temp3`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `temp3` (
+  `t3id` int(11) NOT NULL auto_increment,
+  `old_id` int(11) default NULL,
+  `new_id` int(11) default NULL,
+  PRIMARY KEY  (`t3id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12059 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ticket`
+--
+
+DROP TABLE IF EXISTS `ticket`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ticket` (
+  `TID` int(11) NOT NULL auto_increment,
+  `nuid` text,
+  `INDATE` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  `Fixed` tinyint(1) default '0',
+  `checkedDate` date default '0000-00-00',
+  `DoneDate` date default '0000-00-00',
+  `outdate` timestamp NOT NULL default '0000-00-00 00:00:00',
+  `CDs` longblob,
+  `problems` longblob,
+  `Accounts` longblob,
+  `laptopcase` blob,
+  `laptoppower` tinyint(1) default NULL,
+  `Ethernet` tinyint(1) default NULL,
+  `Wireless` tinyint(1) default NULL,
+  `status` blob,
+  `repairstatus` int(11) default NULL,
+  `workingtech` int(11) default NULL,
+  `checkouttech` int(11) default NULL,
+  `backup` tinyint(1) default NULL,
+  `taxable` tinyint(1) default '1',
+  `express` tinyint(1) default '0',
+  `rsid` int(11) default '0',
+  `untilDate` date default '0000-00-00',
+  `locid` int(11) default '0',
+  `needsupdate` tinyint(1) default '0',
+  `lastupdatestatus` varchar(50) default 'none',
+  `warranty` tinyint(1) default NULL,
+  PRIMARY KEY  (`TID`),
+  KEY `TID` (`TID`),
+  KEY `ticket_info` (`TID`,`outdate`),
+  FULLTEXT KEY `nuid` (`nuid`)
+) ENGINE=MyISAM AUTO_INCREMENT=10443 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ttc`
+--
+
+DROP TABLE IF EXISTS `ttc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ttc` (
+  `ttcid` int(11) NOT NULL auto_increment,
+  `COMPID` int(11) default NULL,
+  `TID` int(11) default NULL,
+  `nuid` text,
+  PRIMARY KEY  (`ttcid`),
+  KEY `TID` (`TID`,`COMPID`),
+  KEY `COMPID` (`COMPID`,`TID`),
+  KEY `COMPID_2` (`COMPID`,`TID`,`ttcid`)
+) ENGINE=MyISAM AUTO_INCREMENT=10448 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `UID` int(11) NOT NULL auto_increment,
+  `nuid` text,
+  `ISO` mediumtext,
+  `Name` blob,
+  `Givenname` blob,
+  `Surname` blob,
+  `status` blob,
+  `username` blob,
+  `password` blob,
+  PRIMARY KEY  (`UID`),
+  KEY `UID` (`UID`),
+  KEY `user` (`UID`,`Name`(50)),
+  FULLTEXT KEY `nuid` (`nuid`)
+) ENGINE=MyISAM AUTO_INCREMENT=7211 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `userlogin`
+--
+
+DROP TABLE IF EXISTS `userlogin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `userlogin` (
+  `userloginid` int(11) NOT NULL auto_increment,
+  `ip` blob,
+  `userid` int(11) default NULL,
+  `hash` blob,
+  `login_time` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  `last` timestamp NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`userloginid`)
+) ENGINE=MyISAM AUTO_INCREMENT=1671 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2011-03-06 20:31:27

@@ -1,3 +1,7 @@
+There is a companion project to this project that allows for customers who have checked in a computer using the Computer Check-in System to be
+able to look up the status of their computer and leave notes for the tech(s) working on the computer.  The companion project can be found at
+https://github.com/mwalles2/Computer-Check-in-System--Customer-.
+
 INSTALLATION
 To install this on a new server you will need to make sure that the following directories are writebale by the webserver:
 
@@ -5,6 +9,10 @@ To install this on a new server you will need to make sure that the following di
 {WEBSERVERROOT}/pdf/
 
 These directories are where the PDF files will be store for checking in and out repairs as well as where the stale computer list will be stored.
+
+To set up the database:
+
+mysql -u yourusername -p yourdatabase < {WEBSERVERROOT}/install/structure.db
 
 CONFIG FILE
 The two files that need to set up are:
@@ -17,3 +25,7 @@ There are examples of these files in the includes directory.
 STATIC PDF
 The static PDF folder ({WEBSERVERROOT}/pdf/static/) is where any and all static PDFs are store for printing.  Currently there is only one file
 being used this way.  That file is a pricelist that prints on the back of the users copy of the check-in sheet.  The file is named pricelist.pdf
+
+UNL SPECIFIC FILES
+There are design files that are specific to UNL (http://www.unl.edu) and the UNL Computer Help Center (http://ischc.unl.edu).  This was a temporary
+messure for expedience.  These files will be removed in the future once a system as been built to allow easier customization.
