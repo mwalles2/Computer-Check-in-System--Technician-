@@ -3,7 +3,7 @@ able to look up the status of their computer and leave notes for the tech(s) wor
 https://github.com/mwalles2/Computer-Check-in-System--Customer-.
 
 INSTALLATION
-To install this on a new server you will need to make sure that the following directories are writebale by the webserver:
+To install this on a new server you will need to make sure that the following directories are writeable by the web server:
 
 {WEBSERVERROOT}/admin/pdf/
 {WEBSERVERROOT}/pdf/
@@ -22,10 +22,25 @@ The two files that need to set up are:
 
 There are examples of these files in the includes directory.
 
+CRON JOBS
+There are a few scripts that need to be scheduled to run automatically.  It does not matter when they run.  These scripts are:
+
+Turn Around Information
+	{WEBSERVERROOT}/admin/maintenance/update_turn_around-done_date.php
+	This will update the estimated turn around in days that is currently displayed on the front page of the Check-in System.
+
+Stale Computer List
+	{WEBSERVERROOT}/admin/maintenance/stale_computers_pdf.php
+	This will print out all computer that have not had a note added to them in the last four days.
+
+Auto Contact
+	{WEBSERVERROOT}/admin/maintenance/auto_contact.php
+	This will automaticlly contact costumers that wish to be contacted when the status of their computer changes.
+
 STATIC PDF
 The static PDF folder ({WEBSERVERROOT}/pdf/static/) is where any and all static PDFs are store for printing.  Currently there is only one file
-being used this way.  That file is a pricelist that prints on the back of the users copy of the check-in sheet.  The file is named pricelist.pdf
+being used this way.  That file is a price list that prints on the back of the users copy of the check-in sheet.  The file is named pricelist.pdf
 
 UNL SPECIFIC FILES
 There are design files that are specific to UNL (http://www.unl.edu) and the UNL Computer Help Center (http://ischc.unl.edu).  This was a temporary
-messure for expedience.  These files will be removed in the future once a system as been built to allow easier customization.
+measure for expedience.  These files will be removed in the future once a system as been built to allow easier customization.
