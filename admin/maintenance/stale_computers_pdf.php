@@ -1,12 +1,12 @@
 #! /usr/bin/php
 <?php
-	require_once("/usr/lib/php/cmdl-maw/error.php");
+	//require_once("/usr/lib/php/cmdl-maw/error.php");
 
-	CMDL_log_error(__FILE__ . ": started");
+	//CMDL_log_error(__FILE__ . ": started");
 
-	require_once("/Library/WebServer/Gateway/check-in/includes/class/pdf/fpdf.php");
-	require_once("/Library/WebServer/Gateway/check-in/includes/php/db.php");
-	require_once("/Library/WebServer/Gateway/check-in/includes/php/general.php");
+	require_once(__DIR__ . "/../../includes/class/pdf/fpdf.php");
+	require_once(__DIR__ . "/../../includes/php/db.php");
+	require_once(__DIR__ . "/../../includes/php/general.php");
 
 	$connect = mysql_connect($DB_server,$DB_user,$DB_password);
 	mysql_select_db($DB_database, $connect);
@@ -34,7 +34,7 @@
 		function GenSection($section)
 		{
 			global $tickets;
-			if(count($tickets[$section]) == 0)
+			if(!isset($tickets[$section]))
 			{
 				return false;
 			}
@@ -92,7 +92,7 @@
 	$tickets = array();
 
 	$brand_new_result = mysql_query("select ticket.tid, user.name, ticket.indate, computer.brand, computer.type, ticket.status from ticket, user, ttc, computer where ticket.untildate = '0000-00-00' and ticket.outdate = '0000-00-00' and ticket.tid=ttc.tid and ttc.compid=computer.compid and ticket.nuid=user.nuid and ticket.status = 'new' order by ticket.INDATE");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): brand new mysql_query");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): brand new mysql_query");
 
 	while($brand_new_row=mysql_fetch_array($brand_new_result,MYSQL_ASSOC))
 	{
@@ -115,7 +115,7 @@
 
 	$result = mysql_query("select ticket.tid, user.name, ticket.indate, computer.brand, computer.type, ticket.status, MAX(notes.cDate) as cDate from ticket, user, ttc, computer, notes, ntt where ticket.untildate = '0000-00-00' and notes.nid = ntt.nid and ntt.tid = ticket.tid and ticket.outdate = '0000-00-00' and ticket.status != 'repair' and notes.nType != 'system' and ticket.tid=ttc.tid and ttc.compid=computer.compid and ticket.nuid=user.nuid group by ticket.tid HAVING cDate < '".date("Y-m-d H:i:s",time() - (4 * 24 * 60 * 60))."' order by ticket.INDATE");
 //	$result = mysql_query("select ticket.tid, user.name, ticket.indate, computer.brand, computer.type, ticket.status, MAX(notes.cDate) as cDate from ticket, user, ttc, computer, notes, ntt where notes.nid = ntt.nid and ntt.tid = ticket.tid and ticket.outdate = '0000-00-00' and ticket.status = 'repair' and notes.nType = 'system' and ticket.tid=ttc.tid and ttc.compid=computer.compid and ticket.nuid=user.nuid group by ticket.tid HAVING cDate < '".date("Y-m-d H:i:s",time() - (8 * 24 * 60 * 60))."' order by ticket.INDATE");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): default mysql_query");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): default mysql_query");
 
 	while($row=mysql_fetch_array($result,MYSQL_ASSOC))
 	{
@@ -133,7 +133,7 @@
 	}
 
 	$result = mysql_query("select ticket.tid, user.name, ticket.indate, computer.brand, computer.type, ticket.status, MAX(notes.cDate) as cDate from ticket, user, ttc, computer, notes, ntt where ticket.untildate = '0000-00-00' and notes.nid = ntt.nid and ntt.tid = ticket.tid and ticket.outdate = '0000-00-00' and ticket.status = 'repair' and notes.nType != 'system' and ticket.tid=ttc.tid and ttc.compid=computer.compid and ticket.nuid=user.nuid group by ticket.tid HAVING cDate < '".date("Y-m-d H:i:s",time() - (8 * 24 * 60 * 60))."' order by ticket.INDATE");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): repair mysql_query");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): repair mysql_query");
 
 	while($row=mysql_fetch_array($result,MYSQL_ASSOC))
 	{
@@ -150,7 +150,7 @@
 	}
 
 	$result = mysql_query("select ticket.tid, user.name, ticket.indate from ticket, user, ttc where ticket.tid=ttc.tid and ttc.compid=0 and ticket.nuid=user.nuid order by ticket.INDATE");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): missing mysql_query");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): missing mysql_query");
 
 	while($row=mysql_fetch_array($result,MYSQL_ASSOC))
 	{
@@ -166,40 +166,40 @@
 	}
 
 	mysql_close($connect);
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): mysql_close");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): mysql_close");
 
-	$out_file = "/Library/WebServer/Gateway/check-in/admin/maintenance/pdf/Stale Computer Report - ".date("Y-m-d H-i-s").".pdf";
+	$out_file = __DIR__ . "/pdf/Stale Computer Report - ".date("Y-m-d H-i-s").".pdf";
 	$pdf = new PDF("P","in","Letter");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): new PDF");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): new PDF");
 	$pdf->AliasNbPages();
 	$pdf->SetMargins(.3,.3);
 	$pdf->SetTitle("Stale Computer Report - ".date("Y-m-d H:i:s"));
 //	$pdf->SetAutoPageBreak(true,.3);
 	$pdf->GenSection("bnew");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('bnew')");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('bnew')");
 	$pdf->GenSection("new");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('new')");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('new')");
 	$pdf->GenSection("work");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('work')");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('work')");
 	$pdf->GenSection("user");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('user')");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('user')");
 	$pdf->GenSection("tech");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('tech')");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('tech')");
 	$pdf->GenSection("part");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('part')");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('part')");
 	$pdf->GenSection("price");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('price')");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('price')");
 	$pdf->GenSection("missing");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('missing')");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('missing')");
 	$pdf->GenSection("repair");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('repair')");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('repair')");
 	$pdf->GenSection("done");
-	CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('done')");
+	//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): GenSection('done')");
 	if($pages)
 	{
 		$pdf->Output($out_file,"F");
-		CMDL_log_error(__FILE__ . " (" . __LINE__ . "): pdf->Output");
+		//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): pdf->Output");
 		system("lpr -P ischc_counter_unl_edu -o duplex=DuplexNoTumble '".$out_file."'");
-		CMDL_log_error(__FILE__ . " (" . __LINE__ . "): print pdf");
+		//CMDL_log_error(__FILE__ . " (" . __LINE__ . "): print pdf");
 	}
 ?>

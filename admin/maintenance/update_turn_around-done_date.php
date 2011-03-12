@@ -1,6 +1,6 @@
 #! /usr/bin/php
 <?php
-	require_once("/Library/WebServer/Gateway/check-in"."/includes/php/db.php");
+	require_once(__DIR__ . "/../../includes/php/db.php");
 	$connect = mysql_connect($DB_server,$DB_user,$DB_password);
 	mysql_select_db($DB_database, $connect);
 
@@ -21,11 +21,15 @@
 		{
 			return ($values[(count($values) - 1) / 2]);
 		}
-		else
+		else if(count($values)>0)
 		{
 			$first_index = count($values) / 2;
 			$second_index = $first_index - 1;
 			return (($values[$first_index] + $values[$second_index]) / 2);
+		}
+		else
+		{
+			return 0;
 		}
 	}
 

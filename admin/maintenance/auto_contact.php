@@ -1,9 +1,9 @@
 #! /usr/bin/php
 <?php
-	require_once("../../includes/class/HtmlTemplate.class");
-	require_once("../../includes/php/db.php");
-	require_once("../includes/php/class.twitter.php");
-	require_once("../includes/php/admin-general-ajax.php");
+	require_once(__DIR__ . "/../../includes/class/HtmlTemplate.class");
+	require_once(__DIR__ . "/../../includes/php/db.php");
+	require_once(__DIR__ . "/../includes/php/class.twitter.php");
+	require_once(__DIR__ . "/../includes/php/admin-general-ajax.php");
 
 	$connect = mysql_connect($DB_server,$DB_user,$DB_password);
 	mysql_select_db($DB_database, $connect);
@@ -22,7 +22,7 @@
 	{
 		$email_header_to = "To: " . $emailRow["name"] . "<" . $emailRow["data"] . ">\r\n";
 		$email_to = $emailRow["data"];
-		$email_message = new HtmlTemplate("../includes/inc/auto_contact/auto_contact_email.inc");
+		$email_message = new HtmlTemplate(__DIR__ . "/../includes/inc/auto_contact/auto_contact_email.inc");
 		$email_message -> SetParameter("NAME", $emailRow["name"]);
 		$email_message -> SetParameter("STATUS", $emailRow["status_text"]);
 		$email_message -> SetParameter("TID", $emailRow["tid"]);
@@ -39,7 +39,7 @@
 	$tweet = new twitter("unlchc", "weneed10", "xml");
 	while($twitterRow = mysql_fetch_array($twitterResults))
 	{
-		$tweet_message = new HtmlTemplate("../includes/inc/auto_contact/auto_contact_twitter.inc");
+		$tweet_message = new HtmlTemplate(__DIR__ . "/../includes/inc/auto_contact/auto_contact_twitter.inc");
 		$tweet_message -> SetParameter("STATUS", $twitterRow["status_text"]);
 		if($tweet -> sendDirectMessage($twitterRow["data"], $tweet_message -> CreateHTML()) === false)
 		{

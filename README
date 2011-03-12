@@ -5,20 +5,20 @@ https://github.com/mwalles2/Computer-Check-in-System--Customer-.
 INSTALLATION
 To install this on a new server you will need to make sure that the following directories are writeable by the web server:
 
-{WEBSERVERROOT}/admin/pdf/
-{WEBSERVERROOT}/pdf/
+	{WEBSERVERROOT}/admin/pdf/
+	{WEBSERVERROOT}/pdf/
 
 These directories are where the PDF files will be store for checking in and out repairs as well as where the stale computer list will be stored.
 
 To set up the database:
 
-mysql -u yourusername -p yourdatabase < {WEBSERVERROOT}/install/structure.db
+	mysql -u yourusername -p yourdatabase < {WEBSERVERROOT}/install/structure.db
 
 CONFIG FILE
 The two files that need to set up are:
 
-{WEBSERVERROOT}/includes/php/db.php
-{WEBSERVERROOT}/includes/php/ldap_info.php
+	{WEBSERVERROOT}/includes/php/db.php
+	{WEBSERVERROOT}/includes/php/ldap_info.php
 
 There are examples of these files in the includes directory.
 
@@ -31,7 +31,10 @@ Turn Around Information
 
 Stale Computer List
 	{WEBSERVERROOT}/admin/maintenance/stale_computers_pdf.php
-	This will print out all computer that have not had a note added to them in the last four days.
+	This will print out all computer that have not had a note added to them in the last four days.  You will also need to set the following
+	directory as readable by what ever account is running the command:
+
+		{WEBSERVERROOT}/admin/maintenance/pdf/
 
 Auto Contact
 	{WEBSERVERROOT}/admin/maintenance/auto_contact.php
