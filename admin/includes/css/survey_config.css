@@ -1,0 +1,61 @@
+	.editbox
+	{
+		margin:2%;
+		max-width:96%;
+		min-width:95%;
+		border-width:2px 0 0 2px;
+		border-color: transparent;
+		border-style: solid;
+		-webkit-border-radius: 5px;
+	}
+
+	.editbox input, .editbox textarea
+	{
+		display: none;
+	}
+
+	.editbox:hover
+	{
+		border-color: #ccc;
+		background-color: #ccc;
+	}
+
+	.editbox.active
+	{
+		border-color: black;
+		background-color: #777;
+	}
+
+	.editbox.active input, .editbox.active textarea
+	{
+		display: inline;
+	}
+
+	.editbox.active .displayText
+	{
+		display: none;
+	}
+
+	.warning
+	{
+		padding: 5px;
+		border-style: solid;
+		border-width: 2px;
+		border-color: #C00;
+		background-color: rgba(204,0,0,.5);
+		-webkit-border-radius: 5px;
+		min-width: 200px;
+		margin: auto 5px;
+		text-align: center;
+	}
+
+	dd
+	{
+		font-size: small;
+	}
+
+	dt
+	{
+		font-size: small;
+		font-weight: bold;
+	}
