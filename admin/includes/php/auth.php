@@ -49,14 +49,14 @@
 		if(mysql_num_rows($cookie_results) > 0)
 		{
 			$cookie_row = mysql_fetch_array($cookie_results);
-			if((strtotime($cookie_row[last])+(60*60)) > time())
+			if((strtotime($cookie_row['last'])+(60*60)) > time())
 			{
 				set_auth($_COOKIE['TECHID'],"u");
 				$no_auth =false;
 			}
 		}
 	}
-	if($_POST['username'] && $_POST['password'])
+	if(isset($_POST['username']) && isset($_POST['password']))
 	{
 		$tech_query = mysql_query("select * from tech where username = \"".$_POST['username']."\" and status != \"none\"");
 		if(mysql_num_rows($tech_query) > 0)

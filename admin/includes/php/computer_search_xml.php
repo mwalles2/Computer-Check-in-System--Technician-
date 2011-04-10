@@ -106,7 +106,7 @@ $search_2_loop_start_time = mktime();
 		$page -> AppendParameter("CONTENT", "\n\t<sort_last>".$key."</sort_last>");
 	}
 
-	mysql_close($connect);;
+	mysql_close($connect);
 	header('Content-Type: text/xml');
 
 	$page -> CreatePage();

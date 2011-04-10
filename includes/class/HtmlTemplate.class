@@ -7,39 +7,47 @@
 		class HtmlTemplate
 		{
 			// Set the attributes.
-			var $template;
+			var $template_file;
 			var $html;
 			var $code = array();
 			var $src = array();
 			var $parameters = array();
 
-			function HtmlTemplate ($template) // This function sets which template will be used.
+			function __construct()
 			{
-				$this->template = $template;
-				$this->html = implode ("", (file($this->template))); // Read the template into an array, then create a string.
+				(func_num_args()>1)?$function="__construct_db":$function="__construct_url";
+				call_user_func_array(array($this,$function),func_get_args());
+			}
+
+			function __construct_url($template_file) // This function sets which template will be used.
+			{
+				$this->template_file = $template_file;
+				$this->html = implode ("", (file($this->template_file))); // Read the template into an array, then create a string.
+			}
+
+			function __construct_db($url,$template)
+			{
+				//$url should be set to NULL.  This function will ignore it.
+				$this->html = $template;
 			}
 
 			function SetParameter ($variable, $value) // This function sets the particular values.
 			{
 				if($variable == "SCRIPTSRC")
 				{
-					$this->src["javascript"] .= "\t<script type=\"text/javascript\" language=\"javascript\" src=\"".$value."\"></script>\n";
+					(isset($this->src["javascript"])) ? $this->src["javascript"] .= "\t<script type=\"text/javascript\" language=\"javascript\" src=\"".$value."\"></script>\n" : $this->src["javascript"] = "\t<script type=\"text/javascript\" language=\"javascript\" src=\"".$value."\"></script>\n";
 				}
 				elseif($variable == "SCRIPTCODE")
 				{
-					//echo $value."<br>\n";
-					$this->code["javascript"] .= "\t\t".$value."\n";
-					//echo $this->code["javascript"]."<br>\n";
+					(isset($this->code["javascript"])) ? $this->code["javascript"] .= "\t\t".$value."\n" : $this->code["javascript"] = "\t\t".$value."\n";
 				}
 				else if($variable == "CSSSRC")
 				{
-					$this->src["CSS"] .= "\t<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"".$value."\" hreflang=\"EN\" />";
+					(isset($this->src["CSS"])) ? $this->src["CSS"] .= "\t<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"".$value."\" hreflang=\"EN\" />":$this->src["CSS"] = "\t<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"".$value."\" hreflang=\"EN\" />";
 				}
 				elseif($variable == "CSSCODE")
 				{
-					//echo $value."<br>\n";
-					$this->code["CSS"] .= "\t\t".$value."\n";
-					//echo $this->code["javascript"]."<br>\n";
+					(isset($this->code["CSS"])) ?$this->code["CSS"] .= "\t\t".$value."\n" : $this->code["CSS"] = "\t\t".$value."\n";
 				}
 				else
 				{

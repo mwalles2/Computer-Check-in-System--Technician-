@@ -7,22 +7,50 @@
 	setLocations($connect);
 
 	$page -> SetParameter ("CSSSRC" , "includes/css/survey_config.css");
-	$page -> SetParameter ("SCRIPTSRC" , "includes/js/survey_config.js");
+	$page -> SetParameter ("SCRIPTSRC" , "includes/js/general.js");
+	$page -> SetParameter ("SCRIPTSRC" , "includes/js/survey_config/survey_config.js");
+	$page -> SetParameter ("SCRIPTSRC", "../includes/js/ajax-fade.js");
+	$page -> SetParameter ("SCRIPTSRC", "../includes/js/xmlrequest.js");
 
 	$survey_config = new HtmlTemplate("includes/inc/survey_config.inc");
 	if(isset($CONFIG["survey_link"]))
 	{
-		$suvey_config->SetParameter("URLTEXT",$CONFIG["survey_link"]);
+		$survey_config->SetParameter("URLTEXT",$CONFIG["survey_link"]);
 	}
 	else
 	{
-		$suvey_config->SetParameter("URLTEXT","http://");
+		$survey_config->SetParameter("URLTEXT","http://");
+	}
+
+	if(isset($CONFIG["survey_subject"]))
+	{
+		$survey_config->SetParameter("SUBJECTTEXT",$CONFIG["survey_subject"]);
+	}
+	else
+	{
+		$survey_config->SetParameter("SUBJECTTEXT","Customer Survey");
+	}
+
+	if(isset($CONFIG["survey_return_address"]))
+	{
+		$survey_config->SetParameter("RETURNHTML",str_replace(array("&","<",">","\n"),array("&amp;","&lt;","&gt;","<br>"),$CONFIG["survey_return_address"]));
+		$survey_config->SetParameter("RETURNTEXT",$CONFIG["survey_return_address"]);
+	}
+	else
+	{
+		$survey_config->SetParameter("RETURNHTML","Company Survey Address &lt;survey@example.com&gt;");
+		$survey_config->SetParameter("RETURNTEXT","");
 	}
 
 	if(isset($CONFIG["survey_text"]))
 	{
-		$suvey_config->SetParameter("EMAILHTML",str_replace("\n","<br>",$CONFIG["survey_text"]);
-		$suvey_config->SetParameter("EMAILTEXT",$CONFIG["survey_text"]);
+		$survey_config->SetParameter("EMAILHTML",str_replace(array("&","<",">","\n"),array("&amp;","&lt;","&gt;","<br>"),$CONFIG["survey_text"]));
+		$survey_config->SetParameter("EMAILTEXT",$CONFIG["survey_text"]);
+	} 
+	else
+	{
+		$survey_config->SetParameter("EMAILHTML","(There is not currently an email message configured)");
+		$survey_config->SetParameter("EMAILTEXT","");
 	} 
 
 	$page -> SetParameter("CONTENT", $survey_config->CreateHtml());
