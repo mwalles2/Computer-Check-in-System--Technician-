@@ -40,6 +40,9 @@ Auto Contact
 	{WEBSERVERROOT}/admin/maintenance/auto_contact.php
 	This will automaticlly contact costumers that wish to be contacted when the status of their computer changes.
 
+Send Survey
+	{WEBSERVERROOT}/admin/maintenance/send_survey.php
+	This will automaticlly send a survey out to anyone that has picked up their computer the prevoius day.
 STATIC PDF
 The static PDF folder ({WEBSERVERROOT}/pdf/static/) is where any and all static PDFs are store for printing.  Currently there is only one file
 being used this way.  That file is a price list that prints on the back of the users copy of the check-in sheet.  The file is named pricelist.pdf
