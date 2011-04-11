@@ -15,21 +15,24 @@
 		$tech_query = mysql_query ("select * from tech where techid = ".$_COOKIE["TECHID"]);
 		$tech_row = mysql_fetch_array($tech_query);
 
-		if($_GET["template"] == "new")
+		if(isset($_GET["template"]))
 		{
-			$page = new HtmlTemplate("includes/inc/admin-new.inc");
-			$page -> SetParameter("TECH", $tech_row['name']);
-			$page -> SetParameter("NAV", implode("", file("includes/inc/nav/main.inc")));
-			$nav_links_admin = "";
-			$nav_links_manage = "";
-			switch($tech_row['status'])
+			if($_GET["template"] == "new")
 			{
-				case "all":
-					$nav_links_admin = implode("", file("includes/inc/nav/admin.inc"));
-				case "manage":
-					$nav_links_manage = implode("", file("includes/inc/nav/manage.inc"));
+				$page = new HtmlTemplate("includes/inc/admin-new.inc");
+				$page -> SetParameter("TECH", $tech_row['name']);
+				$page -> SetParameter("NAV", implode("", file("includes/inc/nav/main.inc")));
+				$nav_links_admin = "";
+				$nav_links_manage = "";
+				switch($tech_row['status'])
+				{
+					case "all":
+						$nav_links_admin = implode("", file("includes/inc/nav/admin.inc"));
+					case "manage":
+						$nav_links_manage = implode("", file("includes/inc/nav/manage.inc"));
+				}
+				$page -> AppendParameter("NAV", $nav_links_manage.$nav_links_admin);
 			}
-			$page -> AppendParameter("NAV", $nav_links_manage.$nav_links_admin);
 		}
 		else
 		{
